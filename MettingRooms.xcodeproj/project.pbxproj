@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		755DEE511F43CFA0006BD444 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEE501F43CFA0006BD444 /* AppDelegate.swift */; };
+		755DEE531F43CFA0006BD444 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEE521F43CFA0006BD444 /* ViewController.swift */; };
+		755DEE561F43CFA0006BD444 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755DEE541F43CFA0006BD444 /* Main.storyboard */; };
+		755DEE581F43CFA0006BD444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755DEE571F43CFA0006BD444 /* Assets.xcassets */; };
+		755DEE5B1F43CFA0006BD444 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755DEE591F43CFA0006BD444 /* LaunchScreen.storyboard */; };
+		755DEE661F43CFA0006BD444 /* MettingRoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEE651F43CFA0006BD444 /* MettingRoomsTests.swift */; };
+		755DEE711F43CFA0006BD444 /* MettingRoomsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEE701F43CFA0006BD444 /* MettingRoomsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		755DEE621F43CFA0006BD444 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 755DEE451F43CFA0006BD444 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 755DEE4C1F43CFA0006BD444;
+			remoteInfo = MettingRooms;
+		};
+		755DEE6D1F43CFA0006BD444 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 755DEE451F43CFA0006BD444 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 755DEE4C1F43CFA0006BD444;
+			remoteInfo = MettingRooms;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		755DEE4D1F43CFA0006BD444 /* MettingRooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MettingRooms.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		755DEE501F43CFA0006BD444 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		755DEE521F43CFA0006BD444 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		755DEE551F43CFA0006BD444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		755DEE571F43CFA0006BD444 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		755DEE5A1F43CFA0006BD444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		755DEE5C1F43CFA0006BD444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		755DEE611F43CFA0006BD444 /* MettingRoomsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MettingRoomsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		755DEE651F43CFA0006BD444 /* MettingRoomsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MettingRoomsTests.swift; sourceTree = "<group>"; };
+		755DEE671F43CFA0006BD444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		755DEE6C1F43CFA0006BD444 /* MettingRoomsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MettingRoomsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		755DEE701F43CFA0006BD444 /* MettingRoomsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MettingRoomsUITests.swift; sourceTree = "<group>"; };
+		755DEE721F43CFA0006BD444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		755DEE4A1F43CFA0006BD444 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755DEE5E1F43CFA0006BD444 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755DEE691F43CFA0006BD444 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		755DEE441F43CFA0006BD444 = {
+			isa = PBXGroup;
+			children = (
+				755DEE4F1F43CFA0006BD444 /* MettingRooms */,
+				755DEE641F43CFA0006BD444 /* MettingRoomsTests */,
+				755DEE6F1F43CFA0006BD444 /* MettingRoomsUITests */,
+				755DEE4E1F43CFA0006BD444 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		755DEE4E1F43CFA0006BD444 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				755DEE4D1F43CFA0006BD444 /* MettingRooms.app */,
+				755DEE611F43CFA0006BD444 /* MettingRoomsTests.xctest */,
+				755DEE6C1F43CFA0006BD444 /* MettingRoomsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		755DEE4F1F43CFA0006BD444 /* MettingRooms */ = {
+			isa = PBXGroup;
+			children = (
+				755DEE501F43CFA0006BD444 /* AppDelegate.swift */,
+				755DEE521F43CFA0006BD444 /* ViewController.swift */,
+				755DEE541F43CFA0006BD444 /* Main.storyboard */,
+				755DEE571F43CFA0006BD444 /* Assets.xcassets */,
+				755DEE591F43CFA0006BD444 /* LaunchScreen.storyboard */,
+				755DEE5C1F43CFA0006BD444 /* Info.plist */,
+			);
+			path = MettingRooms;
+			sourceTree = "<group>";
+		};
+		755DEE641F43CFA0006BD444 /* MettingRoomsTests */ = {
+			isa = PBXGroup;
+			children = (
+				755DEE651F43CFA0006BD444 /* MettingRoomsTests.swift */,
+				755DEE671F43CFA0006BD444 /* Info.plist */,
+			);
+			path = MettingRoomsTests;
+			sourceTree = "<group>";
+		};
+		755DEE6F1F43CFA0006BD444 /* MettingRoomsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				755DEE701F43CFA0006BD444 /* MettingRoomsUITests.swift */,
+				755DEE721F43CFA0006BD444 /* Info.plist */,
+			);
+			path = MettingRoomsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		755DEE4C1F43CFA0006BD444 /* MettingRooms */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 755DEE751F43CFA0006BD444 /* Build configuration list for PBXNativeTarget "MettingRooms" */;
+			buildPhases = (
+				755DEE491F43CFA0006BD444 /* Sources */,
+				755DEE4A1F43CFA0006BD444 /* Frameworks */,
+				755DEE4B1F43CFA0006BD444 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MettingRooms;
+			productName = MettingRooms;
+			productReference = 755DEE4D1F43CFA0006BD444 /* MettingRooms.app */;
+			productType = "com.apple.product-type.application";
+		};
+		755DEE601F43CFA0006BD444 /* MettingRoomsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 755DEE781F43CFA0006BD444 /* Build configuration list for PBXNativeTarget "MettingRoomsTests" */;
+			buildPhases = (
+				755DEE5D1F43CFA0006BD444 /* Sources */,
+				755DEE5E1F43CFA0006BD444 /* Frameworks */,
+				755DEE5F1F43CFA0006BD444 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				755DEE631F43CFA0006BD444 /* PBXTargetDependency */,
+			);
+			name = MettingRoomsTests;
+			productName = MettingRoomsTests;
+			productReference = 755DEE611F43CFA0006BD444 /* MettingRoomsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		755DEE6B1F43CFA0006BD444 /* MettingRoomsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 755DEE7B1F43CFA0006BD444 /* Build configuration list for PBXNativeTarget "MettingRoomsUITests" */;
+			buildPhases = (
+				755DEE681F43CFA0006BD444 /* Sources */,
+				755DEE691F43CFA0006BD444 /* Frameworks */,
+				755DEE6A1F43CFA0006BD444 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				755DEE6E1F43CFA0006BD444 /* PBXTargetDependency */,
+			);
+			name = MettingRoomsUITests;
+			productName = MettingRoomsUITests;
+			productReference = 755DEE6C1F43CFA0006BD444 /* MettingRoomsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		755DEE451F43CFA0006BD444 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Kimhyeonseok;
+				TargetAttributes = {
+					755DEE4C1F43CFA0006BD444 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					755DEE601F43CFA0006BD444 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 755DEE4C1F43CFA0006BD444;
+					};
+					755DEE6B1F43CFA0006BD444 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 755DEE4C1F43CFA0006BD444;
+					};
+				};
+			};
+			buildConfigurationList = 755DEE481F43CFA0006BD444 /* Build configuration list for PBXProject "MettingRooms" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 755DEE441F43CFA0006BD444;
+			productRefGroup = 755DEE4E1F43CFA0006BD444 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				755DEE4C1F43CFA0006BD444 /* MettingRooms */,
+				755DEE601F43CFA0006BD444 /* MettingRoomsTests */,
+				755DEE6B1F43CFA0006BD444 /* MettingRoomsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		755DEE4B1F43CFA0006BD444 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755DEE5B1F43CFA0006BD444 /* LaunchScreen.storyboard in Resources */,
+				755DEE581F43CFA0006BD444 /* Assets.xcassets in Resources */,
+				755DEE561F43CFA0006BD444 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755DEE5F1F43CFA0006BD444 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755DEE6A1F43CFA0006BD444 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		755DEE491F43CFA0006BD444 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755DEE531F43CFA0006BD444 /* ViewController.swift in Sources */,
+				755DEE511F43CFA0006BD444 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755DEE5D1F43CFA0006BD444 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755DEE661F43CFA0006BD444 /* MettingRoomsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755DEE681F43CFA0006BD444 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755DEE711F43CFA0006BD444 /* MettingRoomsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		755DEE631F43CFA0006BD444 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 755DEE4C1F43CFA0006BD444 /* MettingRooms */;
+			targetProxy = 755DEE621F43CFA0006BD444 /* PBXContainerItemProxy */;
+		};
+		755DEE6E1F43CFA0006BD444 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 755DEE4C1F43CFA0006BD444 /* MettingRooms */;
+			targetProxy = 755DEE6D1F43CFA0006BD444 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		755DEE541F43CFA0006BD444 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				755DEE551F43CFA0006BD444 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		755DEE591F43CFA0006BD444 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				755DEE5A1F43CFA0006BD444 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		755DEE731F43CFA0006BD444 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		755DEE741F43CFA0006BD444 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		755DEE761F43CFA0006BD444 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MettingRooms/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = asdf.MettingRooms;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		755DEE771F43CFA0006BD444 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MettingRooms/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = asdf.MettingRooms;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		755DEE791F43CFA0006BD444 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MettingRoomsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = asdf.MettingRoomsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MettingRooms.app/MettingRooms";
+			};
+			name = Debug;
+		};
+		755DEE7A1F43CFA0006BD444 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MettingRoomsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = asdf.MettingRoomsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MettingRooms.app/MettingRooms";
+			};
+			name = Release;
+		};
+		755DEE7C1F43CFA0006BD444 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = MettingRoomsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = asdf.MettingRoomsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MettingRooms;
+			};
+			name = Debug;
+		};
+		755DEE7D1F43CFA0006BD444 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = MettingRoomsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = asdf.MettingRoomsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MettingRooms;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		755DEE481F43CFA0006BD444 /* Build configuration list for PBXProject "MettingRooms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755DEE731F43CFA0006BD444 /* Debug */,
+				755DEE741F43CFA0006BD444 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		755DEE751F43CFA0006BD444 /* Build configuration list for PBXNativeTarget "MettingRooms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755DEE761F43CFA0006BD444 /* Debug */,
+				755DEE771F43CFA0006BD444 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		755DEE781F43CFA0006BD444 /* Build configuration list for PBXNativeTarget "MettingRoomsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755DEE791F43CFA0006BD444 /* Debug */,
+				755DEE7A1F43CFA0006BD444 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		755DEE7B1F43CFA0006BD444 /* Build configuration list for PBXNativeTarget "MettingRoomsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755DEE7C1F43CFA0006BD444 /* Debug */,
+				755DEE7D1F43CFA0006BD444 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 755DEE451F43CFA0006BD444 /* Project object */;
+}
