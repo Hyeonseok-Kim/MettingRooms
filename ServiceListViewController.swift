@@ -101,16 +101,9 @@ class ServiceListViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        /*
-        if segue.identifier == "MeetingRoomSegue" {
-            guard let destination = segue.destination as? MeetingRoomListTableViewController , let selectedIndex = self.tableView.indexPathForSelectedRow?.row, let service = branch?.services?[selectedIndex] else{
-                return
-            }
-            destination.service = service
-        }*/
         
         if segue.identifier == "MeetingRoomSegue" {
-            guard let destination = segue.destination as? MeetingRoomListTableViewController , let selectedIndex = self.tableView.indexPathForSelectedRow?.row, let service = branch?.services?[selectedIndex] else {
+            guard let destination = segue.destination as? MeetingRoomListTableViewController , let selectedIndex = self.tableView.indexPathForSelectedRow?.row, let service = branch?.services?[selectedIndex] else{
                 return
             }
             destination.service = service
@@ -120,7 +113,6 @@ class ServiceListViewController: UITableViewController {
     
 
 }
-
 
 
 
