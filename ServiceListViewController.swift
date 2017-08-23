@@ -54,7 +54,6 @@ class ServiceListViewController: UITableViewController {
         guard let service = branch?.services?[indexPath.row] else{
             return cell
         }
-
         cell.textLabel?.text = service.name
         return cell
     }

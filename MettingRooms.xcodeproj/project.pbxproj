@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		753400CF1F4D979900C22C78 /* RoomInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753400CE1F4D979900C22C78 /* RoomInfoViewController.swift */; };
 		755DEE511F43CFA0006BD444 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEE501F43CFA0006BD444 /* AppDelegate.swift */; };
 		755DEE531F43CFA0006BD444 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEE521F43CFA0006BD444 /* ViewController.swift */; };
 		755DEE561F43CFA0006BD444 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755DEE541F43CFA0006BD444 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		753400CE1F4D979900C22C78 /* RoomInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomInfoViewController.swift; sourceTree = "<group>"; };
 		755DEE4D1F43CFA0006BD444 /* MettingRooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MettingRooms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		755DEE501F43CFA0006BD444 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		755DEE521F43CFA0006BD444 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		755DEE441F43CFA0006BD444 = {
 			isa = PBXGroup;
 			children = (
+				753400CE1F4D979900C22C78 /* RoomInfoViewController.swift */,
 				75E4CF4A1F45240D008F9980 /* BranchListViewController.swift */,
 				75E4CF4C1F45241C008F9980 /* ServiceListViewController.swift */,
 				755DEE4F1F43CFA0006BD444 /* MettingRooms */,
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753400CF1F4D979900C22C78 /* RoomInfoViewController.swift in Sources */,
 				755DEE531F43CFA0006BD444 /* ViewController.swift in Sources */,
 				755DEE7F1F43D000006BD444 /* MeetingRoomListTableViewController.swift in Sources */,
 				755DEEBB1F444B80006BD444 /* DataCenter.swift in Sources */,
