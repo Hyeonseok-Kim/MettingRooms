@@ -14,7 +14,6 @@ class MeetingRoomListTableViewController: UITableViewController {
     
     var service:Service!
     
-    
     /*func meetingRoomsAtIndex(index:Int) -> (key:String, value:[String:Int]) {
         let orderedMeetingRooms = meetingRooms.sorted(by: {$0.1.first!.1 < $1.1.first!.1})
         return orderedMeetingRooms[index]
@@ -30,6 +29,7 @@ class MeetingRoomListTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         self.title = service?.name
+        self.navigationController?.isToolbarHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,15 +70,17 @@ class MeetingRoomListTableViewController: UITableViewController {
         
         cell.textLabel!.text = String(meetingRoom.name)
         cell.detailTextLabel!.text = String(meetingRoom.capacity)
-
+        
         return cell
     }
     
+    /*
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         //let orderedMeetingRooms = meetingRooms.sorted(by: {$0.1.first!.1 < $1.1.first!.1})
         
         return service?.name
     }
+    */
     
     /*
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {

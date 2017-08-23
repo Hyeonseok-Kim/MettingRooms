@@ -16,10 +16,10 @@ class DataCenter {
     
     
     init() {
-        let BermudaRoom = MeetingRoom(name:"Bermuda", capacity: 4)
-        let JejuRoom = MeetingRoom(name:"Jeju", capacity: 6)
-        let SicilyRoom = MeetingRoom(name:"Sicily", capacity: 6)
-        let MoldivRoom = MeetingRoom(name:"Moldiv", capacity: 10)
+        let JejuRoom = MeetingRoom(name:"Jeju/제주", capacity: 4)
+        let BermudaRoom = MeetingRoom(name:"Bermuda/버뮤다", capacity: 6)
+        let SicilyRoom = MeetingRoom(name:"Sicily/시실리", capacity: 6)
+        let MoldivRoom = MeetingRoom(name:"Moldiv/몰디브", capacity: 10)
         
         
         let meetingRoomService = Service(name: "회의실예약")
@@ -27,7 +27,7 @@ class DataCenter {
         let vehicleService = Service(name: "차량예약")
         let deskService = Service(name: "데스크예약")
         
-        meetingRoomService.items = [BermudaRoom, JejuRoom, SicilyRoom, MoldivRoom]
+        meetingRoomService.items = [JejuRoom, BermudaRoom, SicilyRoom, MoldivRoom]
         
         let pangyoBranch = Branch(name: "역삼점")
         let samsungBranch = Branch(name: "삼성점")
