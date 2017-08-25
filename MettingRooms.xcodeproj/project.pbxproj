@@ -19,6 +19,7 @@
 		755DEE711F43CFA0006BD444 /* MettingRoomsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEE701F43CFA0006BD444 /* MettingRoomsUITests.swift */; };
 		755DEE7F1F43D000006BD444 /* MeetingRoomListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEE7E1F43D000006BD444 /* MeetingRoomListTableViewController.swift */; };
 		755DEEBB1F444B80006BD444 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEEBA1F444B80006BD444 /* DataCenter.swift */; };
+		75724C2C1F4FAE7E00738F59 /* TintColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75724C2B1F4FAE7E00738F59 /* TintColorViewController.swift */; };
 		75E4CF4B1F45240D008F9980 /* BranchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E4CF4A1F45240D008F9980 /* BranchListViewController.swift */; };
 		75E4CF4D1F45241C008F9980 /* ServiceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E4CF4C1F45241C008F9980 /* ServiceListViewController.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		755DEE721F43CFA0006BD444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		755DEE7E1F43D000006BD444 /* MeetingRoomListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingRoomListTableViewController.swift; sourceTree = "<group>"; };
 		755DEEBA1F444B80006BD444 /* DataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
+		75724C2B1F4FAE7E00738F59 /* TintColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintColorViewController.swift; sourceTree = "<group>"; };
 		75E4CF4A1F45240D008F9980 /* BranchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchListViewController.swift; sourceTree = "<group>"; };
 		75E4CF4C1F45241C008F9980 /* ServiceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 		755DEE441F43CFA0006BD444 = {
 			isa = PBXGroup;
 			children = (
+				75724C2B1F4FAE7E00738F59 /* TintColorViewController.swift */,
 				751612A51F4E617D00677C44 /* ReservationListViewController.swift */,
 				751612A71F4E619700677C44 /* ReserveRoomViewController.swift */,
 				753400CE1F4D979900C22C78 /* RoomInfoViewController.swift */,
@@ -292,6 +295,7 @@
 				75E4CF4D1F45241C008F9980 /* ServiceListViewController.swift in Sources */,
 				755DEE511F43CFA0006BD444 /* AppDelegate.swift in Sources */,
 				751612A81F4E619700677C44 /* ReserveRoomViewController.swift in Sources */,
+				75724C2C1F4FAE7E00738F59 /* TintColorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
