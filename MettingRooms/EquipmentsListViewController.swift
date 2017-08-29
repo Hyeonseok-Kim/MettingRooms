@@ -65,7 +65,7 @@ class EquipmentsListViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EquipmentCell", for: indexPath)
 
         // Configure the cell...
         
@@ -73,13 +73,18 @@ class EquipmentsListViewController: UITableViewController {
             return cell
         }
         // to be come switch changed
-        if let name = equipment["name"] as? String {
+        
+        let name = equipment["name"] as? String ?? ""
+        
+//        if let name = equipment["name"] as? String {
             cell.textLabel?.text = name
-        }
+//        }
         
         if let amount = equipment["amount"] as? Int {
             cell.detailTextLabel?.text = String(amount)
         }
+        
+        
         /*
         if let late = equipment["Late"] as? String {
             cell.textLabel?.text = late
