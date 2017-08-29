@@ -20,6 +20,9 @@
 		755DEE7F1F43D000006BD444 /* MeetingRoomListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEE7E1F43D000006BD444 /* MeetingRoomListTableViewController.swift */; };
 		755DEEBB1F444B80006BD444 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEEBA1F444B80006BD444 /* DataCenter.swift */; };
 		75724C2C1F4FAE7E00738F59 /* TintColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75724C2B1F4FAE7E00738F59 /* TintColorViewController.swift */; };
+		75A1D1521F53A4380033E06C /* EquipmentsDefault.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A1D1511F53A4380033E06C /* EquipmentsDefault.plist */; };
+		75A1D1541F53B6690033E06C /* EquipmentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1D1531F53B6690033E06C /* EquipmentsListViewController.swift */; };
+		75A1D1581F5401700033E06C /* EquipmentsPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A1D1571F5401700033E06C /* EquipmentsPlist.plist */; };
 		75E4CF4B1F45240D008F9980 /* BranchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E4CF4A1F45240D008F9980 /* BranchListViewController.swift */; };
 		75E4CF4D1F45241C008F9980 /* ServiceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E4CF4C1F45241C008F9980 /* ServiceListViewController.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +64,9 @@
 		755DEE7E1F43D000006BD444 /* MeetingRoomListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingRoomListTableViewController.swift; sourceTree = "<group>"; };
 		755DEEBA1F444B80006BD444 /* DataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
 		75724C2B1F4FAE7E00738F59 /* TintColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintColorViewController.swift; sourceTree = "<group>"; };
+		75A1D1511F53A4380033E06C /* EquipmentsDefault.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EquipmentsDefault.plist; sourceTree = "<group>"; };
+		75A1D1531F53B6690033E06C /* EquipmentsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentsListViewController.swift; sourceTree = "<group>"; };
+		75A1D1571F5401700033E06C /* EquipmentsPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = EquipmentsPlist.plist; path = ../EquipmentsPlist.plist; sourceTree = "<group>"; };
 		75E4CF4A1F45240D008F9980 /* BranchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchListViewController.swift; sourceTree = "<group>"; };
 		75E4CF4C1F45241C008F9980 /* ServiceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +128,9 @@
 				755DEE501F43CFA0006BD444 /* AppDelegate.swift */,
 				755DEE521F43CFA0006BD444 /* ViewController.swift */,
 				755DEE541F43CFA0006BD444 /* Main.storyboard */,
+				75A1D1511F53A4380033E06C /* EquipmentsDefault.plist */,
+				75A1D1571F5401700033E06C /* EquipmentsPlist.plist */,
+				75A1D1531F53B6690033E06C /* EquipmentsListViewController.swift */,
 				755DEEBA1F444B80006BD444 /* DataCenter.swift */,
 				755DEE7E1F43D000006BD444 /* MeetingRoomListTableViewController.swift */,
 				755DEE571F43CFA0006BD444 /* Assets.xcassets */,
@@ -260,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				755DEE5B1F43CFA0006BD444 /* LaunchScreen.storyboard in Resources */,
+				75A1D1521F53A4380033E06C /* EquipmentsDefault.plist in Resources */,
 				755DEE581F43CFA0006BD444 /* Assets.xcassets in Resources */,
+				75A1D1581F5401700033E06C /* EquipmentsPlist.plist in Resources */,
 				755DEE561F43CFA0006BD444 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +300,7 @@
 				753400CF1F4D979900C22C78 /* RoomInfoViewController.swift in Sources */,
 				755DEE531F43CFA0006BD444 /* ViewController.swift in Sources */,
 				755DEE7F1F43D000006BD444 /* MeetingRoomListTableViewController.swift in Sources */,
+				75A1D1541F53B6690033E06C /* EquipmentsListViewController.swift in Sources */,
 				751612A61F4E617D00677C44 /* ReservationListViewController.swift in Sources */,
 				755DEEBB1F444B80006BD444 /* DataCenter.swift in Sources */,
 				75E4CF4B1F45240D008F9980 /* BranchListViewController.swift in Sources */,

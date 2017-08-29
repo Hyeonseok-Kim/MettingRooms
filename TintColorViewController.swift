@@ -18,7 +18,7 @@ func UIColorFromRGB(rgbValue: UInt) -> UIColor {
 }
 
 enum TintColor:Int {
-    case Blue = 0, Red, Green, Purple, Brawn, Basic
+    case Blue = 0, Red, Green, Purple, GoldBar
     
     var color:UIColor { get{
         switch self {
@@ -30,10 +30,8 @@ enum TintColor:Int {
             return UIColorFromRGB(rgbValue: 0x00BB10) //global set color
         case .Purple:
             return UIColorFromRGB(rgbValue: 0xBD63F9) //global set color
-        case .Brawn:
-            return UIColorFromRGB(rgbValue: 0xD18C22) //global set color
-        case .Basic:
-            return UIColorFromRGB(rgbValue: 0x057AFF) //global set color
+        case .GoldBar:
+            return UIColorFromRGB(rgbValue: 0xD9C317) //global set color
         }}
     }
 }
