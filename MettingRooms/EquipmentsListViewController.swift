@@ -75,76 +75,85 @@ class EquipmentsListViewController: UITableViewController {
         // to be come switch changed
         
         let name = equipment["name"] as? String ?? ""
+        cell.textLabel?.text = name
+        
+        guard let amount = equipment["amount"] as? Int else{
+            return cell
+        }
+        
+        cell.detailTextLabel?.text = String(amount) + "원"
         
 //        if let name = equipment["name"] as? String {
-            cell.textLabel?.text = name
+//          cell.textLabel?.text = name
 //        }
         
-        if let amount = equipment["amount"] as? Int {
-            cell.detailTextLabel?.text = String(amount)
-        }
-        
-        
-        /*
-        if let late = equipment["Late"] as? String {
-            cell.textLabel?.text = late
-        }
-        
-        if let display = equipment["Display"] as? String {
-            cell.textLabel?.text = display
-        }
-        
-        if let defaultCore = equipment["Default core"] as? String {
-            cell.textLabel?.text = defaultCore
-        }
-        
-        if let turboBoost = equipment["Turbo Boost"] as? String {
-            cell.textLabel?.text = turboBoost
-        }
-        
-        if let defaultRam = equipment["Default ram"] as? String {
-            cell.textLabel?.text = defaultRam
-        }
-        
-        if let defaultStorage = equipment["Default storage"] as? Int {
-            cell.textLabel?.text = String(defaultStorage)
-        }
-        
-        if let defaultStorage = equipment["Default Storage(SSD)"] as? Int {
-            cell.textLabel?.text = String(defaultStorage)
-        }
-        
-        if let defaultStorage = equipment["Default storage(1TB Serial ATA)"] as? Int {
-            cell.textLabel?.text = String(defaultStorage)
-        }
-        
-        if let graphicCard = equipment["Graphic card"] as? String {
-            cell.textLabel?.text = graphicCard
-        }
-        
-        if let forceTouchTrackpad = equipment["Force touch trackpad"] as? Bool {
-            cell.textLabel?.text = String(forceTouchTrackpad)
-        }
-        
-        if let touchBar = equipment["Touchbar"] as? Bool {
-            cell.textLabel?.text = String(touchBar)
-        }
-        
-        if let touchId = equipment["TouchID"] as? Bool {
-            cell.textLabel?.text = String(touchId)
-        }
-        
-        if let port = equipment["Port"] as? String {
-            cell.textLabel?.text = port
-        }
-        
-        if let earJack = equipment["3.5pi earjack"] as? Bool {
-            cell.textLabel?.text = String(earJack)
-        }
-        */
+//        if let amount = equipment["amount"] as? Int {
+//            cell.detailTextLabel?.text = String(amount)
+//        }
+//        
+//        
+//        if let late = equipment["Late"] as? String {
+//            cell.textLabel?.text = late
+//        }
+//        
+//        if let display = equipment["Display"] as? String {
+//            cell.textLabel?.text = display
+//        }
+//        
+//        if let defaultCore = equipment["Default core"] as? String {
+//            cell.textLabel?.text = defaultCore
+//        }
+//        
+//        if let turboBoost = equipment["Turbo Boost"] as? String {
+//            cell.textLabel?.text = turboBoost
+//        }
+//        
+//        if let defaultRam = equipment["Default ram"] as? String {
+//            cell.textLabel?.text = defaultRam
+//        }
+//        
+//        if let defaultStorage = equipment["Default storage"] as? Int {
+//            cell.textLabel?.text = String(defaultStorage)
+//        }
+//        
+//        if let defaultStorage = equipment["Default Storage(SSD)"] as? Int {
+//            cell.textLabel?.text = String(defaultStorage)
+//        }
+//        
+//        if let defaultStorage = equipment["Default storage(1TB Serial ATA)"] as? Int {
+//            cell.textLabel?.text = String(defaultStorage)
+//        }
+//        
+//        if let graphicCard = equipment["Graphic card"] as? String {
+//            cell.textLabel?.text = graphicCard
+//        }
+//        
+//        if let forceTouchTrackpad = equipment["Force touch trackpad"] as? Bool {
+//            cell.textLabel?.text = String(forceTouchTrackpad)
+//        }
+//        
+//        if let touchBar = equipment["Touchbar"] as? Bool {
+//            cell.textLabel?.text = String(touchBar)
+//        }
+//        
+//        if let touchId = equipment["TouchID"] as? Bool {
+//            cell.textLabel?.text = String(touchId)
+//        }
+//        
+//        if let port = equipment["Port"] as? String {
+//            cell.textLabel?.text = port
+//        }
+//        
+//        if let earJack = equipment["3.5pi earjack"] as? Bool {
+//            cell.textLabel?.text = String(earJack)
+//        }
+//        
         return cell
     }
     
+    @IBAction func unwind(to unwindSegue: UIStoryboardSegue, EquipmentsList subsequentVC: UITableViewController) {
+        print("unwind")
+    }
 
     /*
     // Override to support conditional editing of the table view.
