@@ -62,9 +62,9 @@ class EquipmentApplicationListViewController: UITableViewController {
             return cell
         }
         
-//        if let name = equipment["name"] as? String {
-//            cell.textLabel?.text = name
-//        }
+        if let name = equipmentSection["Name"] as? String {
+            cell.textLabel?.text = name
+        }
         
         if let amount = equipmentSection["Amount"] as? Int {
             cell.detailTextLabel?.text = String(amount)
