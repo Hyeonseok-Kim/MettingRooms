@@ -19,6 +19,7 @@
 		755DEE711F43CFA0006BD444 /* MettingRoomsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEE701F43CFA0006BD444 /* MettingRoomsUITests.swift */; };
 		755DEE7F1F43D000006BD444 /* MeetingRoomListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEE7E1F43D000006BD444 /* MeetingRoomListTableViewController.swift */; };
 		755DEEBB1F444B80006BD444 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEEBA1F444B80006BD444 /* DataCenter.swift */; };
+		7571D6371F58F8AB0033EC8F /* EquipmentApplicationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571D6361F58F8AB0033EC8F /* EquipmentApplicationListViewController.swift */; };
 		75724C2C1F4FAE7E00738F59 /* TintColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75724C2B1F4FAE7E00738F59 /* TintColorViewController.swift */; };
 		75A1D1521F53A4380033E06C /* EquipmentsDefault.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A1D1511F53A4380033E06C /* EquipmentsDefault.plist */; };
 		75A1D1541F53B6690033E06C /* EquipmentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1D1531F53B6690033E06C /* EquipmentsListViewController.swift */; };
@@ -63,6 +64,7 @@
 		755DEE721F43CFA0006BD444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		755DEE7E1F43D000006BD444 /* MeetingRoomListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingRoomListTableViewController.swift; sourceTree = "<group>"; };
 		755DEEBA1F444B80006BD444 /* DataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
+		7571D6361F58F8AB0033EC8F /* EquipmentApplicationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentApplicationListViewController.swift; sourceTree = "<group>"; };
 		75724C2B1F4FAE7E00738F59 /* TintColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintColorViewController.swift; sourceTree = "<group>"; };
 		75A1D1511F53A4380033E06C /* EquipmentsDefault.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EquipmentsDefault.plist; sourceTree = "<group>"; };
 		75A1D1531F53B6690033E06C /* EquipmentsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentsListViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		755DEE441F43CFA0006BD444 = {
 			isa = PBXGroup;
 			children = (
+				7571D6361F58F8AB0033EC8F /* EquipmentApplicationListViewController.swift */,
 				75724C2B1F4FAE7E00738F59 /* TintColorViewController.swift */,
 				751612A51F4E617D00677C44 /* ReservationListViewController.swift */,
 				751612A71F4E619700677C44 /* ReserveRoomViewController.swift */,
@@ -303,6 +306,7 @@
 				75A1D1541F53B6690033E06C /* EquipmentsListViewController.swift in Sources */,
 				751612A61F4E617D00677C44 /* ReservationListViewController.swift in Sources */,
 				755DEEBB1F444B80006BD444 /* DataCenter.swift in Sources */,
+				7571D6371F58F8AB0033EC8F /* EquipmentApplicationListViewController.swift in Sources */,
 				75E4CF4B1F45240D008F9980 /* BranchListViewController.swift in Sources */,
 				75E4CF4D1F45241C008F9980 /* ServiceListViewController.swift in Sources */,
 				755DEE511F43CFA0006BD444 /* AppDelegate.swift in Sources */,

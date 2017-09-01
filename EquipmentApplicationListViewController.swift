@@ -1,17 +1,17 @@
 //
-//  EquipmentsListViewController.swift
+//  EquipmentApplicationListViewController.swift
 //  MettingRooms
 //
-//  Created by 김현석 on 2017. 8. 28..
+//  Created by 김현석 on 2017. 9. 1..
 //  Copyright © 2017년 Kimhyeonseok. All rights reserved.
 //
 
 import UIKit
-let equipmentFileName = "EquipmentsPlist"
+let equipmentThisFile = "EquipmentsDefault"
 
-class EquipmentsListViewController: UITableViewController {
+class EquipmentApplicationListViewController: UITableViewController {
 
-    var equipments:Array<AnyObject> = []
+    var equipmentsApply:Array<AnyObject> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,27 +22,16 @@ class EquipmentsListViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        
-        guard let equipmentURL = Bundle.main.url(forResource: equipmentFileName, withExtension: "plist") else{
+        guard let equipmentApplyURL = Bundle.main.url(forResource: equipmentFileName, withExtension: "plist") else{
             print("No File")
             return
         }
-        /*
-        if let equipmentURL = Bundle.main.url(forResource: equipmentFileName, withExtension: "plist") {
-            do{
-                let data = try Data(contentsOf: equipmentURL)
-                let swiftDictionary = try PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [String:Any]
-            } catch {
-                print(error)
-            }
-        }*/
         
-        if let equipmentArray = NSArray(contentsOf: equipmentURL) {
-            print(equipmentArray)
+        if let equipmentArray = NSArray(contentsOf: equipmentApplyURL) {
+            print(equipmentsApply)
             
-            equipments = equipments + (equipmentArray as Array<AnyObject>)
+            equipmentsApply = equipmentsApply + (equipmentArray as Array<AnyObject>)
         }
-        
         
     }
 
@@ -60,35 +49,86 @@ class EquipmentsListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return equipments.count
+        return equipmentsApply.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EquipmentCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "equipmentDetails", for: indexPath)
 
         // Configure the cell...
-        
-        guard let equipment = equipments[indexPath.row] as? [String:AnyObject] else {
-            return cell
-        }
-        // to be come switch changed
-        
-        let name = equipment["name"] as? String ?? ""
-        cell.textLabel?.text = name
-        
-        guard let amount = equipment["amount"] as? Int else{
-            return cell
-        }
-        
-        cell.detailTextLabel?.text = String(amount) + "원"
 
+        guard let equipmentSection = equipmentsApply[indexPath.row] as? [String:AnyObject] else {
+            return cell
+        }
+        
+//        if let name = equipment["name"] as? String {
+//            cell.textLabel?.text = name
+//        }
+        
+        if let amount = equipmentSection["Amount"] as? Int {
+            cell.detailTextLabel?.text = String(amount)
+        }
+
+        if let late = equipmentSection["Late"] as? String {
+            cell.textLabel?.text = late
+        }
+        if let display = equipmentSection["Display"] as? String {
+            cell.textLabel?.text = display
+        }
+        
+        if let defaultCore = equipmentSection["Default core"] as? String {
+            cell.textLabel?.text = defaultCore
+        }
+        
+        if let turboBoost = equipmentSection["Turbo Boost"] as? String {
+            cell.textLabel?.text = turboBoost
+        }
+        
+        if let defaultRam = equipmentSection["Default ram"] as? String {
+            cell.textLabel?.text = defaultRam
+        }
+        
+        if let defaultStorage = equipmentSection["Default storage"] as? Int {
+            cell.textLabel?.text = String(defaultStorage)
+        }
+        
+        if let defaultStorage = equipmentSection["Default Storage(SSD)"] as? Int {
+            cell.textLabel?.text = String(defaultStorage)
+        }
+        
+        if let defaultStorage = equipmentSection["Default storage(1TB Serial ATA)"] as? Int {
+            cell.textLabel?.text = String(defaultStorage)
+        }
+        
+        if let graphicCard = equipmentSection["Graphic card"] as? String {
+            cell.textLabel?.text = graphicCard
+        }
+        
+        if let forceTouchTrackpad = equipmentSection["Force touch trackpad"] as? Bool {
+            cell.textLabel?.text = String(forceTouchTrackpad)
+        }
+        
+        if let touchBar = equipmentSection["Touchbar"] as? Bool {
+            cell.textLabel?.text = String(touchBar)
+        }
+        
+        if let touchId = equipmentSection["TouchID"] as? Bool {
+            cell.textLabel?.text = String(touchId)
+        }
+                
+        if let port = equipmentSection["Port"] as? String {
+            cell.textLabel?.text = port
+        }
+                
+        if let earJack = equipmentSection["3.5pi earjack"] as? Bool {
+            cell.textLabel?.text = String(earJack)
+        }
+        
         return cell
+        
     }
     
-    @IBAction func unwind(to unwindSegue: UIStoryboardSegue, EquipmentsList subsequentVC: UITableViewController) {
-        print("unwind")
-    }
 
     /*
     // Override to support conditional editing of the table view.
