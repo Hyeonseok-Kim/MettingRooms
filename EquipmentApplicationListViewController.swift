@@ -7,11 +7,10 @@
 //
 
 import UIKit
-let equipmentThisFile = "EquipmentsDefault"
+
 
 class EquipmentApplicationListViewController: UITableViewController {
 
-    var equipmentsApply:Array<AnyObject> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +21,6 @@ class EquipmentApplicationListViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        guard let equipmentApplyURL = Bundle.main.url(forResource: equipmentFileName, withExtension: "plist") else{
-            print("No File")
-            return
-        }
-        
-        if let equipmentArray = NSArray(contentsOf: equipmentApplyURL) {
-            print(equipmentsApply)
-            
-            equipmentsApply = equipmentsApply + (equipmentArray as Array<AnyObject>)
-        }
         
     }
 
@@ -44,86 +33,20 @@ class EquipmentApplicationListViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return equipmentsApply.count
+        return 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "equipmentDetails", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "resue", for: indexPath)
 
         // Configure the cell...
 
-        guard let equipmentSection = equipmentsApply[indexPath.row] as? [String:AnyObject] else {
-            return cell
-        }
-        
-        if let name = equipmentSection["Name"] as? String {
-            cell.textLabel?.text = name
-        }
-        
-        if let amount = equipmentSection["Amount"] as? Int {
-            cell.detailTextLabel?.text = String(amount)
-        }
-
-        if let late = equipmentSection["Late"] as? String {
-            cell.textLabel?.text = late
-        }
-        if let display = equipmentSection["Display"] as? String {
-            cell.textLabel?.text = display
-        }
-        
-        if let defaultCore = equipmentSection["Default core"] as? String {
-            cell.textLabel?.text = defaultCore
-        }
-        
-        if let turboBoost = equipmentSection["Turbo Boost"] as? String {
-            cell.textLabel?.text = turboBoost
-        }
-        
-        if let defaultRam = equipmentSection["Default ram"] as? String {
-            cell.textLabel?.text = defaultRam
-        }
-        
-        if let defaultStorage = equipmentSection["Default storage"] as? Int {
-            cell.textLabel?.text = String(defaultStorage)
-        }
-        
-        if let defaultStorage = equipmentSection["Default Storage(SSD)"] as? Int {
-            cell.textLabel?.text = String(defaultStorage)
-        }
-        
-        if let defaultStorage = equipmentSection["Default storage(1TB Serial ATA)"] as? Int {
-            cell.textLabel?.text = String(defaultStorage)
-        }
-        
-        if let graphicCard = equipmentSection["Graphic card"] as? String {
-            cell.textLabel?.text = graphicCard
-        }
-        
-        if let forceTouchTrackpad = equipmentSection["Force touch trackpad"] as? Bool {
-            cell.textLabel?.text = String(forceTouchTrackpad)
-        }
-        
-        if let touchBar = equipmentSection["Touchbar"] as? Bool {
-            cell.textLabel?.text = String(touchBar)
-        }
-        
-        if let touchId = equipmentSection["TouchID"] as? Bool {
-            cell.textLabel?.text = String(touchId)
-        }
-                
-        if let port = equipmentSection["Port"] as? String {
-            cell.textLabel?.text = port
-        }
-                
-        if let earJack = equipmentSection["3.5pi earjack"] as? Bool {
-            cell.textLabel?.text = String(earJack)
-        }
         
         return cell
         

@@ -17,8 +17,8 @@
 		<string>최대 4.2GHz</string>
 		<key>Default ram</key>
 		<string>8GB 2400MHz 최대 32GB</string>
-		<key>Default storage(1TB Fusion)</key>
-		<integer>2</integer>
+		<key>Default storage</key>
+		<string>Fusion 2TB</string>
 		<key>Graphic card</key>
 		<string>Radeon Pro 580 8GB</string>
 		<key>Port</key>
@@ -41,8 +41,8 @@
 		<string>최대 4.1GHz</string>
 		<key>Default ram</key>
 		<string>8GB 2400MHz 최대 32GB</string>
-		<key>Default storage(1TB Fusion)</key>
-		<integer>1</integer>
+		<key>Default storage</key>
+		<string>Fusion 1TB</string>
 		<key>Graphic card</key>
 		<string>Radeon Pro 575 4GB</string>
 		<key>Port</key>
@@ -65,8 +65,8 @@
 		<string>최대 3.8GHz</string>
 		<key>Default ram</key>
 		<string>8GB 2400MHz 최대 32GB</string>
-		<key>Default storage(1TB Fusion)</key>
-		<integer>1</integer>
+		<key>Default storage</key>
+		<string>Fusion 1TB</string>
 		<key>Graphic card</key>
 		<string>Radeon Pro 570 4GB</string>
 		<key>Port</key>
@@ -89,8 +89,8 @@
 		<string>최대 3.8GHz</string>
 		<key>Default ram</key>
 		<string>8GB 2400MHz 최대 32GB</string>
-		<key>Default storage(1TB Fusion)</key>
-		<integer>1</integer>
+		<key>Default storage</key>
+		<string>Fusion 1TB</string>
 		<key>Graphic card</key>
 		<string>Radeon Pro 560 4GB</string>
 		<key>Port</key>
@@ -113,8 +113,8 @@
 		<string>최대 3.5GHz</string>
 		<key>Default ram</key>
 		<string>8GB 2400MHz 최대 16GB</string>
-		<key>Default storage(1TB Serial ATA)</key>
-		<integer>1</integer>
+		<key>Default storage</key>
+		<string>Serial ATA 1TB</string>
 		<key>Graphic card</key>
 		<string>Radeon Pro 555 2GB</string>
 		<key>Port</key>
@@ -137,8 +137,8 @@
 		<string>최대 3.6GHz</string>
 		<key>Default ram</key>
 		<string>8GB 2133MHz 최대 16GB</string>
-		<key>Default storage(1TB Serial ATA)</key>
-		<integer>1</integer>
+		<key>Default storage</key>
+		<string>Serial ATA 1TB</string>
 		<key>Graphic card</key>
 		<string>Intel Iris Plus Graphic 640</string>
 		<key>Port</key>
@@ -161,8 +161,8 @@
 		<string>최대 3.9GHz</string>
 		<key>Default ram</key>
 		<string>16GB 2133MHz LPDDR3</string>
-		<key>Default storage(SSD)</key>
-		<integer>512</integer>
+		<key>Default storage</key>
+		<string>SSD 512GB</string>
 		<key>Graphic card</key>
 		<string>Radeon Pro 560 4GB</string>
 		<key>Force touch trackpad</key>
@@ -191,8 +191,8 @@
 		<string>최대 3.8GHz</string>
 		<key>Default ram</key>
 		<string>16GB 2133MHz LPDDR3</string>
-		<key>Default storage(SSD)</key>
-		<integer>256</integer>
+		<key>Default storage</key>
+		<string>SSD 256GB</string>
 		<key>Graphic card</key>
 		<string>Radeon Pro 555 2GB</string>
 		<key>Force touch trackpad</key>
@@ -221,8 +221,8 @@
 		<string>최대 3.5GHz</string>
 		<key>Default ram</key>
 		<string>8GB 2133MHz LPDDR3</string>
-		<key>Default storage(SSD)</key>
-		<integer>512</integer>
+		<key>Default storage</key>
+		<string>SSD 512GB</string>
 		<key>Graphic card</key>
 		<string>Intel Iris Plus Graphics 650</string>
 		<key>Force touch trackpad</key>
@@ -251,8 +251,8 @@
 		<string>최대 3.5GHz</string>
 		<key>Default ram</key>
 		<string>8GB 2133MHz LPDDR3</string>
-		<key>Default storage(SSD)</key>
-		<integer>256</integer>
+		<key>Default storage</key>
+		<string>SSD 256GB</string>
 		<key>Graphic card</key>
 		<string>Intel Iris Plus Graphics 650</string>
 		<key>Force touch trackpad</key>
@@ -281,8 +281,8 @@
 		<string>최대 3.6GHz</string>
 		<key>Default ram</key>
 		<string>8GB 2133MHz LPDDR3</string>
-		<key>Default storage(SSD)</key>
-		<integer>256</integer>
+		<key>Default storage</key>
+		<string>SSD 256GB</string>
 		<key>Graphic card</key>
 		<string>Intel Iris Plus Graphics 640</string>
 		<key>Force touch trackpad</key>
@@ -309,8 +309,8 @@
 		<string>최대 3.6GHz</string>
 		<key>Default ram</key>
 		<string>8GB 2133MHz LPDDR3</string>
-		<key>Default storage(SSD)</key>
-		<integer>128</integer>
+		<key>Default storage</key>
+		<string>SSD 128GB</string>
 		<key>Graphic card</key>
 		<string>Intel Iris Plus Graphics 640</string>
 		<key>Force touch trackpad</key>
@@ -338,7 +338,7 @@
 		<key>Default ram</key>
 		<string>8GB 1600MHz LPDDR3</string>
 		<key>Default storage</key>
-		<integer>256</integer>
+		<string>256GB</string>
 		<key>Graphic card</key>
 		<string>Intel HD Graphics 6000</string>
 		<key>Force touch trackpad</key>
@@ -364,7 +364,7 @@
 		<key>Default ram</key>
 		<string>8GB 1600MHz LPDDR3</string>
 		<key>Default storage</key>
-		<integer>128</integer>
+		<string>128GB</string>
 		<key>Graphic card</key>
 		<string>Intel HD Graphics 6000</string>
 		<key>Force touch trackpad</key>
@@ -389,8 +389,8 @@
 		<string>최대 3.0GHz</string>
 		<key>Default ram</key>
 		<string>8GB 1866MHz LPDDR3</string>
-		<key>Default storage(SSD)</key>
-		<integer>512</integer>
+		<key>Default storage</key>
+		<string>SSD 512GB</string>
 		<key>Graphic card</key>
 		<string>Intel HD Graphics 615</string>
 		<key>Force touch trackpad</key>
@@ -415,8 +415,8 @@
 		<string>최대 3.2GHz</string>
 		<key>Default ram</key>
 		<string>8GB 1866MHz LPDDR3</string>
-		<key>Default storage(SSD)</key>
-		<integer>256</integer>
+		<key>Default storage</key>
+		<string>SSD 256GB</string>
 		<key>Graphic card</key>
 		<string>Intel HD Graphics 615</string>
 		<key>Force touch trackpad</key>
