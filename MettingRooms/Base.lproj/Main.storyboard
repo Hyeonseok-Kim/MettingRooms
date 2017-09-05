@@ -1171,7 +1171,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="YFM-Zh-3DL" kind="presentation" trigger="accessoryAction" id="Agx-Ip-O2i"/>
-                                    <segue destination="Qxe-3O-CPX" kind="show" id="iGE-mW-e9W"/>
+                                    <segue destination="Qxe-3O-CPX" kind="show" identifier="OptionEquipmentsVC" id="iGE-mW-e9W"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

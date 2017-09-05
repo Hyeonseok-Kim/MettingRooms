@@ -12,6 +12,7 @@ let equipmentFileName = "EquipmentsPlist"
 class EquipmentsListViewController: UITableViewController {
 
     var equipments:Array<AnyObject> = []
+    var selectedEQ:String? = "" //name form temp
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,10 +87,17 @@ class EquipmentsListViewController: UITableViewController {
         return cell
     }
     
+    
+    
     @IBAction func unwind(to unwindSegue: UIStoryboardSegue, EquipmentsList subsequentVC: UITableViewController) {
         print("unwind")
     }
-
+    
+    @IBAction func loadThirdScreenPressend(_ sender: AnyObject) {
+        performSegue(withIdentifier: "OptionEquipmentsVC", sender: selectedEQ)
+        print("\(String(describing: self.selectedEQ))")
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -125,14 +133,42 @@ class EquipmentsListViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+//        if segue.identifier == "OptionEquipmentsVC" {
+//            if let selectedC = self.tableView.indexPathForSelectedRow {
+//                let destinationController = OptionEquipmentsVC.destination as OptionEquipmentsViewController
+//                destinationController.indexPath.row = self.name[indexPath.row]
+//            }
+//        }
     }
-    */
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
