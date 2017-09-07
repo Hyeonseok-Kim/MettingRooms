@@ -85,6 +85,8 @@ class EquipmentsListViewController: UITableViewController {
             return cell
         }
         
+        selectedEQValue = amount
+        
         cell.detailTextLabel?.text = String(amount) + "원"
 
         return cell
@@ -162,7 +164,12 @@ class EquipmentsListViewController: UITableViewController {
         print("\(String(describing: selectedEQName!))")
         print(selectedEQValue!)
     }
-
+    
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        <#code#>
+    }
+    
+    
 }
 
 

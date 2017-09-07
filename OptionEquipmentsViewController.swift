@@ -67,9 +67,9 @@ class OptionEquipmentsViewController: UITableViewController {
             nameCell.textLabel?.text = name
         }
         
-        //        if let amount = equipmentSection["Amount"] as? Int {
-        //            cell.detailTextLabel?.text = String(amount)
-        //        }
+        if let amount = equipmentSection["Amount"] as? Int {
+            nameCell.detailTextLabel?.text = String(amount)
+        }
         //
         //        if let late = equipmentSection["Late"] as? String {
         //            cell.textLabel?.text = late
