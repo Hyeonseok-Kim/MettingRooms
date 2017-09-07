@@ -166,7 +166,8 @@ class EquipmentsListViewController: UITableViewController {
     }
     
     override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        <#code#>
+        let destinationAmountValueTemp = segue.destination as! OptionEquipmentsViewController
+        destinationAmountValueTemp.equipmentsOutsideValue = selectedEQValue!
     }
     
     
