@@ -10,8 +10,10 @@ import UIKit
 let equipmentThisFile = "EquipmentsDefault"
 
 class OptionEquipmentsViewController: UITableViewController {
-
+    
     var equipmentsApply:Array<AnyObject> = []
+    var equipmentsOutside:String = ""
+    var equipmentsOutsideValue:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +24,13 @@ class OptionEquipmentsViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         guard let equipmentApplyURL = Bundle.main.url(forResource: equipmentThisFile, withExtension: "plist") else{
-            print("No File")
+//            print("No File")
             return
         }
         
         if let equipmentArray = NSArray(contentsOf: equipmentApplyURL) {
-            print(equipmentsApply)
-            
             equipmentsApply = equipmentsApply + (equipmentArray as Array<AnyObject>)
+//            print("plist 데이터 : \(equipmentsApply)") //test
         }
 
     }

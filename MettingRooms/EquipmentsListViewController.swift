@@ -12,7 +12,8 @@ let equipmentFileName = "EquipmentsPlist"
 class EquipmentsListViewController: UITableViewController {
 
     var equipments:Array<AnyObject> = []
-    var selectedEQ:String? = "" //name form temp
+    var selectedEQName:String? = "" //name form temp
+    var selectedEQValue:Int? = 0 //Amount form temp
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +79,8 @@ class EquipmentsListViewController: UITableViewController {
         let name = equipment["name"] as? String ?? ""
         cell.textLabel?.text = name
         
+        selectedEQName = name
+        
         guard let amount = equipment["amount"] as? Int else{
             return cell
         }
@@ -94,8 +97,10 @@ class EquipmentsListViewController: UITableViewController {
     }
     
     @IBAction func loadThirdScreenPressend(_ sender: AnyObject) {
-        performSegue(withIdentifier: "OptionEquipmentsVC", sender: selectedEQ)
-        print("\(String(describing: self.selectedEQ))")
+        performSegue(withIdentifier: "OptionEquipmentsVC", sender: selectedEQName)
+        print("\(String(describing: self.selectedEQName))")
+        performSegue(withIdentifier: "OptionEquipmentsVC", sender: selectedEQValue)
+        print("\(String(describing: self.selectedEQValue))")
     }
     
     /*
@@ -147,6 +152,15 @@ class EquipmentsListViewController: UITableViewController {
 //                destinationController.indexPath.row = self.name[indexPath.row]
 //            }
 //        }
+        
+        let destinationName = segue.destination as! OptionEquipmentsViewController
+        destinationName.equipmentsOutside = selectedEQName!
+        
+        let destinationAmount = segue.destination as! OptionEquipmentsViewController
+        destinationAmount.equipmentsOutsideValue = selectedEQValue!
+        
+        print("\(String(describing: selectedEQName!))")
+        print(selectedEQValue!)
     }
 
 }
