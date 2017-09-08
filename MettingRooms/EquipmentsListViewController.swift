@@ -85,10 +85,18 @@ class EquipmentsListViewController: UITableViewController {
             return cell
         }
         
-        selectedEQValue = amount
+        let selectedIndex = self.tableView.indexPathForSelectedRow
+        
+        guard let cellValue:String = self.tableView.cellForRow(at: selectedIndex!)?.textLabel?.text else {
+            return cell
+        }//fatalError
+        
+        selectedEQValue = Int(cellValue)
+        
+        print("cellValue\(selectedEQValue!)")
         
         cell.detailTextLabel?.text = String(amount) + "원"
-
+        
         return cell
     }
     
@@ -165,11 +173,10 @@ class EquipmentsListViewController: UITableViewController {
         print(selectedEQValue!)
     }
     
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        let destinationAmountValueTemp = segue.destination as! OptionEquipmentsViewController
-        destinationAmountValueTemp.equipmentsOutsideValue = selectedEQValue!
-    }
-    
+//    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+//        let destinationAmountValueTemp = segue.destination as! OptionEquipmentsViewController
+//        destinationAmountValueTemp.equipmentsOutsideValue = selectedEQValue!
+//    }
     
 }
 
