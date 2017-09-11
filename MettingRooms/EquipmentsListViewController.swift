@@ -85,15 +85,11 @@ class EquipmentsListViewController: UITableViewController {
             return cell
         }
         
-        let selectedIndex = self.tableView.indexPathForSelectedRow
+        //temp let
         
-        guard let cellValue:String = self.tableView.cellForRow(at: selectedIndex!)?.textLabel?.text else {
-            return cell
-        }//fatalError
-        
-        selectedEQValue = Int(cellValue)
-        
+        selectedEQValue = amount
         print("cellValue\(selectedEQValue!)")
+        
         
         cell.detailTextLabel?.text = String(amount) + "원"
         
