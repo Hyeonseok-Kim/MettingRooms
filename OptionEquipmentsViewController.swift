@@ -12,7 +12,7 @@ let equipmentThisFile = "EquipmentsDefault"
 class OptionEquipmentsViewController: UITableViewController {
     
     var equipmentsApply:Array<AnyObject> = []
-    var equipmentsOutside:String = ""
+    var equipmentsOutsideName:String = ""
     var equipmentsOutsideValue:Int = 0
     
     override func viewDidLoad() {

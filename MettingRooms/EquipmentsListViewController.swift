@@ -14,6 +14,7 @@ class EquipmentsListViewController: UITableViewController {
     var equipments:Array<AnyObject> = []
     var selectedEQName:String? = "" //name form temp
     var selectedEQValue:Int? = 0 //Amount form temp
+//    var submitValue:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,9 +86,7 @@ class EquipmentsListViewController: UITableViewController {
             return cell
         }
         
-        //temp let
-        
-        selectedEQValue = amount
+        selectedEQValue = amount //submitValue = selectedRowDetailLabelTextAmount
         print("cellValue\(selectedEQValue!)")
         
         
@@ -153,27 +152,43 @@ class EquipmentsListViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         
 //        if segue.identifier == "OptionEquipmentsVC" {
-//            if let selectedC = self.tableView.indexPathForSelectedRow {
-//                let destinationController = OptionEquipmentsVC.destination as OptionEquipmentsViewController
-//                destinationController.indexPath.row = self.name[indexPath.row]
+//            if let indexPath = self.tableView.indexPathForSelectedRow {
+//                let destinationVC = segue.destination as! EquipmentsListViewController
+//                destinationVC.selectedEQValue = self.equipments[indexPath.row] as? Int
 //            }
 //        }
         
+        if segue.identifier == "OptionEquipmentsVC"{
+//            if let indexPath = self.tableView.indexPathForSelectedRow {
+//                let destinationVC = segue.destination as! OptionEquipmentsViewController
+//                destinationVC.equipmentsOutsideName = (selectedEQName)!
+//            }
+            
+            let destinationVC = segue.destination as! OptionEquipmentsViewController
+            let indexPath = sender as! IndexPath
+            destinationVC.equipmentsOutsideName = self.selectedEQValue[indexPath.row]
+        }
+        
+        
         let destinationName = segue.destination as! OptionEquipmentsViewController
-        destinationName.equipmentsOutside = selectedEQName!
+        destinationName.equipmentsOutsideName = selectedEQName!
         
         let destinationAmount = segue.destination as! OptionEquipmentsViewController
         destinationAmount.equipmentsOutsideValue = selectedEQValue!
         
         print("\(String(describing: selectedEQName!))")
         print(selectedEQValue!)
+        
     }
     
 //    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-//        let destinationAmountValueTemp = segue.destination as! OptionEquipmentsViewController
-//        destinationAmountValueTemp.equipmentsOutsideValue = selectedEQValue!
+//        if segue.identifier == "OptionEquipmentsVC" {
+//            if let indexPath = self.tableView.indexPathForSelectedRow {
+//                let destinationC = segue.destination as! EquipmentsListViewController
+//                destinationC.selectedEQValue = self.equipments[indexPath.row] as? Int
+//            }
+//        }
 //    }
-    
 }
 
 
