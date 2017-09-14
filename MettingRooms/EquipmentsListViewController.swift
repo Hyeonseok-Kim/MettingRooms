@@ -166,7 +166,7 @@ class EquipmentsListViewController: UITableViewController {
             
             let destinationVC = segue.destination as! OptionEquipmentsViewController
             let indexPath = sender as! IndexPath
-            destinationVC.equipmentsOutsideName = self.selectedEQValue[indexPath.row]
+            destinationVC.equipmentsOutsideName = selectedEQName!
         }
         
         
