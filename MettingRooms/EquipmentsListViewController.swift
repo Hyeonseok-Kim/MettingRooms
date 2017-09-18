@@ -143,32 +143,20 @@ class EquipmentsListViewController: UITableViewController {
     }
     */
 
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "OptionEquipmentsVC", sender: indexPath)
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        
-//        if segue.identifier == "OptionEquipmentsVC" {
-//            if let indexPath = self.tableView.indexPathForSelectedRow {
-//                let destinationVC = segue.destination as! EquipmentsListViewController
-//                destinationVC.selectedEQValue = self.equipments[indexPath.row] as? Int
-//            }
-//        }
         
         if segue.identifier == "OptionEquipmentsVC"{
-//            if let indexPath = self.tableView.indexPathForSelectedRow {
-//                let destinationVC = segue.destination as! OptionEquipmentsViewController
-//                destinationVC.equipmentsOutsideName = (selectedEQName)!
-//            }
             
             let destinationVC = segue.destination as! OptionEquipmentsViewController
-            let indexPath = sender as! IndexPath
+//            let indexPath = sender as! IndexPath
             destinationVC.equipmentsOutsideName = selectedEQName!
         }
-        
         
         let destinationName = segue.destination as! OptionEquipmentsViewController
         destinationName.equipmentsOutsideName = selectedEQName!
