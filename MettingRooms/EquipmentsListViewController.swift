@@ -80,14 +80,14 @@ class EquipmentsListViewController: UITableViewController {
         let name = equipment["name"] as? String ?? ""
         cell.textLabel?.text = name
         
-        selectedEQName = name
+//        selectedEQName = name
         
         guard let amount = equipment["amount"] as? Int else{
             return cell
         }
         
-        selectedEQValue = amount
-        print("cellValue\(selectedEQValue!)")
+//        selectedEQValue = amount
+//        print("cellValue\(selectedEQValue!)")
         
         
         cell.detailTextLabel?.text = String(amount) + "원"
@@ -99,6 +99,21 @@ class EquipmentsListViewController: UITableViewController {
     
     @IBAction func unwind(to unwindSegue: UIStoryboardSegue, EquipmentsList subsequentVC: UITableViewController) {
         print("unwind")
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { //didSelected
+        
+        //        performSegue(withIdentifier: "OptionEquipmentsVC", sender: indexPath)
+        
+        guard let equipment = equipments[indexPath.row] as? [String:AnyObject] else {
+            return
+        }
+        
+        print("index : \(indexPath.row)")
+        print("index items : \(equipments[indexPath.row])")
+        
+        selectedEQName = equipment["name"] as? String
+        selectedEQValue = equipment["amount"] as? Int
+        
     }
     
 //    @IBAction func loadThirdScreenPressend(_ sender: AnyObject) {
@@ -143,46 +158,28 @@ class EquipmentsListViewController: UITableViewController {
     }
     */
     // MARK: - Navigation
-
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { //didSelected
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-//        performSegue(withIdentifier: "OptionEquipmentsVC", sender: indexPath)
+        if segue.identifier == "OptionEquipmentsVC" && selectedEQValue != 0 {
+            
+            let destinationName = segue.destination as! OptionEquipmentsViewController
+            destinationName.equipmentsOutsideName = selectedEQName!
+            let destinationAmount = segue.destination as! OptionEquipmentsViewController
+            destinationAmount.equipmentsOutsideValue = selectedEQValue!
+
+        }
         
-        print(indexPath.row)
-        print("\(equipments[indexPath.row])")
     }
 
+    /*
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        print("preformSegue selectItems = \(selectedEQName!), \(selectedEQValue!)")
+    }
+    */
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation //   didSelectRowAt 이전 error발생 코드
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        if segue.identifier == "OptionEquipmentsVC"{
-//            
-//            let destinationVC = segue.destination as! OptionEquipmentsViewController
-////            let indexPath = sender as! IndexPath
-//            destinationVC.equipmentsOutsideName = selectedEQName!
-//        }
-//        
-////        let destinationName = segue.destination as! OptionEquipmentsViewController
-////        destinationName.equipmentsOutsideName = selectedEQName!
-////        
-////        let destinationAmount = segue.destination as! OptionEquipmentsViewController
-////        destinationAmount.equipmentsOutsideValue = selectedEQValue!
-//        
-//        print("\(String(describing: selectedEQName!))")
-//        print(selectedEQValue!)
-//        
-//    }
-    
-//    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-//        if segue.identifier == "OptionEquipmentsVC" {
-//            if let indexPath = self.tableView.indexPathForSelectedRow {
-//                let destinationC = segue.destination as! EquipmentsListViewController
-//                destinationC.selectedEQValue = self.equipments[indexPath.row] as? Int
-//            }
-//        }
-//    }
 }
 
 

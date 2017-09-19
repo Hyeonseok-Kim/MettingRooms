@@ -32,6 +32,12 @@ class OptionEquipmentsViewController: UITableViewController {
             equipmentsApply = equipmentsApply + (equipmentArray as Array<AnyObject>)
 //            print("plist 데이터 : \(equipmentsApply)") //test
         }
+        
+        if equipmentsOutsideValue != 0 {
+            print("prepareItems : \(equipmentsOutsideName), \(equipmentsOutsideValue)")
+        }else {
+            print("Notting..")
+        }
 
     }
 
