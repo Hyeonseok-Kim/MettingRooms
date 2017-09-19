@@ -86,7 +86,7 @@ class EquipmentsListViewController: UITableViewController {
             return cell
         }
         
-        selectedEQValue = amount //submitValue = selectedRowDetailLabelTextAmount
+        selectedEQValue = amount
         print("cellValue\(selectedEQValue!)")
         
         
@@ -95,18 +95,18 @@ class EquipmentsListViewController: UITableViewController {
         return cell
     }
     
-    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
     
     @IBAction func unwind(to unwindSegue: UIStoryboardSegue, EquipmentsList subsequentVC: UITableViewController) {
         print("unwind")
     }
     
-    @IBAction func loadThirdScreenPressend(_ sender: AnyObject) {
-        performSegue(withIdentifier: "OptionEquipmentsVC", sender: selectedEQName)
-        print("\(String(describing: self.selectedEQName))")
-        performSegue(withIdentifier: "OptionEquipmentsVC", sender: selectedEQValue)
-        print("\(String(describing: self.selectedEQValue))")
-    }
+//    @IBAction func loadThirdScreenPressend(_ sender: AnyObject) {
+//        performSegue(withIdentifier: "OptionEquipmentsVC", sender: selectedEQName)
+//        print("\(String(describing: self.selectedEQName))")
+//        performSegue(withIdentifier: "OptionEquipmentsVC", sender: selectedEQValue)
+//        print("\(String(describing: self.selectedEQValue))")
+//    }
     
     /*
     // Override to support conditional editing of the table view.
@@ -142,32 +142,38 @@ class EquipmentsListViewController: UITableViewController {
         return true
     }
     */
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "OptionEquipmentsVC", sender: indexPath)
-    }
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { //didSelected
         
-        if segue.identifier == "OptionEquipmentsVC"{
-            
-            let destinationVC = segue.destination as! OptionEquipmentsViewController
-//            let indexPath = sender as! IndexPath
-            destinationVC.equipmentsOutsideName = selectedEQName!
-        }
+//        performSegue(withIdentifier: "OptionEquipmentsVC", sender: indexPath)
         
-        let destinationName = segue.destination as! OptionEquipmentsViewController
-        destinationName.equipmentsOutsideName = selectedEQName!
-        
-        let destinationAmount = segue.destination as! OptionEquipmentsViewController
-        destinationAmount.equipmentsOutsideValue = selectedEQValue!
-        
-        print("\(String(describing: selectedEQName!))")
-        print(selectedEQValue!)
-        
+        print(indexPath.row)
+        print("\(equipments[indexPath.row])")
     }
+
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation //   didSelectRowAt 이전 error발생 코드
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//        if segue.identifier == "OptionEquipmentsVC"{
+//            
+//            let destinationVC = segue.destination as! OptionEquipmentsViewController
+////            let indexPath = sender as! IndexPath
+//            destinationVC.equipmentsOutsideName = selectedEQName!
+//        }
+//        
+////        let destinationName = segue.destination as! OptionEquipmentsViewController
+////        destinationName.equipmentsOutsideName = selectedEQName!
+////        
+////        let destinationAmount = segue.destination as! OptionEquipmentsViewController
+////        destinationAmount.equipmentsOutsideValue = selectedEQValue!
+//        
+//        print("\(String(describing: selectedEQName!))")
+//        print(selectedEQValue!)
+//        
+//    }
     
 //    override func performSegue(withIdentifier identifier: String, sender: Any?) {
 //        if segue.identifier == "OptionEquipmentsVC" {
