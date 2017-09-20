@@ -78,8 +78,7 @@ class OptionEquipmentsViewController: UITableViewController {
         
         //Apply를 Outside값 수 만큼만 카운트하면...
         
-        
-        if let cutCount = ((equipmentsApply.first)){
+        if let cutCount = ((equipmentsApply.first)){ //cutCount = Apply ∩ Param
             return self.equipmentsApply.count
         }
         //---------20일

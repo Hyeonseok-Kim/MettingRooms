@@ -114,8 +114,6 @@ class EquipmentsListViewController: UITableViewController {
         selectedEQName = equipment["name"] as? String
         selectedEQValue = equipment["amount"] as? Int
         
-        
-        
     }
     
 //    @IBAction func loadThirdScreenPressend(_ sender: AnyObject) {
