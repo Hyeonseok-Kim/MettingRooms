@@ -169,10 +169,10 @@ class EquipmentsListViewController: UITableViewController {
         if segue.identifier == "OptionEquipmentsVC"{
             
             let destinationName = segue.destination as! OptionEquipmentsViewController
-            destinationName.equipmentsOutsideName = selectedEQName!
+            destinationName.firstParamName = selectedEQName!
             
             let destinationAmount = segue.destination as! OptionEquipmentsViewController
-            destinationAmount.equipmentsOutsideValue = selectedEQValue!
+            destinationAmount.firstParamValue = selectedEQValue!
 
         }
         

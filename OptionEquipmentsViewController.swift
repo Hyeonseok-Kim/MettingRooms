@@ -12,8 +12,8 @@ let equipmentThisFile = "EquipmentsDefault"
 class OptionEquipmentsViewController: UITableViewController {
     
     var equipmentsApply:Array<AnyObject> = []
-    var equipmentsOutsideName:String = ""
-    var equipmentsOutsideValue:Int = 0
+    var firstParamName:String = ""
+    var firstParamValue:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,18 +50,42 @@ class OptionEquipmentsViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         
         // Outside값과 해당하는 값만 return 해서 apply에 넣는다
-        var discountArray:Array<AnyObject> = []
+//        var discountArray:Array<AnyObject> = []
+//        
+//        for i in (0..<equipmentsApply.count) {
+//            if equipmentsApply[i] as! (String, Int) == (String(firstParamName), Int(firstParamValue)){
+//                if equipmentsApply[i] as! Int == firstParamValue{
+//                    discountArray = discountArray + ((equipmentsApply[i]) as! Array<AnyObject>)
+//                    print(discountArray)
+//                }
+//            }
+//        }
         
-        for i in (0..<equipmentsApply.count) {
-            if equipmentsApply[i,i] as! (String, Int) == (equipmentsOutsideName, equipmentsOutsideValue) {
-                if equipmentsApply[i] as! Int == equipmentsOutsideValue{
-                    discountArray = discountArray + ((equipmentsApply[i]) as! Array<AnyObject>)
-                    print(discountArray)
-                }
-            }
+        //////////////////////////////
+        switch firstParamName {
+        case "iMac":
+            return equipmentsApply.count-10
+        case "MacBook Pro":
+            return equipmentsApply.count-4
+        case "MacBook Air":
+            return equipmentsApply.count-2
+        case "MacBook":
+            return equipmentsApply.count
+        default:
+            return 0
         }
+        //////////////////////////////
         
-        return equipmentsApply.count
+        //Apply를 Outside값 수 만큼만 카운트하면...
+        
+        
+        if let cutCount = ((equipmentsApply.first)){
+            return self.equipmentsApply.count
+        }
+        //---------20일
+//        var disCount = equipmentsApply.count - (equipmentsApply.count - firstParamName.count)
+//        return disCount.count
+//        return equipmentsApply.count
     }
 
     
@@ -75,10 +99,10 @@ class OptionEquipmentsViewController: UITableViewController {
             return nameCell
         }
         
-        nameCell.textLabel?.text = equipmentsOutsideName
+//        nameCell.textLabel?.text = firstParamName
         
-//        let name = equipmentSection["Name"] as? String ?? ""
-//        nameCell.textLabel?.text = name
+        let name = equipmentSection["Name"] as? String ?? ""
+        nameCell.textLabel?.text = name
         
         if let amount = equipmentSection["Amount"] as? Int {
             nameCell.detailTextLabel?.text = String(amount)
@@ -195,8 +219,8 @@ class OptionEquipmentsViewController: UITableViewController {
     */
     /*
     override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        if equipmentsOutsideValue != 0 {
-            print("prepareItems : \(equipmentsOutsideName), \(equipmentsOutsideValue)")
+        if firstParamValue != 0 {
+            print("prepareItems : \(firstParamName), \(firstParamValue)")
         }else {
             print("Notting..")
         }
