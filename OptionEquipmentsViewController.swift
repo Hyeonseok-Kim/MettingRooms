@@ -24,19 +24,12 @@ class OptionEquipmentsViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         guard let equipmentApplyURL = Bundle.main.url(forResource: equipmentThisFile, withExtension: "plist") else{
-//            print("No File")
             return
         }
         
         if let equipmentArray = NSArray(contentsOf: equipmentApplyURL) {
+            
             equipmentsApply = equipmentsApply + (equipmentArray as Array<AnyObject>)
-//            print("plist 데이터 : \(equipmentsApply)") //test
-        }
-        
-        if equipmentsOutsideValue != 0 {
-            print("prepareItems : \(equipmentsOutsideName), \(equipmentsOutsideValue)")
-        }else {
-            print("Notting..")
         }
 
     }
@@ -55,6 +48,19 @@ class OptionEquipmentsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        
+        // Outside값과 해당하는 값만 return 해서 apply에 넣는다
+        var discountArray:Array<AnyObject> = []
+        
+        for i in (0..<equipmentsApply.count) {
+            if equipmentsApply[i,i] as! (String, Int) == (equipmentsOutsideName, equipmentsOutsideValue) {
+                if equipmentsApply[i] as! Int == equipmentsOutsideValue{
+                    discountArray = discountArray + ((equipmentsApply[i]) as! Array<AnyObject>)
+                    print(discountArray)
+                }
+            }
+        }
+        
         return equipmentsApply.count
     }
 
@@ -69,13 +75,15 @@ class OptionEquipmentsViewController: UITableViewController {
             return nameCell
         }
         
-        if let name = equipmentSection["Name"] as? String {
-            nameCell.textLabel?.text = name
-        }
+        nameCell.textLabel?.text = equipmentsOutsideName
+        
+//        let name = equipmentSection["Name"] as? String ?? ""
+//        nameCell.textLabel?.text = name
         
         if let amount = equipmentSection["Amount"] as? Int {
             nameCell.detailTextLabel?.text = String(amount)
         }
+        
         //
         //        if let late = equipmentSection["Late"] as? String {
         //            cell.textLabel?.text = late
@@ -185,5 +193,13 @@ class OptionEquipmentsViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    /*
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        if equipmentsOutsideValue != 0 {
+            print("prepareItems : \(equipmentsOutsideName), \(equipmentsOutsideValue)")
+        }else {
+            print("Notting..")
+        }
+    }
+    */
 }

@@ -44,6 +44,7 @@ class EquipmentsListViewController: UITableViewController {
             print(equipmentArray)
             
             equipments = equipments + (equipmentArray as Array<AnyObject>)
+            
         }
         
         
@@ -100,9 +101,8 @@ class EquipmentsListViewController: UITableViewController {
     @IBAction func unwind(to unwindSegue: UIStoryboardSegue, EquipmentsList subsequentVC: UITableViewController) {
         print("unwind")
     }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { //didSelected
-        
-        //        performSegue(withIdentifier: "OptionEquipmentsVC", sender: indexPath)
         
         guard let equipment = equipments[indexPath.row] as? [String:AnyObject] else {
             return
@@ -114,11 +114,14 @@ class EquipmentsListViewController: UITableViewController {
         selectedEQName = equipment["name"] as? String
         selectedEQValue = equipment["amount"] as? Int
         
+        
+        
     }
     
 //    @IBAction func loadThirdScreenPressend(_ sender: AnyObject) {
 //        performSegue(withIdentifier: "OptionEquipmentsVC", sender: selectedEQName)
 //        print("\(String(describing: self.selectedEQName))")
+//        
 //        performSegue(withIdentifier: "OptionEquipmentsVC", sender: selectedEQValue)
 //        print("\(String(describing: self.selectedEQValue))")
 //    }
@@ -163,10 +166,11 @@ class EquipmentsListViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "OptionEquipmentsVC" && selectedEQValue != 0 {
+        if segue.identifier == "OptionEquipmentsVC"{
             
             let destinationName = segue.destination as! OptionEquipmentsViewController
             destinationName.equipmentsOutsideName = selectedEQName!
+            
             let destinationAmount = segue.destination as! OptionEquipmentsViewController
             destinationAmount.equipmentsOutsideValue = selectedEQValue!
 
