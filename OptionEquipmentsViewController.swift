@@ -34,19 +34,14 @@ class OptionEquipmentsViewController: UITableViewController {
             ////////////////////////
             let cirName:Array<AnyObject> = equipmentArray.value(forKey: "Name") as! Array<AnyObject> //equipmentArray Temp of name
             let cirAmount:Array<AnyObject> = equipmentArray.value(forKey: "Amount") as! Array<AnyObject> //equipmentArray Temp of amount
-//            var cirText:String = "" //cir from i Text
             
-//            print((equipmentArray as AnyObject).value(forKey: "Name") as! Array<AnyObject>)
-            print(cirName, cirAmount)
             for i in 0 ..< 15 {
-                if cirName[i].value(forKey: "Name") as! String == firstParamName{
-//                    cirText = cir[i] as! String
+                if cirName[i] as! String == firstParamName{
                     
-//                    equipmentsApplyCutArray += cirAmount[i].value(forKey: "Amount") as! Array
-                    
-                    print(equipmentsApplyCutArray)
+                    equipmentsApplyCutArray += cirAmount[i] as! Array //signal SIGABRT error
                 }
             }
+            print(equipmentsApplyCutArray)
             ////////////////////////
             equipmentsApply = equipmentsApply + (equipmentArray as Array<AnyObject>)
         }
