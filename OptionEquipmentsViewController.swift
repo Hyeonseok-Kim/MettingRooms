@@ -32,11 +32,17 @@ class OptionEquipmentsViewController: UITableViewController {
         
         if let equipmentArray = NSArray(contentsOf: equipmentApplyURL) {
             ////////////////////////
-            let cir:Array<AnyObject> = equipmentArray.value(forKey: "Amount") as! Array<AnyObject> //equipmentArray Temp
+            let cirName:Array<AnyObject> = equipmentArray.value(forKey: "Name") as! Array<AnyObject> //equipmentArray Temp of name
+            let cirAmount:Array<AnyObject> = equipmentArray.value(forKey: "Amount") as! Array<AnyObject> //equipmentArray Temp of amount
+//            var cirText:String = "" //cir from i Text
             
-            for i in 1 ..< 16 {
-                if cir[i] as! Int == firstParamValue{
-                    equipmentsApplyCutArray = equipmentsApplyCutArray + (cir[i] as! Array<AnyObject>)
+//            print((equipmentArray as AnyObject).value(forKey: "Name") as! Array<AnyObject>)
+            print(cirName, cirAmount)
+            for i in 0 ..< 15 {
+                if cirName[i].value(forKey: "Name") as! String == firstParamName{
+//                    cirText = cir[i] as! String
+                    
+//                    equipmentsApplyCutArray += cirAmount[i].value(forKey: "Amount") as! Array
                     
                     print(equipmentsApplyCutArray)
                 }
