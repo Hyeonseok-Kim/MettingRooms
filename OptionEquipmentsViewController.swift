@@ -12,6 +12,9 @@ let equipmentThisFile = "EquipmentsDefault"
 class OptionEquipmentsViewController: UITableViewController {
     
     var equipmentsApply:Array<AnyObject> = []
+    
+    var equipmentsApplyCutArray:Array<AnyObject> = [] // Apply ∩ Param
+    
     var firstParamName:String = ""
     var firstParamValue:Int = 0
     
@@ -28,7 +31,17 @@ class OptionEquipmentsViewController: UITableViewController {
         }
         
         if let equipmentArray = NSArray(contentsOf: equipmentApplyURL) {
+            ////////////////////////
+            let cir:Array<AnyObject> = equipmentArray.value(forKey: "Amount") as! Array<AnyObject> //equipmentArray Temp
             
+            for i in 1 ..< 16 {
+                if cir[i] as! Int == firstParamValue{
+                    equipmentsApplyCutArray = equipmentsApplyCutArray + (cir[i] as! Array<AnyObject>)
+                    
+                    print(equipmentsApplyCutArray)
+                }
+            }
+            ////////////////////////
             equipmentsApply = equipmentsApply + (equipmentArray as Array<AnyObject>)
         }
 
@@ -78,9 +91,10 @@ class OptionEquipmentsViewController: UITableViewController {
         
         //Apply를 Outside값 수 만큼만 카운트하면...
         
-        if let cutCount = ((equipmentsApply.first)){ //cutCount = Apply ∩ Param
-            return self.equipmentsApply.count
-        }
+//        if let cutCount = equipmentsApply.first { //cutCount = Apply ∩ Param
+//            print(cutCount)
+//            return equipmentsApply.count
+//        }
         //---------20일
 //        var disCount = equipmentsApply.count - (equipmentsApply.count - firstParamName.count)
 //        return disCount.count

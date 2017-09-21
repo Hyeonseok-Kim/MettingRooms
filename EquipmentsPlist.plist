@@ -6,19 +6,7 @@
 		<key>name</key>
 		<string>iMac</string>
 		<key>amount</key>
-		<integer>2320000</integer>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>iMac</string>
-		<key>amount</key>
 		<integer>1440000</integer>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>MacBook Pro</string>
-		<key>amount</key>
-		<integer>2290000</integer>
 	</dict>
 	<dict>
 		<key>name</key>
