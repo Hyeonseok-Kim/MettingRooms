@@ -324,7 +324,7 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>MacBook air</string>
+		<string>MacBook Air</string>
 		<key>Amount</key>
 		<real>1490000</real>
 		<key>Late</key>
@@ -350,7 +350,7 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>MacBook air</string>
+		<string>MacBook Air</string>
 		<key>Amount</key>
 		<integer>1250000</integer>
 		<key>Late</key>

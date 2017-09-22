@@ -31,17 +31,17 @@ class OptionEquipmentsViewController: UITableViewController {
         }
         
         if let equipmentArray = NSArray(contentsOf: equipmentApplyURL) {
-            ////////////////////////
+
             let cirName:Array<AnyObject> = equipmentArray.value(forKey: "Name") as! Array<AnyObject> //equipmentArray Temp of name
             let cirAmount:Array<AnyObject> = equipmentArray.value(forKey: "Amount") as! Array<AnyObject> //equipmentArray Temp of amount
             
-            for i in 0 ..< 15 { //Apply ∩ Param in the equipmentsApplyCutArray
+            for i in 0 ..< 16 { //Apply ∩ Param in the equipmentsApplyCutArray
                 if cirName[i] as! String == firstParamName{
                     equipmentsApplyCutArray.append(cirAmount[i])
                 }
             }
             print(equipmentsApplyCutArray)
-            ////////////////////////
+
         }
 
     }
@@ -70,10 +70,6 @@ class OptionEquipmentsViewController: UITableViewController {
         let nameCell = tableView.dequeueReusableCell(withIdentifier: "NameCell", for: indexPath)
         
         // Configure the cell...
-        
-//        guard let equipmentSection = equipmentsApply[indexPath.row] as? [String:AnyObject] else {
-//            return nameCell
-//        }
         
         nameCell.textLabel?.text = firstParamName
         nameCell.detailTextLabel?.text = String(describing: equipmentsApplyCutArray[cellAppend])
@@ -130,15 +126,6 @@ class OptionEquipmentsViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
-    /*
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        if firstParamValue != 0 {
-            print("prepareItems : \(firstParamName), \(firstParamValue)")
-        }else {
-            print("Notting..")
-        }
     }
     */
 }
