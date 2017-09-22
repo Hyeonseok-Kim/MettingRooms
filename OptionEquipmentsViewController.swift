@@ -42,7 +42,6 @@ class OptionEquipmentsViewController: UITableViewController {
             }
             print(equipmentsApplyCutArray)
             ////////////////////////
-            //equipmentsApply = equipmentsApply + (equipmentArray as Array<AnyObject>)
         }
 
     }
@@ -61,44 +60,6 @@ class OptionEquipmentsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        
-        // Outside값과 해당하는 값만 return 해서 apply에 넣는다
-//        var discountArray:Array<AnyObject> = []
-//        
-//        for i in (0..<equipmentsApply.count) {
-//            if equipmentsApply[i] as! (String, Int) == (String(firstParamName), Int(firstParamValue)){
-//                if equipmentsApply[i] as! Int == firstParamValue{
-//                    discountArray = discountArray + ((equipmentsApply[i]) as! Array<AnyObject>)
-//                    print(discountArray)
-//                }
-//            }
-//        }
-        
-        //////////////////////////////
-//        switch firstParamName {
-//        case "iMac":
-//            return equipmentsApply.count-10
-//        case "MacBook Pro":
-//            return equipmentsApply.count-4
-//        case "MacBook Air":
-//            return equipmentsApply.count-2
-//        case "MacBook":
-//            return equipmentsApply.count
-//        default:
-//            return 0
-//        }
-        //////////////////////////////
-        
-        //Apply를 Outside값 수 만큼만 카운트하면...
-        
-//        if let cutCount = equipmentsApply.first { //cutCount = Apply ∩ Param
-//            print(cutCount)
-//            return equipmentsApply.count
-//        }
-        //---------20일
-//        var disCount = equipmentsApply.count - (equipmentsApply.count - firstParamName.count)
-//        return disCount.count
-//        return equipmentsApply.count
         return equipmentsApplyCutArray.count
     }
 
@@ -116,74 +77,7 @@ class OptionEquipmentsViewController: UITableViewController {
         
         nameCell.textLabel?.text = firstParamName
         nameCell.detailTextLabel?.text = String(describing: equipmentsApplyCutArray[cellAppend])
-//        for cellAppend in 0..<(equipmentsApplyCutArray.count){
-//            nameCell.detailTextLabel?.text = String(describing: equipmentsApplyCutArray[cellAppend])
-//        }
-        
-        //nameCell.detailTextLabel?.text = String(firstParamValue)
-        
-//        let name = equipmentSection["Name"] as? String ?? ""
-//        nameCell.textLabel?.text = name
-//
-//        if let amount = equipmentSection["Amount"] as? Int {
-//            nameCell.detailTextLabel?.text = String(amount)
-//        }
-        
-        //
-        //        if let late = equipmentSection["Late"] as? String {
-        //            cell.textLabel?.text = late
-        //        }
-        //        if let display = equipmentSection["Display"] as? String {
-        //            cell.textLabel?.text = display
-        //        }
-        //
-        //        if let defaultCore = equipmentSection["Default core"] as? String {
-        //            cell.textLabel?.text = defaultCore
-        //        }
-        //
-        //        if let turboBoost = equipmentSection["Turbo Boost"] as? String {
-        //            cell.textLabel?.text = turboBoost
-        //        }
-        //
-        //        if let defaultRam = equipmentSection["Default ram"] as? String {
-        //            cell.textLabel?.text = defaultRam
-        //        }
-        //
-        //        if let defaultStorage = equipmentSection["Default storage"] as? Int {
-        //            cell.textLabel?.text = String(defaultStorage)
-        //        }
-        //
-        //        if let defaultStorage = equipmentSection["Default Storage(SSD)"] as? Int {
-        //            cell.textLabel?.text = String(defaultStorage)
-        //        }
-        //
-        //        if let defaultStorage = equipmentSection["Default storage(1TB Serial ATA)"] as? Int {
-        //            cell.textLabel?.text = String(defaultStorage)
-        //        }
-        //
-        //        if let graphicCard = equipmentSection["Graphic card"] as? String {
-        //            cell.textLabel?.text = graphicCard
-        //        }
-        //
-        //        if let forceTouchTrackpad = equipmentSection["Force touch trackpad"] as? Bool {
-        //            cell.textLabel?.text = String(forceTouchTrackpad)
-        //        }
-        //
-        //        if let touchBar = equipmentSection["Touchbar"] as? Bool {
-        //            cell.textLabel?.text = String(touchBar)
-        //        }
-        //
-        //        if let touchId = equipmentSection["TouchID"] as? Bool {
-        //            cell.textLabel?.text = String(touchId)
-        //        }
-        //                
-        //        if let port = equipmentSection["Port"] as? String {
-        //            cell.textLabel?.text = port
-        //        }
-        //                
-        //        if let earJack = equipmentSection["3.5pi earjack"] as? Bool {
-        //            cell.textLabel?.text = String(earJack)
-        //        }
+
         cellAppend = cellAppend+1 //for func check
         return nameCell
 
