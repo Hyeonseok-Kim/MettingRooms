@@ -42,7 +42,7 @@ class OptionEquipmentsViewController: UITableViewController {
             }
             print(equipmentsApplyCutArray)
             ////////////////////////
-            equipmentsApply = equipmentsApply + (equipmentArray as Array<AnyObject>)
+            //equipmentsApply = equipmentsApply + (equipmentArray as Array<AnyObject>)
         }
 
     }
@@ -104,7 +104,7 @@ class OptionEquipmentsViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        var cellAppend:Int = 0
         let nameCell = tableView.dequeueReusableCell(withIdentifier: "NameCell", for: indexPath)
         
         // Configure the cell...
@@ -113,8 +113,13 @@ class OptionEquipmentsViewController: UITableViewController {
 //            return nameCell
 //        }
         
-        nameCell.textLabel?.text = firstParamName
-        nameCell.detailTextLabel?.text = String(firstParamValue)
+        nameCell.textLabel?[indexPath.row].text = firstParamName
+        nameCell.detailTextLabel?.text = String(describing: equipmentsApplyCutArray[cellAppend])
+//        for cellAppend in 0..<(equipmentsApplyCutArray.count){
+//            nameCell.detailTextLabel?.text = String(describing: equipmentsApplyCutArray[cellAppend])
+//        }
+        
+        //nameCell.detailTextLabel?.text = String(firstParamValue)
         
 //        let name = equipmentSection["Name"] as? String ?? ""
 //        nameCell.textLabel?.text = name
@@ -178,7 +183,7 @@ class OptionEquipmentsViewController: UITableViewController {
         //        if let earJack = equipmentSection["3.5pi earjack"] as? Bool {
         //            cell.textLabel?.text = String(earJack)
         //        }
-        
+        cellAppend = cellAppend+1 //for func check
         return nameCell
 
     }
