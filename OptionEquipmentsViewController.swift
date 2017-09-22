@@ -35,10 +35,9 @@ class OptionEquipmentsViewController: UITableViewController {
             let cirName:Array<AnyObject> = equipmentArray.value(forKey: "Name") as! Array<AnyObject> //equipmentArray Temp of name
             let cirAmount:Array<AnyObject> = equipmentArray.value(forKey: "Amount") as! Array<AnyObject> //equipmentArray Temp of amount
             
-            for i in 0 ..< 15 {
+            for i in 0 ..< 15 { //Apply ∩ Param in the equipmentsApplyCutArray
                 if cirName[i] as! String == firstParamName{
-                    
-                    equipmentsApplyCutArray += cirAmount[i] as! Array //signal SIGABRT error
+                    equipmentsApplyCutArray.append(cirAmount[i])
                 }
             }
             print(equipmentsApplyCutArray)
@@ -76,18 +75,18 @@ class OptionEquipmentsViewController: UITableViewController {
 //        }
         
         //////////////////////////////
-        switch firstParamName {
-        case "iMac":
-            return equipmentsApply.count-10
-        case "MacBook Pro":
-            return equipmentsApply.count-4
-        case "MacBook Air":
-            return equipmentsApply.count-2
-        case "MacBook":
-            return equipmentsApply.count
-        default:
-            return 0
-        }
+//        switch firstParamName {
+//        case "iMac":
+//            return equipmentsApply.count-10
+//        case "MacBook Pro":
+//            return equipmentsApply.count-4
+//        case "MacBook Air":
+//            return equipmentsApply.count-2
+//        case "MacBook":
+//            return equipmentsApply.count
+//        default:
+//            return 0
+//        }
         //////////////////////////////
         
         //Apply를 Outside값 수 만큼만 카운트하면...
@@ -100,6 +99,7 @@ class OptionEquipmentsViewController: UITableViewController {
 //        var disCount = equipmentsApply.count - (equipmentsApply.count - firstParamName.count)
 //        return disCount.count
 //        return equipmentsApply.count
+        return equipmentsApplyCutArray.count
     }
 
     
@@ -109,18 +109,19 @@ class OptionEquipmentsViewController: UITableViewController {
         
         // Configure the cell...
         
-        guard let equipmentSection = equipmentsApply[indexPath.row] as? [String:AnyObject] else {
-            return nameCell
-        }
+//        guard let equipmentSection = equipmentsApply[indexPath.row] as? [String:AnyObject] else {
+//            return nameCell
+//        }
         
-//        nameCell.textLabel?.text = firstParamName
+        nameCell.textLabel?.text = firstParamName
+        nameCell.detailTextLabel?.text = String(firstParamValue)
         
-        let name = equipmentSection["Name"] as? String ?? ""
-        nameCell.textLabel?.text = name
-        
-        if let amount = equipmentSection["Amount"] as? Int {
-            nameCell.detailTextLabel?.text = String(amount)
-        }
+//        let name = equipmentSection["Name"] as? String ?? ""
+//        nameCell.textLabel?.text = name
+//
+//        if let amount = equipmentSection["Amount"] as? Int {
+//            nameCell.detailTextLabel?.text = String(amount)
+//        }
         
         //
         //        if let late = equipmentSection["Late"] as? String {
