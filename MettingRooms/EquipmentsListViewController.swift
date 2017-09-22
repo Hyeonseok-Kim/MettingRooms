@@ -171,7 +171,6 @@ class EquipmentsListViewController: UITableViewController {
             
             let destinationAmount = segue.destination as! OptionEquipmentsViewController
             destinationAmount.firstParamValue = selectedEQValue!
-
         }
         
     }

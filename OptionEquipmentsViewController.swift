@@ -40,7 +40,6 @@ class OptionEquipmentsViewController: UITableViewController {
                     equipmentsApplyCutArray.append(cirAmount[i])
                 }
             }
-            print(equipmentsApplyCutArray)
 
         }
 
