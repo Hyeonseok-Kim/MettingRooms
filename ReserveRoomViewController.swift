@@ -20,6 +20,24 @@ class ReserveRoomViewController: UITableViewController {
     
     @IBOutlet weak var cateringSwitch: UISwitch!
     
+    @IBOutlet weak var dateTextField: UITextField!
+    
+    @IBAction func textFieldEditing(_ sender: UITextField) {
+            
+        let datePickerView:UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(ReserveRoomViewController.datePickerValueChanged), for: UIControlEvents.valueChanged)
+        
+    }
+    
+    func datePickerValueChanged(sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+        dateFormatter.timeStyle = DateFormatter.Style.medium
+        dateTextField.text = dateFormatter.string(from: sender.date)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -78,10 +96,6 @@ class ReserveRoomViewController: UITableViewController {
     @IBAction func cancleReservation(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    
     
     // MARK: - Table view data source
     /*
@@ -148,9 +162,9 @@ class ReserveRoomViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      if segue.identifier == "ReserveDone"{
      guard let reservation = newReservation(), let reservationListVC = segue.destination as? ReservationListViewController else {
-     return
+        return
      }
-     reservationListVC.addNewItem(reservation: reservation)
+        reservationListVC.addNewItem(reservation: reservation)
      }    }
     
 
