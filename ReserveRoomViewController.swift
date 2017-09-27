@@ -33,14 +33,14 @@ class ReserveRoomViewController: UITableViewController {
     }
     
     @objc func datePickerValueChanged(sender: UIDatePicker) {
-        var dateFormatter = DateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.medium
         
         dateTextField.text = dateFormatter.string(from: sender.date) //textLabel에 표시됨
         let stringToDate = dateFormatter.string(from: sender.date) //파라미터역할(datePick)의 값을 위함
-        let datePickOfDateset = Date(timeIntervalSinceNow: 32400)
-        print(datePickOfDateset)
+        datePick = Date(timeIntervalSinceNow: 32400)
+        print(datePick)
         datePick = dateFormatter.date(from: stringToDate)!
         print(datePick)
     }
