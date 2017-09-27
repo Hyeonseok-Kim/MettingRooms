@@ -9,7 +9,8 @@
 import UIKit
 
 class ReserveRoomViewController: UITableViewController {
-
+    var datePick : Date = Date() //reservation의 값 전달 파라미터역할(reservation.date:Date())
+    
     @IBOutlet weak var hostNameField: UITextField!
     
     @IBOutlet weak var attendeesField: UITextField!
@@ -32,12 +33,16 @@ class ReserveRoomViewController: UITableViewController {
     }
     
     @objc func datePickerValueChanged(sender: UIDatePicker) {
-        let dateFormatter = DateFormatter()
+        var dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.medium
-        dateFormatter.timeZone = TimeZone(secondsFromGMT: 9 * 60 * 60)
         
-        dateTextField.text = dateFormatter.string(from: sender.date)
+        dateTextField.text = dateFormatter.string(from: sender.date) //textLabel에 표시됨
+        let stringToDate = dateFormatter.string(from: sender.date) //파라미터역할(datePick)의 값을 위함
+        let datePickOfDateset = Date(timeIntervalSinceNow: 32400)
+        print(datePickOfDateset)
+        datePick = dateFormatter.date(from: stringToDate)!
+        print(datePick)
     }
     
     override func viewDidLoad() {
@@ -63,7 +68,7 @@ class ReserveRoomViewController: UITableViewController {
             return nil
         }
         reservation.hostName = host
-        reservation.date = Date()
+        reservation.date = datePick
         if let equipmentArray = equipmentField.text?.characters.split(separator: ",").map(String.init){
             reservation.equipments = equipmentArray
         }
