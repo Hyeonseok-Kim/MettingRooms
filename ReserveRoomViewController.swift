@@ -35,6 +35,7 @@ class ReserveRoomViewController: UITableViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.medium
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 9 * 60 * 60)
         
         dateTextField.text = dateFormatter.string(from: sender.date)
     }
@@ -62,7 +63,7 @@ class ReserveRoomViewController: UITableViewController {
             return nil
         }
         reservation.hostName = host
-        reservation.date = dateTextField.text
+        reservation.date = Date()
         if let equipmentArray = equipmentField.text?.characters.split(separator: ",").map(String.init){
             reservation.equipments = equipmentArray
         }

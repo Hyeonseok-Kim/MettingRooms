@@ -138,14 +138,14 @@ class MeetingRoom:NSObject, NSCoding {
 
 class Reservation:NSObject, NSCoding {
     var hostName:String
-    var date:NSDate
+    var date:Date
     var attendees:Int
     var equipments:[String]
     var catering:Bool
     
     override init(){
         self.hostName = "Host of Meeting"
-        self.date = NSDate()
+        self.date = Date()
         self.attendees = 1
         self.equipments = []
         self.catering = false
@@ -153,7 +153,7 @@ class Reservation:NSObject, NSCoding {
     
     required init?(coder aDecoder: NSCoder) {
         self.hostName = aDecoder.decodeObject(forKey: "hostName") as! String
-        self.date = aDecoder.decodeObject(forKey: "date") as! NSDate
+        self.date = aDecoder.decodeObject(forKey: "date") as! Date
         self.attendees = aDecoder.decodeInteger(forKey: "attendees")
         self.equipments = aDecoder.decodeObject(forKey: "equipments") as! [String]
         self.catering = aDecoder.decodeBool(forKey: "catering")
