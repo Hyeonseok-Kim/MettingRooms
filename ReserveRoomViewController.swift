@@ -12,9 +12,9 @@ class ReserveRoomViewController: UITableViewController {
 
     @IBOutlet weak var hostNameField: UITextField!
     
-    @IBOutlet weak var datePicker: UIDatePicker!
-    
     @IBOutlet weak var attendeesField: UITextField!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var equipmentField: UITextField!
     
@@ -25,16 +25,17 @@ class ReserveRoomViewController: UITableViewController {
     @IBAction func textFieldEditing(_ sender: UITextField) {
             
         let datePickerView:UIDatePicker = UIDatePicker()
-        datePickerView.datePickerMode = UIDatePickerMode.date
+        datePickerView.datePickerMode = UIDatePickerMode.dateAndTime
         sender.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(ReserveRoomViewController.datePickerValueChanged), for: UIControlEvents.valueChanged)
         
     }
     
-    func datePickerValueChanged(sender: UIDatePicker) {
+    @objc func datePickerValueChanged(sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.medium
+        
         dateTextField.text = dateFormatter.string(from: sender.date)
     }
     
@@ -56,11 +57,12 @@ class ReserveRoomViewController: UITableViewController {
     func newReservation() -> Reservation?{
         let reservation = Reservation()
         let host = hostNameField.text!
+        
         if host.isEmpty {
             return nil
         }
         reservation.hostName = host
-        reservation.date = datePicker.date as NSDate
+        reservation.date = dateTextField.text
         if let equipmentArray = equipmentField.text?.characters.split(separator: ",").map(String.init){
             reservation.equipments = equipmentArray
         }
