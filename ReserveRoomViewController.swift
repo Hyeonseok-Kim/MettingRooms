@@ -39,10 +39,9 @@ class ReserveRoomViewController: UITableViewController {
         
         dateTextField.text = dateFormatter.string(from: sender.date) //textLabel에 표시됨
         let stringToDate = dateFormatter.string(from: sender.date) //파라미터역할(datePick)의 값을 위함
-        datePick = Date(timeIntervalSinceNow: 32400)
-        print(datePick)
         datePick = dateFormatter.date(from: stringToDate)!
-        print(datePick)
+        datePick.addTimeInterval(32400)
+        print("현재시각 : \(datePick)")
     }
     
     override func viewDidLoad() {
@@ -69,6 +68,7 @@ class ReserveRoomViewController: UITableViewController {
         }
         reservation.hostName = host
         reservation.date = datePick
+        print("데이터 전송 시각 : \(datePick)")
         if let equipmentArray = equipmentField.text?.characters.split(separator: ",").map(String.init){
             reservation.equipments = equipmentArray
         }
