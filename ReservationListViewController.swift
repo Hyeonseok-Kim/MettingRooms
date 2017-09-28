@@ -63,7 +63,7 @@ class ReservationListViewController: UITableViewController {
         guard let reservation = meetingRoom?.reservations?[indexPath.row] else{
             return cell
         }
-        cell.textLabel?.text = reservation.date.description
+        cell.textLabel?.text = reservation.dateToString
         cell.detailTextLabel?.text = reservation.hostName
         
         return cell

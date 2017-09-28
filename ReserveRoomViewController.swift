@@ -10,6 +10,7 @@ import UIKit
 
 class ReserveRoomViewController: UITableViewController {
     var datePick : Date = Date() //reservation의 값 전달 파라미터역할(reservation.date:Date())
+    var stringToDate:String = "예약날짜를 표시합니다."
     
     @IBOutlet weak var hostNameField: UITextField!
     
@@ -32,16 +33,18 @@ class ReserveRoomViewController: UITableViewController {
         
     }
     
-    @objc func datePickerValueChanged(sender: UIDatePicker) {
+    @objc func datePickerValueChanged(sender: UIDatePicker){
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.medium
+        dateFormatter.dateFormat = "yy년 MM월 dd일 a h시mm분"
         
         dateTextField.text = dateFormatter.string(from: sender.date) //textLabel에 표시됨
-        let stringToDate = dateFormatter.string(from: sender.date) //파라미터역할(datePick)의 값을 위함
+        stringToDate = dateFormatter.string(from: sender.date) //파라미터역할(datePick)의 값을 위함
         datePick = dateFormatter.date(from: stringToDate)!
         datePick.addTimeInterval(32400)
         print("현재시각 : \(datePick)")
+        print(stringToDate)
     }
     
     override func viewDidLoad() {
@@ -68,6 +71,8 @@ class ReserveRoomViewController: UITableViewController {
         }
         reservation.hostName = host
         reservation.date = datePick
+        reservation.dateToString = stringToDate
+        
         print("데이터 전송 시각 : \(datePick)")
         if let equipmentArray = equipmentField.text?.characters.split(separator: ",").map(String.init){
             reservation.equipments = equipmentArray
@@ -91,7 +96,6 @@ class ReserveRoomViewController: UITableViewController {
             if let reservationListVC = navigationC.topViewController as? ReservationListViewController{
                 reservationListVC.addNewItem(reservation: reservation)
             }
-                
         case let reservationListVC as ReservationListViewController:
             reservationListVC.addNewItem(reservation: reservation)
         default:
@@ -169,11 +173,10 @@ class ReserveRoomViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      if segue.identifier == "ReserveDone"{
-     guard let reservation = newReservation(), let reservationListVC = segue.destination as? ReservationListViewController else {
-        return
-     }
-        reservationListVC.addNewItem(reservation: reservation)
-     }    }
-    
-
+        guard let reservation = newReservation(), let reservationListVC = segue.destination as? ReservationListViewController else {
+            return
+        }
+            reservationListVC.addNewItem(reservation: reservation)
+        }
+    }
 }

@@ -142,6 +142,7 @@ class Reservation:NSObject, NSCoding {
     var attendees:Int
     var equipments:[String]
     var catering:Bool
+    var dateToString:String
     
     override init(){
         self.hostName = "Host of Meeting"
@@ -149,6 +150,7 @@ class Reservation:NSObject, NSCoding {
         self.attendees = 1
         self.equipments = []
         self.catering = false
+        self.dateToString = "Date of Meeting"
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -157,6 +159,7 @@ class Reservation:NSObject, NSCoding {
         self.attendees = aDecoder.decodeInteger(forKey: "attendees")
         self.equipments = aDecoder.decodeObject(forKey: "equipments") as! [String]
         self.catering = aDecoder.decodeBool(forKey: "catering")
+        self.dateToString = aDecoder.decodeObject(forKey: "dateToString") as! String
     }
     
     func encode(with aCoder: NSCoder) {
@@ -165,5 +168,6 @@ class Reservation:NSObject, NSCoding {
         aCoder.encode(self.attendees, forKey: "attendees")
         aCoder.encode(self.equipments, forKey: "equipments")
         aCoder.encode(self.catering, forKey: "catering")
+        aCoder.encode(self.dateToString, forKey: "dateToString")
     }
 }
