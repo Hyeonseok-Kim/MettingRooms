@@ -112,16 +112,13 @@ class ReservationListViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         
-        if segue.identifier == "ReserveDone"{
-            guard let reservation = newReservation, let reservationListVC = segue.destination as? ReservationListViewController else {
+        if segue.identifier == "ConferenceReservation" {
+            guard let destination = segue.destination as? ReserveRoomViewController , let meetingRoom = meetingRoom?.name.substring(to: (meetingRoom?.name.index(of: "/"))!) else{
                 return
             }
-            reservationListVC.addNewItem(reservation: reservation)
+            print(meetingRoom)
         }
     }
-    
      */
 }

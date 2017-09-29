@@ -11,7 +11,7 @@ import UIKit
 class ReserveRoomViewController: UITableViewController {
     var datePick : Date = Date() //reservation의 값 전달 파라미터역할(reservation.date:Date())
     var stringToDate:String = "예약날짜를 표시합니다."
-    
+    var meetingRoom:MeetingRoom?
     
     @IBOutlet weak var hostNameField: UITextField!
     
@@ -56,8 +56,7 @@ class ReserveRoomViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        
+        self.title = meetingRoom?.name
         
     }
 

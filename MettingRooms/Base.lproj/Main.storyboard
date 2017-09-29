@@ -637,7 +637,7 @@
                     <navigationItem key="navigationItem" title="Reservations" id="h0B-FW-mnW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="J1s-ns-Otg">
                             <connections>
-                                <segue destination="AW4-ZG-2cn" kind="presentation" id="DlP-ed-fhb"/>
+                                <segue destination="AW4-ZG-2cn" kind="presentation" identifier="ConferenceReservation" id="DlP-ed-fhb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
