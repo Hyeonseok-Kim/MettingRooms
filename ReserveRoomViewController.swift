@@ -71,8 +71,8 @@ class ReserveRoomViewController: UITableViewController {
         }
         reservation.hostName = host
         reservation.date = datePick
-        reservation.dateToString = stringToDate
-        
+        reservation.dateToString = stringToDate //리스트에 한글로 String출력
+
         print("데이터 전송 시각 : \(datePick)")
         if let equipmentArray = equipmentField.text?.characters.split(separator: ",").map(String.init){
             reservation.equipments = equipmentArray
