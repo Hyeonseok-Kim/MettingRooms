@@ -21,6 +21,7 @@ class ReservationListViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.title = meetingRoom?.name.substring(to: (meetingRoom?.name.index(of: "/"))!)
     }
 
     override func didReceiveMemoryWarning() {

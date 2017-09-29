@@ -49,11 +49,10 @@ class DataCenter {
     
     
     func defaultData() -> Array<Branch> {
-        let JejuRoom = MeetingRoom(name:"Jeju/제주", capacity: 4)
-        let BermudaRoom = MeetingRoom(name:"Bermuda/버뮤다", capacity: 6)
-        let SicilyRoom = MeetingRoom(name:"Sicily/시실리", capacity: 6)
-        let MoldivRoom = MeetingRoom(name:"Moldiv/몰디브", capacity: 10)
-        
+        let JejuRoom = MeetingRoom(name:"제주/Jeju", capacity: 4)
+        let BermudaRoom = MeetingRoom(name:"버뮤다/Bermuda", capacity: 6)
+        let SicilyRoom = MeetingRoom(name:"시실리/Sicily", capacity: 6)
+        let MoldivRoom = MeetingRoom(name:"몰디브/Moldiv", capacity: 10)
         
         let meetingRoomService = Service(name: "회의실예약")
         let visitorService = Service(name: "방문자예약")

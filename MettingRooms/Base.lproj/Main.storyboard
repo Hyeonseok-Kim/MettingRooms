@@ -646,7 +646,7 @@
             </objects>
             <point key="canvasLocation" x="2782" y="6"/>
         </scene>
-        <!--Bermuda 예약하기-->
+        <!--Reserve Room View Controller-->
         <scene sceneID="ba5-Ff-Qo4">
             <objects>
                 <tableViewController id="jHE-1q-2Nu" customClass="ReserveRoomViewController" customModule="MettingRooms" customModuleProvider="target" sceneMemberID="viewController">
@@ -819,7 +819,7 @@
                             <outlet property="delegate" destination="jHE-1q-2Nu" id="mEM-S3-FNA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Bermuda 예약하기" id="sBu-hg-PJK">
+                    <navigationItem key="navigationItem" id="sBu-hg-PJK">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="67C-ci-w4c">
                             <connections>
                                 <segue destination="FAB-a1-G0U" kind="unwind" identifier="ReserveCancel" unwindAction="unwindTo:ReservationList:" id="vEZ-k8-F0u"/>
