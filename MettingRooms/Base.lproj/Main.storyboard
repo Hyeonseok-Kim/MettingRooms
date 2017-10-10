@@ -1248,21 +1248,23 @@
         <!--Tab4-->
         <scene sceneID="yWv-Ob-vWn">
             <objects>
-                <viewController title="Tab4" id="RGq-7B-Kid" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ERy-nI-03d"/>
-                        <viewControllerLayoutGuide type="bottom" id="tqb-mj-xMi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vD3-Ik-NCm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Tab4" id="0p1-fd-4AA"/>
-                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qAC-Vt-lH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Tab4" id="RGq-7B-Kid" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tab4" id="0p1-fd-4AA"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="9VO-hC-YgZ" id="TWZ-oO-3HO"/>
+                    </connections>
+                </viewController>
+                <searchDisplayController id="9VO-hC-YgZ">
+                    <connections>
+                        <outlet property="delegate" destination="RGq-7B-Kid" id="eCo-Mt-RP6"/>
+                        <outlet property="searchContentsController" destination="RGq-7B-Kid" id="xMW-Iw-oc8"/>
+                        <outlet property="searchResultsDataSource" destination="RGq-7B-Kid" id="DTh-NO-WpG"/>
+                        <outlet property="searchResultsDelegate" destination="RGq-7B-Kid" id="4ze-7o-sxJ"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-821" y="2316"/>
+            <point key="canvasLocation" x="-821.60000000000002" y="2315.8920539730138"/>
         </scene>
         <!--Tab5-->
         <scene sceneID="1aa-WX-sal">

@@ -13,7 +13,6 @@ class ReservationListViewController: UITableViewController {
     var meetingRoom:MeetingRoom?
     var newReservation:Reservation?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +22,7 @@ class ReservationListViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.title = meetingRoom?.name.substring(to: (meetingRoom?.name.index(of: "/"))!)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +41,6 @@ class ReservationListViewController: UITableViewController {
     @IBAction func unwind(to unwindSegue: UIStoryboardSegue, ReservationList subsequentVC: UITableViewController) {
         print("unwind")
     }
-    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

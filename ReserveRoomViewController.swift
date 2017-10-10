@@ -56,8 +56,8 @@ class ReserveRoomViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.title = meetingRoom?.name
         
+        self.title = "회의실 예약하기"
     }
 
     override func didReceiveMemoryWarning() {
