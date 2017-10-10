@@ -20,6 +20,7 @@ class BranchListViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         self.navigationController?.isToolbarHidden = true
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +32,6 @@ class BranchListViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        
         return 1
     }
 

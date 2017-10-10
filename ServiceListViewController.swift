@@ -23,6 +23,11 @@ class ServiceListViewController: UITableViewController {
         
         self.title = branch?.name
         self.navigationController?.isToolbarHidden = false
+
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) { //back button event Hidden
+        self.navigationController?.isToolbarHidden = true
     }
 
     override func didReceiveMemoryWarning() {
