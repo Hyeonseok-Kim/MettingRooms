@@ -86,12 +86,10 @@ class EquipmentsListViewController: UITableViewController {
         guard let amount = equipment["amount"] as? Int else{
             return cell
         }
+        cell.detailTextLabel?.text = String(amount) + "원"
         
 //        selectedEQValue = amount
 //        print("cellValue\(selectedEQValue!)")
-        
-        
-        cell.detailTextLabel?.text = String(amount) + "원"
         
         return cell
     }

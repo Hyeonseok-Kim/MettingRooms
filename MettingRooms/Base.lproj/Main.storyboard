@@ -920,7 +920,7 @@
             </objects>
             <point key="canvasLocation" x="3714" y="-798"/>
         </scene>
-        <!--Bermuda 정보-->
+        <!--정보-->
         <scene sceneID="IGP-eF-j1f">
             <objects>
                 <tableViewController id="cHl-Kb-ITa" customClass="RoomInfoViewController" customModule="MettingRooms" customModuleProvider="target" sceneMemberID="viewController">
@@ -938,30 +938,34 @@
                         <sections>
                             <tableViewSection headerTitle="기본정보" id="9A4-ge-gRu">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="fDo-Xf-LRI" detailTextLabel="Gdf-xl-YIj" rowHeight="56" style="IBUITableViewCellStyleValue1" id="0bt-gE-9tB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="56" id="0bt-gE-9tB" customClass="reserveLocationCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0bt-gE-9tB" id="Xy9-m3-byh">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fDo-Xf-LRI">
-                                                    <rect key="frame" x="16" y="19" width="26" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bp-lR-yT6">
+                                                    <rect key="frame" x="19" y="17" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="탕비공간 옆" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gdf-xl-YIj">
-                                                    <rect key="frame" x="291" y="19" width="69" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYo-Uf-XNW">
+                                                    <rect key="frame" x="325" y="17" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="locationText" destination="0Bp-lR-yT6" id="Hua-vP-MwU"/>
+                                            <outlet property="locationValue" destination="RYo-Uf-XNW" id="6Zj-Vv-KR4"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="LFy-WC-bsT" detailTextLabel="FXY-tB-wi8" rowHeight="56" style="IBUITableViewCellStyleValue1" id="ESh-0T-IWD">
                                         <rect key="frame" x="0.0" y="84" width="375" height="56"/>
@@ -1144,7 +1148,7 @@
                             <outlet property="delegate" destination="cHl-Kb-ITa" id="c3d-p5-PCY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Bermuda 정보" id="enw-eR-WUI">
+                    <navigationItem key="navigationItem" title="정보" id="enw-eR-WUI">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="hhR-9L-9Ny">
                             <connections>
                                 <action selector="modalDismiss:" destination="cHl-Kb-ITa" id="oBd-mH-TQ5"/>

@@ -7,10 +7,14 @@
 //
 
 import UIKit
+let roomInfoFileName = "ReserveInfomationPlist"
 
 class RoomInfoViewController: UITableViewController {
-
+    
+    var infomations:Array<AnyObject> = []
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -18,6 +22,18 @@ class RoomInfoViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        guard let infomationURL = Bundle.main.url(forResource: roomInfoFileName, withExtension: "plist") else {
+            print("has no file")
+            return
+        }
+
+        if let infomationArray = NSArray(contentsOf: infomationURL) {
+            print(infomationArray)
+
+            infomations = infomations + (infomationArray as Array<AnyObject>)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,28 +48,39 @@ class RoomInfoViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    /*
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return infomations.count
     }
 
-    */
     
-    /*
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let locationCell = reserveLocationCell()
         // Configure the cell...
-
+        
+        guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else {
+            return cell
+        }
+        
+        let name = infomation["Name"] as? String ?? ""
+//        locationCell.locationText?.text = name
+        locationCell.locationText.text = name
+        
+        let locationRoom = infomation["Location"] as? String ?? ""
+        locationCell.locationValue?.text = locationRoom
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
