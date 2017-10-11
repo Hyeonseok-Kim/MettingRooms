@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7503BB011F8DA0EC007EDA51 /* ReservationImformationPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7503BB001F8DA0EC007EDA51 /* ReservationImformationPlist.plist */; };
 		751612A61F4E617D00677C44 /* ReservationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751612A51F4E617D00677C44 /* ReservationListViewController.swift */; };
 		751612A81F4E619700677C44 /* ReserveRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751612A71F4E619700677C44 /* ReserveRoomViewController.swift */; };
 		7521CF271F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7521CF261F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7503BB001F8DA0EC007EDA51 /* ReservationImformationPlist.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ReservationImformationPlist.plist; path = MettingRooms/ReservationImformationPlist.plist; sourceTree = "<group>"; };
 		751612A51F4E617D00677C44 /* ReservationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationListViewController.swift; sourceTree = "<group>"; };
 		751612A71F4E619700677C44 /* ReserveRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveRoomViewController.swift; sourceTree = "<group>"; };
 		7521CF261F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionEquipmentsViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		755DEE441F43CFA0006BD444 = {
 			isa = PBXGroup;
 			children = (
+				7503BB001F8DA0EC007EDA51 /* ReservationImformationPlist.plist */,
 				7521CF261F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift */,
 				7571D6361F58F8AB0033EC8F /* EquipmentApplicationListViewController.swift */,
 				75724C2B1F4FAE7E00738F59 /* TintColorViewController.swift */,
@@ -279,6 +282,7 @@
 			files = (
 				755DEE5B1F43CFA0006BD444 /* LaunchScreen.storyboard in Resources */,
 				75A1D1521F53A4380033E06C /* EquipmentsDefault.plist in Resources */,
+				7503BB011F8DA0EC007EDA51 /* ReservationImformationPlist.plist in Resources */,
 				755DEE581F43CFA0006BD444 /* Assets.xcassets in Resources */,
 				75A1D1581F5401700033E06C /* EquipmentsPlist.plist in Resources */,
 				755DEE561F43CFA0006BD444 /* Main.storyboard in Resources */,

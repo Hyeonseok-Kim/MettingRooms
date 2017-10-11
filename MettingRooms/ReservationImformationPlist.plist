@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>제주</string>
+		<key>Location</key>
+		<string>대회의실 맞은편</string>
+		<key>Capacity</key>
+		<string>6</string>
+		<key>BasicFacilities</key>
+		<string>테이블1, 의자6, 모니터</string>
+		<key>Equipment</key>
+		<string>검정, 파랑, 빨강</string>
+		<key>ApplicableEquipments</key>
+		<string>hdmi cable</string>
+		<key>Characteristic</key>
+		<string>옆 회의실과 연결되어있음</string>
+		<key>Precautions</key>
+		<string>회의실은 모든 직원이 사용하실 수 있습니다. 회의실이 사용중이라면 다른 회의실을 이용해 주시기 바랍니다.</string>
+		<key>Notice</key>
+		<string>이 어플은 아직 테스트 단계 이므로, 항목별 자세한 정보가 제공되지않음을 명시합니다.</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>버뮤다</string>
+		<key>Location</key>
+		<string>기존휴계공간 옆</string>
+		<key>Capacity</key>
+		<string>8</string>
+		<key>BasicFacilities</key>
+		<string>테이블1, 의자8, AppleTV, 40인치 모니터</string>
+		<key>Equipment</key>
+		<string>검정, 파랑, 빨강</string>
+		<key>ApplicableEquipments</key>
+		<string>AppleTV -&gt; hdmi cable</string>
+		<key>Characteristic</key>
+		<string>AppleTV리모컨(거치대포함)</string>
+		<key>Precautions</key>
+		<string>회의실은 모든 직원이 사용하실 수 있습니다. 회의실이 사용중이라면 다른 회의실을 이용해 주시기 바랍니다.</string>
+		<key>Notice</key>
+		<string>이 어플은 아직 테스트 단계 이므로, 항목별 자세한 정보가 제공되지않음을 명시합니다.</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>시실리</string>
+		<key>Location</key>
+		<string>출입문 바로 앞</string>
+		<key>Capacity</key>
+		<string>6</string>
+		<key>BasicFacilities</key>
+		<string>테이블1, 의자6, 모니터</string>
+		<key>Equipment</key>
+		<string>검정, 파랑, 빨강</string>
+		<key>ApplicableEquipments</key>
+		<string>hdmi cable</string>
+		<key>Characteristic</key>
+		<string>옆 회의실과 연결되어있음</string>
+		<key>Precautions</key>
+		<string>회의실은 모든 직원이 사용하실 수 있습니다. 회의실이 사용중이라면 다른 회의실을 이용해 주시기 바랍니다.</string>
+		<key>Notice</key>
+		<string>이 어플은 아직 테스트 단계 이므로, 항목별 자세한 정보가 제공되지않음을 명시합니다.</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>몰디브</string>
+		<key>Location</key>
+		<string>대회의실</string>
+		<key>Capacity</key>
+		<string>12</string>
+		<key>BasicFacilities</key>
+		<string>테이블1, 의자12, 모니터</string>
+		<key>Equipment</key>
+		<string>검정, 파랑, 빨강</string>
+		<key>ApplicableEquipments</key>
+		<string>hdmi cable</string>
+		<key>Characteristic</key>
+		<string>대회의실</string>
+		<key>Precautions</key>
+		<string>회의실은 모든 직원이 사용하실 수 있습니다. 회의실이 사용중이라면 다른 회의실을 이용해 주시기 바랍니다.</string>
+		<key>Notice</key>
+		<string>이 어플은 아직 테스트 단계 이므로, 항목별 자세한 정보가 제공되지않음을 명시합니다.</string>
+	</dict>
+</array>
+</plist>

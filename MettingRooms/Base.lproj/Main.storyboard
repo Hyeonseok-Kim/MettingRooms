@@ -930,7 +930,7 @@
                         <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="0.59720141270000004" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableFooterView" contentMode="bottom" id="yfT-Vd-LTe">
-                            <rect key="frame" x="0.0" y="532" width="375" height="72"/>
+                            <rect key="frame" x="0.0" y="560" width="375" height="72"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1096,8 +1096,12 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="주의사항" id="fIX-RI-Xyk">
+                                <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="QjD-37-Weu" rowHeight="56" style="IBUITableViewCellStyleDefault" id="2Kj-6r-27G">
-                                        <rect key="frame" x="0.0" y="420" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="448" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Kj-6r-27G" id="Nue-qs-xqk">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
@@ -1115,7 +1119,7 @@
                                         <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Bcc-qU-OZL" rowHeight="56" style="IBUITableViewCellStyleDefault" id="noI-HB-fEu">
-                                        <rect key="frame" x="0.0" y="476" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="504" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="noI-HB-fEu" id="1qR-EB-lhG">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
@@ -1321,7 +1325,6 @@
         <!--Tab4-->
         <scene sceneID="yWv-Ob-vWn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qAC-Vt-lH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Tab4" id="RGq-7B-Kid" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TUV-G5-pcT"/>
@@ -1337,6 +1340,7 @@
                         <outlet property="searchDisplayController" destination="9VO-hC-YgZ" id="TWZ-oO-3HO"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qAC-Vt-lH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="9VO-hC-YgZ">
                     <connections>
                         <outlet property="delegate" destination="RGq-7B-Kid" id="eCo-Mt-RP6"/>
