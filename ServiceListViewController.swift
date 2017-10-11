@@ -60,6 +60,7 @@ class ServiceListViewController: UITableViewController {
             return cell
         }
         cell.textLabel?.text = service.name
+        
         return cell
     }
     
@@ -111,6 +112,8 @@ class ServiceListViewController: UITableViewController {
                 return
             }
             destination.service = service
+        }else {
+            
         }
  
     }

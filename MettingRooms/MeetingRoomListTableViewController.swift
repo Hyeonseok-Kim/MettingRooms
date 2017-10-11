@@ -31,6 +31,9 @@ class MeetingRoomListTableViewController: UITableViewController {
         self.title = service?.name
         self.navigationController?.isToolbarHidden = true
     }
+    override func viewWillDisappear(_ animated: Bool) { //back button event Hidden
+        self.navigationController?.isToolbarHidden = false
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

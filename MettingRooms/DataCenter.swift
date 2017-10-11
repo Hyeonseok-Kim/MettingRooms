@@ -61,16 +61,21 @@ class DataCenter {
         
         meetingRoomService.items = [JejuRoom, BermudaRoom, SicilyRoom, MoldivRoom]
         
-        let pangyoBranch = Branch(name: "역삼점")
+        let yeoksamBranch = Branch(name: "역삼점")
         let samsungBranch = Branch(name: "삼성점")
-        let yeoksamBranch = Branch(name: "판교점")
+        let pangyoBranch = Branch(name: "판교점")
         let sinrimBranch = Branch(name: "신림점")
         let songdoBranch = Branch(name: "송도점")
         let anamBranch = Branch(name: "안암점")
         
-        pangyoBranch.services = [meetingRoomService, visitorService, vehicleService, deskService]
+        yeoksamBranch.services = [meetingRoomService, visitorService, vehicleService, deskService]
+//        samsungBranch.services = [meetingRoomService, visitorService, vehicleService, deskService]
+//        pangyoBranch.services = [meetingRoomService, visitorService, vehicleService, deskService]
+//        sinrimBranch.services = [meetingRoomService, visitorService, vehicleService, deskService]
+//        songdoBranch.services = [meetingRoomService, visitorService, vehicleService, deskService]
+//        anamBranch.services = [meetingRoomService, visitorService, vehicleService, deskService]
         
-        return [pangyoBranch, samsungBranch, yeoksamBranch, sinrimBranch, songdoBranch, anamBranch]
+        return [yeoksamBranch, samsungBranch, pangyoBranch, sinrimBranch, songdoBranch, anamBranch]
     }
 }
 
