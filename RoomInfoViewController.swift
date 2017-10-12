@@ -12,6 +12,9 @@ let roomInfoFileName = "ReserveInfomationPlist"
 class RoomInfoViewController: UITableViewController {
     
     var infomations:Array<AnyObject> = []
+    let locationCell = reserveLocationCell()
+    
+    @IBOutlet weak var locationRCell: UITableViewCell!
     
     override func viewDidLoad() {
         
@@ -32,6 +35,7 @@ class RoomInfoViewController: UITableViewController {
             print(infomationArray)
 
             infomations = infomations + (infomationArray as Array<AnyObject>)
+            print(infomations.count)
         }
         
     }
@@ -51,36 +55,31 @@ class RoomInfoViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return infomations.count
     }
 
-    
-    
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        let locationCell = reserveLocationCell()
-        // Configure the cell...
-        
-        guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else {
-            return cell
-        }
-        
-        let name = infomation["Name"] as? String ?? ""
-//        locationCell.locationText?.text = name
-        locationCell.locationText.text = name
-        
-        let locationRoom = infomation["Location"] as? String ?? ""
-        locationCell.locationValue?.text = locationRoom
-        
-        return cell
-    }
-    
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return infomations.count
+//    }
+
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath)
+//
+//        // Configure the cell...
+//
+//        guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else {
+//            return cell
+//        }
+//
+//        let locationRoom = infomation["Location"] as? String ?? ""
+////        locationCell.locationText?.text = locationRoom
+//        locationRCell.textLabel?.text = locationRoom
+//
+//        return cell
+//    }
+ 
+ 
 
     /*
     // Override to support conditional editing of the table view.

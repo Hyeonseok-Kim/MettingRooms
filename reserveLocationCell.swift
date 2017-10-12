@@ -11,7 +11,20 @@ import UIKit
 class reserveLocationCell: UITableViewCell {
     
     @IBOutlet weak var locationText: UILabel!
-    @IBOutlet weak var locationValue: UILabel!
+    
+    @IBOutlet weak var capacityValue: UILabel!
+    
+    @IBOutlet weak var basicFacilities: UILabel!
+    
+    @IBOutlet weak var applicableEquipments: UILabel!
+    
+    @IBOutlet weak var equipments: UILabel!
+    
+    @IBOutlet weak var characteristic: UILabel!
+    
+    @IBOutlet weak var precautions: UILabel!
+    
+    @IBOutlet weak var notice: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

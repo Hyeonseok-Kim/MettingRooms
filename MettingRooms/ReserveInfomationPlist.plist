@@ -8,7 +8,7 @@
 		<key>Location</key>
 		<string>대회의실 맞은편</string>
 		<key>Capacity</key>
-		<string>6</string>
+		<integer>6</integer>
 		<key>BasicFacilities</key>
 		<string>테이블1, 의자6, 모니터</string>
 		<key>Equipment</key>
@@ -28,7 +28,7 @@
 		<key>Location</key>
 		<string>기존휴계공간 옆</string>
 		<key>Capacity</key>
-		<string>8</string>
+		<integer>8</integer>
 		<key>BasicFacilities</key>
 		<string>테이블1, 의자8, AppleTV, 40인치 모니터</string>
 		<key>Equipment</key>
@@ -48,7 +48,7 @@
 		<key>Location</key>
 		<string>출입문 바로 앞</string>
 		<key>Capacity</key>
-		<string>6</string>
+		<integer>6</integer>
 		<key>BasicFacilities</key>
 		<string>테이블1, 의자6, 모니터</string>
 		<key>Equipment</key>
@@ -68,7 +68,7 @@
 		<key>Location</key>
 		<string>대회의실</string>
 		<key>Capacity</key>
-		<string>12</string>
+		<integer>12</integer>
 		<key>BasicFacilities</key>
 		<string>테이블1, 의자12, 모니터</string>
 		<key>Equipment</key>
