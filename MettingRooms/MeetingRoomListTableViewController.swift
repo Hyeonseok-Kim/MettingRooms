@@ -141,7 +141,12 @@ class MeetingRoomListTableViewController: UITableViewController {
             }
             destination.meetingRoom = meetingRoom
         }
-        
+        if segue.identifier == "roomInfomationSegue" {
+            guard let destinationDVC = segue.destination as? RoomInfoViewController , let selectedIndexDVC = self.tableView.indexPathForSelectedRow?.row, let roomInfo = self.service?.name else {
+                return
+            }
+            //name 전달 매개변수 생성
+        }
     }
     
 
