@@ -8,7 +8,7 @@
 
 import UIKit
 
-class reserveLocationCell: UITableViewCell {
+class reserveCell: UITableViewCell {
     
     @IBOutlet weak var locationText: UILabel!
     
@@ -33,7 +33,6 @@ class reserveLocationCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 

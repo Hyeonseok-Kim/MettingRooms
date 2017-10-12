@@ -12,19 +12,11 @@ let roomInfoFileName = "ReserveInfomationPlist"
 class RoomInfoViewController: UITableViewController {
     
     var infomations:Array<AnyObject> = []
-    let locationCell = reserveLocationCell()
-    
-    @IBOutlet weak var locationRCell: UITableViewCell!
+    var infomationTableCell = reserveCell()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         guard let infomationURL = Bundle.main.url(forResource: roomInfoFileName, withExtension: "plist") else {
             print("has no file")
@@ -42,44 +34,61 @@ class RoomInfoViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
     @IBAction func modalDismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-
-    // MARK: - Table view data source
-
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return infomations.count
+        return 4
     }
 
 //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return infomations.count
+//        return 1
 //    }
 
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath)
-//
-//        // Configure the cell...
-//
-//        guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else {
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "locationCell")
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "capacityCell")
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "basicFacilitiesCell")
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "applicableCell")
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "basicEquipmentsCell")
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "characteristicCell")
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "precautionsCell")
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "noticeCell")
+        
+        let locationCell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath)
+//        let capacityCell = tableView.dequeueReusableCell(withIdentifier: "capacityCell", for: indexPath)
+//        let basicFacilitiesCell = tableView.dequeueReusableCell(withIdentifier: "basicFacilitiesCell", for: indexPath)
+//        let applicableCell = tableView.dequeueReusableCell(withIdentifier: "applicableCell", for: indexPath)
+//        let basicEquipmentsCell = tableView.dequeueReusableCell(withIdentifier: "basicEquipmentsCell", for: indexPath)
+//        let characteristicCell = tableView.dequeueReusableCell(withIdentifier: "characteristicCell", for: indexPath)
+//        let precautionsCell = tableView.dequeueReusableCell(withIdentifier: "precautionsCell", for: indexPath)
+//        let noticeCell = tableView.dequeueReusableCell(withIdentifier: "noticeCell", for: indexPath)
+        
+        guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else {
 //            return cell
-//        }
-//
-//        let locationRoom = infomation["Location"] as? String ?? ""
-////        locationCell.locationText?.text = locationRoom
-//        locationRCell.textLabel?.text = locationRoom
-//
+            return infomationTableCell
+        }
+
+        let locationRoom = infomation["Location"] as? String ?? ""
+        locationCell.textLabel?.text = locationRoom
+        
+//        capacityCell.textLabel?.text = infomation["Capacity"] as? String
+//        basicFacilitiesCell.textLabel?.text = infomation["BasicFacilities"] as? String
+//        applicableCell.textLabel?.text = infomation["ApplicableEquipments"] as? String
+//        characteristicCell.textLabel?.text = infomation["Characteristic"] as? String
+//        basicEquipmentsCell.textLabel?.text = infomation["Equipment"] as? String
+//        precautionsCell.textLabel?.text = infomation["precautions"] as? String
+//        noticeCell.textLabel?.text = infomation["Notice"] as? String
+        
+        
 //        return cell
-//    }
- 
- 
+        return infomationTableCell
+    }
 
     /*
     // Override to support conditional editing of the table view.
