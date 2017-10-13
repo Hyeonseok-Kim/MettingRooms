@@ -28,6 +28,7 @@ class RoomInfoViewController: UITableViewController {
 
             infomations = infomations + (infomationArray as Array<AnyObject>)
             print(infomations.count)
+            print(infomationArray.value(forKeyPath: "Name").debugDescription)
         }
         
     }
@@ -59,8 +60,8 @@ class RoomInfoViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "locationCell")
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "capacityCell")
+        tableView.register(reserveCell.self, forCellReuseIdentifier: "locationCell")
+//        tableView.register(reserveCell.self, forCellReuseIdentifier: "capacityCell")
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "basicFacilitiesCell")
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "applicableCell")
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "basicEquipmentsCell")
@@ -68,7 +69,7 @@ class RoomInfoViewController: UITableViewController {
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "precautionsCell")
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "noticeCell")
         
-        let locationCell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath)
+        let locationCell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as! reserveCell
 //        let capacityCell = tableView.dequeueReusableCell(withIdentifier: "capacityCell", for: indexPath)
 //        let basicFacilitiesCell = tableView.dequeueReusableCell(withIdentifier: "basicFacilitiesCell", for: indexPath)
 //        let applicableCell = tableView.dequeueReusableCell(withIdentifier: "applicableCell", for: indexPath)
@@ -79,14 +80,30 @@ class RoomInfoViewController: UITableViewController {
         
         guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else {
 //            return cell
-            return infomationTableCell
+            return locationCell
         }
-        
         let locationRoom = infomation["Location"] as? String ?? ""
+        
+        var i:Int = 1
+        
+        switch infomation["Name"]?[indexPath] as? String ?? "" {
+        case "제주":
+            i = 1
+        case "버뮤다":
+            i = 2
+        case "시실리":
+            i = 3
+        case "몰디브":
+            i = 4
+        default:
+            i = 1
+        }
+        print(self.infomations[i])
+        
         locationCell.textLabel?.text = locationRoom
-        locationCell.backgroundColor = UIColorFromHex(rgbValue: 0x555562, alpha: 1)
-        locationCell.textLabel?.textColor = UIColorFromHex(rgbValue: 0xEBEBF1, alpha: 1)
-        locationCell.textLabel?.font = UIFont.systemFont(ofSize: 15)
+        locationCell.backgroundColor = UIColorFromHex(rgbValue: 0x555562, alpha: 1) //셀 배경색상
+        locationCell.textLabel?.textColor = UIColorFromHex(rgbValue: 0xEBEBF1, alpha: 1)//셀 라벨색상
+        locationCell.textLabel?.font = UIFont.systemFont(ofSize: 15)//셀 폰트, 크기
         
 //        capacityCell.textLabel?.text = infomation["Capacity"] as? String
 //        basicFacilitiesCell.textLabel?.text = infomation["BasicFacilities"] as? String
@@ -98,9 +115,10 @@ class RoomInfoViewController: UITableViewController {
         
         
 //        return cell
-        return infomationTableCell
+        return locationCell
+        
     }
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
