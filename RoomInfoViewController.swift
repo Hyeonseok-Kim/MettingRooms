@@ -24,11 +24,9 @@ class RoomInfoViewController: UITableViewController {
         }
 
         if let infomationArray = NSArray(contentsOf: infomationURL) {
-            print(infomationArray)
+//            print(infomationArray)
 
             infomations = infomations + (infomationArray as Array<AnyObject>)
-            print(infomations.count)
-            print(infomationArray.value(forKeyPath: "Name").debugDescription)
         }
         
     }
@@ -96,15 +94,15 @@ class RoomInfoViewController: UITableViewController {
         case "몰디브":
             i = 4
         default:
-            i = 1
+            i = 0
         }
-        print(self.infomations[i])
+        print(i)
         
         locationCell.textLabel?.text = locationRoom
         locationCell.backgroundColor = UIColorFromHex(rgbValue: 0x555562, alpha: 1) //셀 배경색상
         locationCell.textLabel?.textColor = UIColorFromHex(rgbValue: 0xEBEBF1, alpha: 1)//셀 라벨색상
         locationCell.textLabel?.font = UIFont.systemFont(ofSize: 15)//셀 폰트, 크기
-        
+    
 //        capacityCell.textLabel?.text = infomation["Capacity"] as? String
 //        basicFacilitiesCell.textLabel?.text = infomation["BasicFacilities"] as? String
 //        applicableCell.textLabel?.text = infomation["ApplicableEquipments"] as? String
