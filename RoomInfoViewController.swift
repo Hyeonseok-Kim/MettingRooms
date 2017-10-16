@@ -11,8 +11,11 @@ let roomInfoFileName = "ReserveInfomationPlist"
 
 class RoomInfoViewController: UITableViewController {
     
+    @IBOutlet weak var locationCell: reserveCell!
+    
+    @IBOutlet weak var locationCellText: UILabel!
+    
     var infomations:Array<AnyObject> = []
-    var infomationTableCell = reserveCell()
     
     override func viewDidLoad() {
         
@@ -48,9 +51,9 @@ class RoomInfoViewController: UITableViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        return 4
+//    }
 
 //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return 1
@@ -58,7 +61,7 @@ class RoomInfoViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath)
-        tableView.register(reserveCell.self, forCellReuseIdentifier: "locationCell")
+//        tableView.register(reserveCell.self, forCellReuseIdentifier: "locationCell")
 //        tableView.register(reserveCell.self, forCellReuseIdentifier: "capacityCell")
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "basicFacilitiesCell")
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "applicableCell")
@@ -67,8 +70,9 @@ class RoomInfoViewController: UITableViewController {
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "precautionsCell")
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "noticeCell")
         
-        let locationCell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as! reserveCell
-//        let capacityCell = tableView.dequeueReusableCell(withIdentifier: "capacityCell", for: indexPath)
+//        let locationCell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as! reserveCell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as! reserveCell
+//        let capacityCell = tableView.dequeueReusableCell(withIdentifier: "capacityCell", for: indexPath) as! reserveCell
 //        let basicFacilitiesCell = tableView.dequeueReusableCell(withIdentifier: "basicFacilitiesCell", for: indexPath)
 //        let applicableCell = tableView.dequeueReusableCell(withIdentifier: "applicableCell", for: indexPath)
 //        let basicEquipmentsCell = tableView.dequeueReusableCell(withIdentifier: "basicEquipmentsCell", for: indexPath)
@@ -82,26 +86,18 @@ class RoomInfoViewController: UITableViewController {
         }
         let locationRoom = infomation["Location"] as? String ?? ""
         
-        var i:Int = 1
-        
-        switch infomation["Name"]?[indexPath] as? String ?? "" {
-        case "제주":
-            i = 1
-        case "버뮤다":
-            i = 2
-        case "시실리":
-            i = 3
-        case "몰디브":
-            i = 4
-        default:
-            i = 0
-        }
-        print(i)
-        
-        locationCell.textLabel?.text = locationRoom
         locationCell.backgroundColor = UIColorFromHex(rgbValue: 0x555562, alpha: 1) //셀 배경색상
         locationCell.textLabel?.textColor = UIColorFromHex(rgbValue: 0xEBEBF1, alpha: 1)//셀 라벨색상
         locationCell.textLabel?.font = UIFont.systemFont(ofSize: 15)//셀 폰트, 크기
+        locationCellText.sizeToFit()
+        
+        locationCellText.text = locationRoom
+        
+        
+//        cell.textLabel?.text = locationRoom
+//        cell.backgroundColor = UIColorFromHex(rgbValue: 0x555562, alpha: 1) //셀 배경색상
+//        cell.textLabel?.textColor = UIColorFromHex(rgbValue: 0xEBEBF1, alpha: 1)//셀 라벨색상
+//        cell.textLabel?.font = UIFont.systemFont(ofSize: 15)//셀 폰트, 크기
     
 //        capacityCell.textLabel?.text = infomation["Capacity"] as? String
 //        basicFacilitiesCell.textLabel?.text = infomation["BasicFacilities"] as? String
@@ -116,6 +112,7 @@ class RoomInfoViewController: UITableViewController {
         return locationCell
         
     }
+    
     
     /*
     // Override to support conditional editing of the table view.

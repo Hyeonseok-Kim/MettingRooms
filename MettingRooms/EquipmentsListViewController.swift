@@ -88,9 +88,6 @@ class EquipmentsListViewController: UITableViewController {
         }
         cell.detailTextLabel?.text = String(amount) + "원"
         
-//        selectedEQValue = amount
-//        print("cellValue\(selectedEQValue!)")
-        
         return cell
     }
     
