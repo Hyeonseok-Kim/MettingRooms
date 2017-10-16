@@ -55,62 +55,49 @@ class RoomInfoViewController: UITableViewController {
 //        return 4
 //    }
 
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 1:
+            return "기본정보"
+        case 2:
+            return "신청가능장비"
+        case 3:
+            return "특징"
+        case 4:
+            return "주의사항"
+        default :
+            return "회의실 정보"
+        }
+    }
+    
 //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return 1
 //    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath)
-//        tableView.register(reserveCell.self, forCellReuseIdentifier: "locationCell")
-//        tableView.register(reserveCell.self, forCellReuseIdentifier: "capacityCell")
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "basicFacilitiesCell")
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "applicableCell")
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "basicEquipmentsCell")
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "characteristicCell")
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "precautionsCell")
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "noticeCell")
-        
-//        let locationCell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as! reserveCell
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as! reserveCell
-//        let capacityCell = tableView.dequeueReusableCell(withIdentifier: "capacityCell", for: indexPath) as! reserveCell
-//        let basicFacilitiesCell = tableView.dequeueReusableCell(withIdentifier: "basicFacilitiesCell", for: indexPath)
-//        let applicableCell = tableView.dequeueReusableCell(withIdentifier: "applicableCell", for: indexPath)
-//        let basicEquipmentsCell = tableView.dequeueReusableCell(withIdentifier: "basicEquipmentsCell", for: indexPath)
-//        let characteristicCell = tableView.dequeueReusableCell(withIdentifier: "characteristicCell", for: indexPath)
-//        let precautionsCell = tableView.dequeueReusableCell(withIdentifier: "precautionsCell", for: indexPath)
-//        let noticeCell = tableView.dequeueReusableCell(withIdentifier: "noticeCell", for: indexPath)
+        tableView.register(reserveCell.self, forCellReuseIdentifier: "locationCell")
+        let cell = locationCell
         
         guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else {
-//            return cell
-            return locationCell
+//            return locationCell
+            return (cell)!
         }
-        let locationRoom = infomation["Location"] as? String ?? ""
+        let locationRoom = infomation["Location"]?[indexPath] as? String ?? ""
+        print(indexPath)
+        print(indexPath.row)
+//        locationCell.backgroundColor = UIColorFromHex(rgbValue: 0x555562, alpha: 1) //셀 배경색상
+//        locationCell.textLabel?.textColor = UIColorFromHex(rgbValue: 0xEBEBF1, alpha: 1)//셀 라벨색상
+//        locationCell.textLabel?.font = UIFont.systemFont(ofSize: 15)//셀 폰트, 크기
+//        locationCellText.sizeToFit()
+//        locationCellText.text = locationRoom
+
+        cell?.backgroundColor = UIColorFromHex(rgbValue: 0x555562, alpha: 1) //셀 배경색상
+        cell?.textLabel?.textColor = UIColorFromHex(rgbValue: 0xEBEBF1, alpha: 1)//셀 라벨색상
+        cell?.textLabel?.font = UIFont.systemFont(ofSize: 15)//셀 폰트, 크기
+        cell?.detailTextLabel?.text = locationRoom
         
-        locationCell.backgroundColor = UIColorFromHex(rgbValue: 0x555562, alpha: 1) //셀 배경색상
-        locationCell.textLabel?.textColor = UIColorFromHex(rgbValue: 0xEBEBF1, alpha: 1)//셀 라벨색상
-        locationCell.textLabel?.font = UIFont.systemFont(ofSize: 15)//셀 폰트, 크기
-        locationCellText.sizeToFit()
-        
-        locationCellText.text = locationRoom
-        
-        
-//        cell.textLabel?.text = locationRoom
-//        cell.backgroundColor = UIColorFromHex(rgbValue: 0x555562, alpha: 1) //셀 배경색상
-//        cell.textLabel?.textColor = UIColorFromHex(rgbValue: 0xEBEBF1, alpha: 1)//셀 라벨색상
-//        cell.textLabel?.font = UIFont.systemFont(ofSize: 15)//셀 폰트, 크기
-    
-//        capacityCell.textLabel?.text = infomation["Capacity"] as? String
-//        basicFacilitiesCell.textLabel?.text = infomation["BasicFacilities"] as? String
-//        applicableCell.textLabel?.text = infomation["ApplicableEquipments"] as? String
-//        characteristicCell.textLabel?.text = infomation["Characteristic"] as? String
-//        basicEquipmentsCell.textLabel?.text = infomation["Equipment"] as? String
-//        precautionsCell.textLabel?.text = infomation["precautions"] as? String
-//        noticeCell.textLabel?.text = infomation["Notice"] as? String
-        
-        
-//        return cell
-        return locationCell
-        
+        return (cell)!
+//        return locationCell
     }
     
     

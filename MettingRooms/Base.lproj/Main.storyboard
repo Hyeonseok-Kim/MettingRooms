@@ -1155,9 +1155,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="capacityCell" destination="ESh-0T-IWD" id="mjy-1H-l6H"/>
-                        <outlet property="capacityCellText" destination="E8a-ZV-e6j" id="lDt-Yg-hEx"/>
-                        <outlet property="infomationCellText" destination="RYo-Uf-XNW" id="db5-8H-Z7G"/>
                         <outlet property="locationCell" destination="0bt-gE-9tB" id="5HF-Cl-KAb"/>
                         <outlet property="locationCellText" destination="RYo-Uf-XNW" id="AQp-Wq-RFA"/>
                     </connections>
