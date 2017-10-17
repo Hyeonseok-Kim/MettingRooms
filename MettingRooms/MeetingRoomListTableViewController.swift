@@ -13,6 +13,7 @@ class MeetingRoomListTableViewController: UITableViewController {
     //var meetingRooms:[String:[String:Int]] = ["Meeting": ["Banksy":4, "Rivera":8, "Kahlo":8, "Picasso":10], "Seminar":["Cezanne":20, "Matisse":30, "Renoir":40]]
     
     var service:Service!
+    var meetingRoom:MeetingRoom!
     
     /*func meetingRoomsAtIndex(index:Int) -> (key:String, value:[String:Int]) {
         let orderedMeetingRooms = meetingRooms.sorted(by: {$0.1.first!.1 < $1.1.first!.1})
@@ -76,6 +77,20 @@ class MeetingRoomListTableViewController: UITableViewController {
         
         return cell
     }
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        if segue.identifier == "OptionEquipmentsVC"{
+//
+//            let destinationName = segue.destination as! OptionEquipmentsViewController
+//            destinationName.firstParamName = selectedEQName!
+//
+//            let destinationAmount = segue.destination as! OptionEquipmentsViewController
+//            destinationAmount.firstParamValue = selectedEQValue!
+//        }
+//
+//    }
     
     /*
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -141,13 +156,13 @@ class MeetingRoomListTableViewController: UITableViewController {
             }
             destination.meetingRoom = meetingRoom
         }
-//        if segue.identifier == "roomInfomationSegue" {
-//            guard let destinationDVC = segue.destination as? RoomInfoViewController , let selectedIndexDVC = self.tableView.indexPathForSelectedRow?.row, let roomInfo = self.service?.name else {
-//                return
-//            }
-//            //name 전달 매개변수 생성
-//            destinationDVC.title = roomInfo
-//        }
+        if segue.identifier == "roomInformationSegue" {
+            guard let destinationDVC = segue.destination as? RoomInfoViewController , let selectedIndexDVC = self.tableView.indexPathForSelectedRow?.row, let roomInfo = meetingRoom?.name else {
+                return
+            }
+            //name 전달 매개변수 생성
+            destinationDVC.plistFormatSource = roomInfo
+        }
     }
     
 

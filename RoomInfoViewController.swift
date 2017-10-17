@@ -7,29 +7,46 @@
 //
 
 import UIKit
-let roomInfoFileName = "ReserveInfomationPlist"
+//let roomInfoFileName = "ReserveInfomationPlist"
+var plistFormat = "reservationPlist-"
 
 class RoomInfoViewController: UITableViewController {
     
-    @IBOutlet weak var locationCell: reserveCell!
+    @IBOutlet weak var meetingRoomInfo_Cell: UITableViewCell!
+
+    @IBOutlet weak var informationLabel: UILabel!
+
+    @IBOutlet weak var informationValue: UILabel!
     
-    @IBOutlet weak var locationCellText: UILabel!
     
     var infomations:Array<AnyObject> = []
+    var plistFormatSource = ""
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        guard let infomationURL = Bundle.main.url(forResource: roomInfoFileName, withExtension: "plist") else {
+//        guard let infomationURL = Bundle.main.url(forResource: roomInfoFileName, withExtension: "plist") else {
+//            print("has no file")
+//            return
+//        }
+//
+//        if let infomationArray = NSArray(contentsOf: infomationURL) {
+////            print(infomationArray)
+//
+//            infomations = infomations + (infomationArray as Array<AnyObject>)
+//        }
+//
+        guard let plistURL = Bundle.main.url(forResource: plistFormat, withExtension: "plist") else {
             print("has no file")
             return
         }
-
-        if let infomationArray = NSArray(contentsOf: infomationURL) {
-//            print(infomationArray)
-
-            infomations = infomations + (infomationArray as Array<AnyObject>)
+        
+        if let plistArray = NSArray(contentsOf: plistURL) {
+            print(plistArray)
+            
+            infomations = infomations + (plistArray as Array<AnyObject>)
+            
         }
         
     }
@@ -55,24 +72,24 @@ class RoomInfoViewController: UITableViewController {
 //        return 4
 //    }
 
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 1:
-            return "기본정보"
-        case 2:
-            return "신청가능장비"
-        case 3:
-            return "특징"
-        case 4:
-            return "주의사항"
-        default :
-            return "회의실 정보"
-        }
-    }
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        switch section {
+//        case 1:
+//            return "기본정보"
+//        case 2:
+//            return "신청가능장비"
+//        case 3:
+//            return "특징"
+//        case 4:
+//            return "주의사항"
+//        default :
+//            return "회의실 정보"
+//        }
+//    }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 1
+//    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 ////        tableView.register(reserveCell.self, forCellReuseIdentifier: "locationCell")
@@ -106,8 +123,13 @@ class RoomInfoViewController: UITableViewController {
         //////////////////////////////////////////////////////////
         
         // code..
+        tableView.register(AnyClass?.none, forCellReuseIdentifier: "meetingRoomInfo_Cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "meetingRoomInfo_Cell", for: indexPath)
+        
+        
         
         //////////////////////////////////////////////////////////
+        return cell
     }
     
     
