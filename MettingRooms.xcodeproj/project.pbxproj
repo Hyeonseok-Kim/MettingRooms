@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		7503BB011F8DA0EC007EDA51 /* ReserveInfomationPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7503BB001F8DA0EC007EDA51 /* ReserveInfomationPlist.plist */; };
 		7503BB031F8DEFBB007EDA51 /* reserveLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7503BB021F8DEFBB007EDA51 /* reserveLocationCell.swift */; };
+		7503BB071F95A37B007EDA51 /* reservationPlist-jeju.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7503BB061F95A37B007EDA51 /* reservationPlist-jeju.plist */; };
+		7503BB091F95A5CA007EDA51 /* reservationPlist-bermuda.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7503BB081F95A5CA007EDA51 /* reservationPlist-bermuda.plist */; };
+		7503BB0B1F95A841007EDA51 /* reservationPlist-sisily.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7503BB0A1F95A841007EDA51 /* reservationPlist-sisily.plist */; };
+		7503BB0D1F95C0C2007EDA51 /* reservationPlist-moldiv.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7503BB0C1F95C0C2007EDA51 /* reservationPlist-moldiv.plist */; };
+		7503BB0F1F95C197007EDA51 /* reservationPlist-precautions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7503BB0E1F95C197007EDA51 /* reservationPlist-precautions.plist */; };
 		751612A61F4E617D00677C44 /* ReservationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751612A51F4E617D00677C44 /* ReservationListViewController.swift */; };
 		751612A81F4E619700677C44 /* ReserveRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751612A71F4E619700677C44 /* ReserveRoomViewController.swift */; };
 		7521CF271F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7521CF261F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift */; };
@@ -51,6 +56,11 @@
 /* Begin PBXFileReference section */
 		7503BB001F8DA0EC007EDA51 /* ReserveInfomationPlist.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ReserveInfomationPlist.plist; path = MettingRooms/ReserveInfomationPlist.plist; sourceTree = "<group>"; };
 		7503BB021F8DEFBB007EDA51 /* reserveLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reserveLocationCell.swift; sourceTree = "<group>"; };
+		7503BB061F95A37B007EDA51 /* reservationPlist-jeju.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "reservationPlist-jeju.plist"; sourceTree = "<group>"; };
+		7503BB081F95A5CA007EDA51 /* reservationPlist-bermuda.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "reservationPlist-bermuda.plist"; sourceTree = "<group>"; };
+		7503BB0A1F95A841007EDA51 /* reservationPlist-sisily.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "reservationPlist-sisily.plist"; sourceTree = "<group>"; };
+		7503BB0C1F95C0C2007EDA51 /* reservationPlist-moldiv.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "reservationPlist-moldiv.plist"; sourceTree = "<group>"; };
+		7503BB0E1F95C197007EDA51 /* reservationPlist-precautions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "reservationPlist-precautions.plist"; sourceTree = "<group>"; };
 		751612A51F4E617D00677C44 /* ReservationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationListViewController.swift; sourceTree = "<group>"; };
 		751612A71F4E619700677C44 /* ReserveRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveRoomViewController.swift; sourceTree = "<group>"; };
 		7521CF261F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionEquipmentsViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +117,11 @@
 		755DEE441F43CFA0006BD444 = {
 			isa = PBXGroup;
 			children = (
+				7503BB061F95A37B007EDA51 /* reservationPlist-jeju.plist */,
+				7503BB081F95A5CA007EDA51 /* reservationPlist-bermuda.plist */,
+				7503BB0A1F95A841007EDA51 /* reservationPlist-sisily.plist */,
+				7503BB0C1F95C0C2007EDA51 /* reservationPlist-moldiv.plist */,
+				7503BB0E1F95C197007EDA51 /* reservationPlist-precautions.plist */,
 				7503BB021F8DEFBB007EDA51 /* reserveLocationCell.swift */,
 				7503BB001F8DA0EC007EDA51 /* ReserveInfomationPlist.plist */,
 				7521CF261F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift */,
@@ -285,8 +300,13 @@
 			files = (
 				755DEE5B1F43CFA0006BD444 /* LaunchScreen.storyboard in Resources */,
 				75A1D1521F53A4380033E06C /* EquipmentsDefault.plist in Resources */,
+				7503BB071F95A37B007EDA51 /* reservationPlist-jeju.plist in Resources */,
+				7503BB0F1F95C197007EDA51 /* reservationPlist-precautions.plist in Resources */,
+				7503BB091F95A5CA007EDA51 /* reservationPlist-bermuda.plist in Resources */,
+				7503BB0B1F95A841007EDA51 /* reservationPlist-sisily.plist in Resources */,
 				7503BB011F8DA0EC007EDA51 /* ReserveInfomationPlist.plist in Resources */,
 				755DEE581F43CFA0006BD444 /* Assets.xcassets in Resources */,
+				7503BB0D1F95C0C2007EDA51 /* reservationPlist-moldiv.plist in Resources */,
 				75A1D1581F5401700033E06C /* EquipmentsPlist.plist in Resources */,
 				755DEE561F43CFA0006BD444 /* Main.storyboard in Resources */,
 			);

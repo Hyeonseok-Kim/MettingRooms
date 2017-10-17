@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Precautions</key>
+		<string>회의실은 모든 직원이 사용하실 수 있습니다. 회의실이 사용중이라면 다른 회의실을 이용해 주시기 바랍니다.</string>
+		<key>Notice</key>
+		<string>이 어플은 아직 테스트 단계 이므로, 항목별 자세한 정보가 제공되지않음을 명시합니다.</string>
+	</dict>
+</array>
+</plist>

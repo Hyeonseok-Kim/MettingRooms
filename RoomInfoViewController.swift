@@ -75,33 +75,39 @@ class RoomInfoViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        tableView.register(reserveCell.self, forCellReuseIdentifier: "locationCell")
-        let cell = locationCell
-        
-        guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else {
-//            return locationCell
-            return (cell)!
-        }
-        
-        let locationRoom = infomation["Location"] as? String ?? ""
-        
-        print(indexPath)
-        print(indexPath.row)
-//        locationCell.backgroundColor = UIColorFromHex(rgbValue: 0x555562, alpha: 1) //셀 배경색상
-//        locationCell.textLabel?.textColor = UIColorFromHex(rgbValue: 0xEBEBF1, alpha: 1)//셀 라벨색상
-//        locationCell.textLabel?.font = UIFont.systemFont(ofSize: 15)//셀 폰트, 크기
-//        locationCellText.sizeToFit()
+////        tableView.register(reserveCell.self, forCellReuseIdentifier: "locationCell")
+//        let cell = locationCell
+//
+//        guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else {
+////            return locationCell
+//            return (cell)!
+//        }
+//
+//        let locationRoom = infomation["Location"] as? String ?? ""
+//
+//        print(indexPath)
+//        print(indexPath.row)
+////        locationCell.backgroundColor = UIColorFromHex(rgbValue: 0x555562, alpha: 1) //셀 배경색상
+////        locationCell.textLabel?.textColor = UIColorFromHex(rgbValue: 0xEBEBF1, alpha: 1)//셀 라벨색상
+////        locationCell.textLabel?.font = UIFont.systemFont(ofSize: 15)//셀 폰트, 크기
+////        locationCellText.sizeToFit()
+////        locationCellText.text = locationRoom
+//
+//        cell?.backgroundColor = UIColorFromHex(rgbValue: 0x555562, alpha: 1) //셀 배경색상
+//        cell?.textLabel?.textColor = UIColorFromHex(rgbValue: 0xEBEBF1, alpha: 1)//셀 라벨색상
+//        cell?.textLabel?.font = UIFont.systemFont(ofSize: 15)//셀 폰트, 크기
+//
 //        locationCellText.text = locationRoom
-
-        cell?.backgroundColor = UIColorFromHex(rgbValue: 0x555562, alpha: 1) //셀 배경색상
-        cell?.textLabel?.textColor = UIColorFromHex(rgbValue: 0xEBEBF1, alpha: 1)//셀 라벨색상
-        cell?.textLabel?.font = UIFont.systemFont(ofSize: 15)//셀 폰트, 크기
-
-        locationCellText.text = locationRoom
-        locationCellText.sizeToFit()
+//        locationCellText.sizeToFit()
+//
+//        return (cell)!
+////        return locationCell
         
-        return (cell)!
-//        return locationCell
+        //////////////////////////////////////////////////////////
+        
+        // code..
+        
+        //////////////////////////////////////////////////////////
     }
     
     
