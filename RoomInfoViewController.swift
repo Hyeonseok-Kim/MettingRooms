@@ -9,6 +9,7 @@
 import UIKit
 //let roomInfoFileName = "ReserveInfomationPlist"
 var plistFormat = "reservationPlist-"
+let precautionsFormat = "reservationPlist-precautions"
 
 class RoomInfoViewController: UITableViewController {
     
@@ -20,7 +21,9 @@ class RoomInfoViewController: UITableViewController {
     
     
     var infomations:Array<AnyObject> = []
+    var precautions:Array<AnyObject> = []
     var plistFormatSource = ""
+    
     
     override func viewDidLoad() {
         
@@ -37,18 +40,36 @@ class RoomInfoViewController: UITableViewController {
 //            infomations = infomations + (infomationArray as Array<AnyObject>)
 //        }
 //
+        switch plistFormatSource {
+        case "제주/Jeju":
+            plistFormat = plistFormat + "jeju"
+        case "버뮤다/Bermuda":
+            plistFormat = plistFormat + "bermuda"
+        case "시실리/Sicily":
+            plistFormat = plistFormat + "sicily"
+        case "몰디브/Moldiv":
+            plistFormat = plistFormat + "moldiv"
+        default:
+            plistFormat = "reservationPlist-precautions"
+        }
+        
         guard let plistURL = Bundle.main.url(forResource: plistFormat, withExtension: "plist") else {
             print("has no file")
+            return
+        }
+        guard let precautionsURL = Bundle.main.url(forResource: precautionsFormat, withExtension: "plist") else {
+            print("has no precautions")
             return
         }
         
         if let plistArray = NSArray(contentsOf: plistURL) {
             print(plistArray)
-            
             infomations = infomations + (plistArray as Array<AnyObject>)
-            
         }
-        
+        if let precautionsArray = NSArray(contentsOf: precautionsURL) {
+            print(precautionsArray)
+            precautions = precautions + (precautionsArray as Array<AnyObject>)
+        }
     }
 
     func UIColorFromHex(rgbValue:UInt32, alpha:Double=1.0)->UIColor {
@@ -68,28 +89,13 @@ class RoomInfoViewController: UITableViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        return 4
-//    }
-
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        switch section {
-//        case 1:
-//            return "기본정보"
-//        case 2:
-//            return "신청가능장비"
-//        case 3:
-//            return "특징"
-//        case 4:
-//            return "주의사항"
-//        default :
-//            return "회의실 정보"
-//        }
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 1
-//    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return infomations.count
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 ////        tableView.register(reserveCell.self, forCellReuseIdentifier: "locationCell")
@@ -125,9 +131,15 @@ class RoomInfoViewController: UITableViewController {
         // code..
 //        tableView.register(AnyClass?.none, forCellReuseIdentifier: "meetingRoomInfo_Cell")
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "meetingRoomInfo_Cell", for: indexPath)
-        informationLabel.text = "위치"
-        informationValue.text = "위치정보"
         
+        guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else{
+            return meetingRoomInfo_Cell
+        }
+        
+        let Value = infomation["Value"] as? String ?? ""
+        
+        informationLabel.text = "위치"
+        informationValue.text = Value
         //////////////////////////////////////////////////////////
         return meetingRoomInfo_Cell
     }

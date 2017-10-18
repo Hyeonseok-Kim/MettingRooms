@@ -10,10 +10,12 @@ import UIKit
 
 class MeetingRoomListTableViewController: UITableViewController {
 
-    //var meetingRooms:[String:[String:Int]] = ["Meeting": ["Banksy":4, "Rivera":8, "Kahlo":8, "Picasso":10], "Seminar":["Cezanne":20, "Matisse":30, "Renoir":40]]
     
     var service:Service!
-    var meetingRoom:MeetingRoom!
+    var selectedRoomName:String = ""
+    //var meetingRooms:[String:[String:Int]] = ["Meeting": ["Banksy":4, "Rivera":8, "Kahlo":8, "Picasso":10], "Seminar":["Cezanne":20, "Matisse":30, "Renoir":40]]
+    
+    
     
     /*func meetingRoomsAtIndex(index:Int) -> (key:String, value:[String:Int]) {
         let orderedMeetingRooms = meetingRooms.sorted(by: {$0.1.first!.1 < $1.1.first!.1})
@@ -76,6 +78,15 @@ class MeetingRoomListTableViewController: UITableViewController {
         cell.detailTextLabel!.text = String(meetingRoom.capacity)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let meetingRoom = service?.items?[indexPath.row] else{
+            return
+        }
+        selectedRoomName = meetingRoom.name
+        
     }
     
     
@@ -157,11 +168,8 @@ class MeetingRoomListTableViewController: UITableViewController {
             destination.meetingRoom = meetingRoom
         }
         if segue.identifier == "roomInformationSegue" {
-            guard let destinationDVC = segue.destination as? RoomInfoViewController , let selectedIndexDVC = self.tableView.indexPathForSelectedRow?.row, let roomInfo = meetingRoom?.name else {
-                return
-            }
-            //name 전달 매개변수 생성
-            destinationDVC.plistFormatSource = roomInfo
+            let destinationName = segue.destination as? RoomInfoViewController
+            destinationName?.plistFormatSource = selectedRoomName
         }
     }
     
