@@ -50,7 +50,7 @@ class RoomInfoViewController: UITableViewController {
         case "몰디브/Moldiv":
             plistFormat = plistFormat + "moldiv"
         default:
-            plistFormat = "reservationPlist-precautions"
+            plistFormat = "reservationPlist-jeju"
         }
         
         guard let plistURL = Bundle.main.url(forResource: plistFormat, withExtension: "plist") else {
@@ -65,9 +65,9 @@ class RoomInfoViewController: UITableViewController {
         if let plistArray = NSArray(contentsOf: plistURL) {
             print(plistArray)
             infomations = infomations + (plistArray as Array<AnyObject>)
+            print(infomations.count)
         }
         if let precautionsArray = NSArray(contentsOf: precautionsURL) {
-            print(precautionsArray)
             precautions = precautions + (precautionsArray as Array<AnyObject>)
         }
     }
@@ -96,7 +96,7 @@ class RoomInfoViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return infomations.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 ////        tableView.register(reserveCell.self, forCellReuseIdentifier: "locationCell")
 //        let cell = locationCell
@@ -136,10 +136,11 @@ class RoomInfoViewController: UITableViewController {
             return meetingRoomInfo_Cell
         }
         
-        let Value = infomation["Value"] as? String ?? ""
+        let label = infomation["Name"] as? String ?? ""
+        let value = infomation["Value"] as? String ?? ""
         
-        informationLabel.text = "위치"
-        informationValue.text = Value
+        informationLabel.text = label
+        informationValue.text = value
         //////////////////////////////////////////////////////////
         return meetingRoomInfo_Cell
     }
