@@ -15,6 +15,9 @@ class RoomInfoViewController: UITableViewController {
     
     @IBOutlet weak var meetingRoomInfo_Cell: UITableViewCell!
 
+    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var testValue: UILabel!
+    
     @IBOutlet weak var informationLabel: UILabel!
 
     @IBOutlet weak var informationValue: UILabel!
@@ -65,7 +68,6 @@ class RoomInfoViewController: UITableViewController {
         if let plistArray = NSArray(contentsOf: plistURL) {
             print(plistArray)
             infomations = infomations + (plistArray as Array<AnyObject>)
-            print(infomations.count)
         }
         if let precautionsArray = NSArray(contentsOf: precautionsURL) {
             precautions = precautions + (precautionsArray as Array<AnyObject>)
@@ -94,22 +96,27 @@ class RoomInfoViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return infomations.count
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // code..
+        let cell = tableView.dequeueReusableCell(withIdentifier: "meetingRoomInfo_Cell", for: indexPath)
+        
         guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else{
             return meetingRoomInfo_Cell
         }
         
-        let label = infomation["Name"] as? String ?? ""
+        let label = infomation["Label"] as? String ?? ""
         let value = infomation["Value"] as? String ?? ""
         
         informationLabel.text = label
         informationValue.text = value
+        testLabel.text = label
+        testValue.text = value
         
-        return meetingRoomInfo_Cell
+//        return meetingRoomInfo_Cell
+        return cell
     }
     
     
