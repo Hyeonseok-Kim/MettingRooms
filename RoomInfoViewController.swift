@@ -131,8 +131,6 @@ class RoomInfoViewController: UITableViewController {
         case [0,0]:
             informationLabel.text = label
             informationValue.text = value
-            Cell.informationLabel?.text = label
-            Cell.informationValue?.text = value
         case [0,1]:
             capacityLabel.text = label
             capacityValue.text = value
@@ -148,12 +146,9 @@ class RoomInfoViewController: UITableViewController {
         case [0,5]:
             precautionsLabel.text = label
             precautionsValue.text = value
-            Cell.precautionsLabel?.text = label
-            Cell.precautionsValue?.text = value
         default:
             break;
         }
-        
         return meetingRoomInfo_Cell
 //        return cell
     }
