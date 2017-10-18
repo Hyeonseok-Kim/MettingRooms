@@ -10,15 +10,29 @@ import UIKit
 //let roomInfoFileName = "ReserveInfomationPlist"
 var plistFormat = "reservationPlist-"
 let precautionsFormat = "reservationPlist-precautions"
+var Cell = RoomInfoCell()
 
 class RoomInfoViewController: UITableViewController {
     
     @IBOutlet weak var meetingRoomInfo_Cell: UITableViewCell!
     
     @IBOutlet weak var informationLabel: UILabel!
-
     @IBOutlet weak var informationValue: UILabel!
     
+    @IBOutlet weak var capacityLabel: UILabel!
+    @IBOutlet weak var capacityValue: UILabel!
+    
+    @IBOutlet weak var facilitiesLabel: UILabel!
+    @IBOutlet weak var facilitiesValue: UILabel!
+    
+    @IBOutlet weak var equipmentsLabel: UILabel!
+    @IBOutlet weak var equipmentsValue: UILabel!
+    
+    @IBOutlet weak var applicatedEQLabel: UILabel!
+    @IBOutlet weak var applicatedEQValue: UILabel!
+    
+    @IBOutlet weak var precautionsLabel: UILabel!
+    @IBOutlet weak var precautionsValue: UILabel!
     
     var infomations:Array<AnyObject> = []
     var precautions:Array<AnyObject> = []
@@ -93,12 +107,14 @@ class RoomInfoViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return infomations.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // code..
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "meetingRoomInfo_Cell", for: indexPath) as! RoomInfoCell
+        
+        tableView.register(RoomInfoCell.self, forCellReuseIdentifier: "meetingRoomInfo_Cell")
         
         guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else{
             return meetingRoomInfo_Cell
@@ -107,8 +123,36 @@ class RoomInfoViewController: UITableViewController {
         let label = infomation["Label"] as? String ?? ""
         let value = infomation["Value"] as? String ?? ""
         
-        informationLabel.text = label
-        informationValue.text = value
+//        informationLabel.text = label
+//        informationValue.text = value
+//        print(indexPath)
+
+        switch indexPath {
+        case [0,0]:
+            informationLabel.text = label
+            informationValue.text = value
+            Cell.informationLabel?.text = label
+            Cell.informationValue?.text = value
+        case [0,1]:
+            capacityLabel.text = label
+            capacityValue.text = value
+        case [0,2]:
+            facilitiesLabel.text = label
+            facilitiesValue.text = value
+        case [0,3]:
+            equipmentsLabel.text = label
+            equipmentsValue.text = value
+        case [0,4]:
+            applicatedEQLabel.text = label
+            applicatedEQValue.text = value
+        case [0,5]:
+            precautionsLabel.text = label
+            precautionsValue.text = value
+            Cell.precautionsLabel?.text = label
+            Cell.precautionsValue?.text = value
+        default:
+            break;
+        }
         
         return meetingRoomInfo_Cell
 //        return cell

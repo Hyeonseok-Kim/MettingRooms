@@ -931,14 +931,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="0.59720141270000004" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="0Xj-h4-whT">
-                            <rect key="frame" x="0.0" y="56" width="375" height="628"/>
+                            <rect key="frame" x="0.0" y="336" width="375" height="628"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <sections>
                             <tableViewSection id="BCd-wt-mVx">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingRoomInfo_Cell" rowHeight="56" id="0mh-Uk-vqo" customClass="RoomInfoCell" customModule="MettingRooms" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingRoomInfo_Cell" rowHeight="56" id="0mh-Uk-vqo" customClass="RoomInfoCell" customModule="MettingRooms" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0mh-Uk-vqo" id="pu4-8c-lfr">
@@ -977,8 +977,223 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="infoLabel" destination="Oag-rb-vQr" id="ZsC-9F-E2T"/>
-                                            <outlet property="infoValue" destination="daV-nP-qRj" id="91e-5O-AVO"/>
+                                            <outlet property="informationLabel" destination="Oag-rb-vQr" id="u1w-lp-YNJ"/>
+                                            <outlet property="informationValue" destination="daV-nP-qRj" id="RO5-Yi-SpO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingRoomInfo_Cell" rowHeight="56" id="03d-aF-1Fk" customClass="RoomInfoCell" customModule="MettingRooms" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="03d-aF-1Fk" id="tml-h2-LnT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C31-c0-Fkn">
+                                                    <rect key="frame" x="17" y="17" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="S2T-m9-Iid"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REE-Xe-1Jn">
+                                                    <rect key="frame" x="318" y="17" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="ieW-L1-aQh"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="y21-g4-cdn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="REE-Xe-1Jn" firstAttribute="baseline" secondItem="C31-c0-Fkn" secondAttribute="baseline" id="9bX-n5-fUy"/>
+                                                <constraint firstItem="REE-Xe-1Jn" firstAttribute="firstBaseline" secondItem="C31-c0-Fkn" secondAttribute="firstBaseline" id="9gw-l1-K1Y"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="REE-Xe-1Jn" secondAttribute="trailing" constant="7" id="I4k-lK-ZwI"/>
+                                                <constraint firstItem="C31-c0-Fkn" firstAttribute="leading" secondItem="tml-h2-LnT" secondAttribute="leadingMargin" constant="9" id="Pet-3A-L9R"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="C31-c0-Fkn" secondAttribute="trailingMargin" id="t3o-08-wck"/>
+                                                <constraint firstItem="REE-Xe-1Jn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tml-h2-LnT" secondAttribute="leadingMargin" id="u8q-B0-Cgr"/>
+                                                <constraint firstItem="REE-Xe-1Jn" firstAttribute="centerY" secondItem="tml-h2-LnT" secondAttribute="centerY" id="yF1-Vv-Ztl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="capacityLabel" destination="C31-c0-Fkn" id="Syk-vt-2uV"/>
+                                            <outlet property="capacityValue" destination="REE-Xe-1Jn" id="qHG-a9-IVS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingRoomInfo_Cell" rowHeight="56" id="9Ms-SB-0Jz" customClass="RoomInfoCell" customModule="MettingRooms" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="112" width="375" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Ms-SB-0Jz" id="Par-f3-cli">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRD-mM-FMC">
+                                                    <rect key="frame" x="17" y="17" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="HQt-b7-GSV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRE-7k-eTB">
+                                                    <rect key="frame" x="318" y="17" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="BlJ-FS-bcS"/>
+                                                        <constraint firstAttribute="height" constant="21" id="pyW-s5-hUa"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SRE-7k-eTB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Par-f3-cli" secondAttribute="leadingMargin" id="4nv-xQ-UBk"/>
+                                                <constraint firstItem="SRE-7k-eTB" firstAttribute="baseline" secondItem="sRD-mM-FMC" secondAttribute="baseline" id="57k-ee-fcg"/>
+                                                <constraint firstItem="SRE-7k-eTB" firstAttribute="centerY" secondItem="Par-f3-cli" secondAttribute="centerY" id="lSU-uS-kgg"/>
+                                                <constraint firstItem="SRE-7k-eTB" firstAttribute="firstBaseline" secondItem="sRD-mM-FMC" secondAttribute="firstBaseline" id="nBx-mL-0qm"/>
+                                                <constraint firstItem="sRD-mM-FMC" firstAttribute="leading" secondItem="Par-f3-cli" secondAttribute="leadingMargin" constant="9" id="njQ-Dw-zdj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SRE-7k-eTB" secondAttribute="trailing" constant="7" id="tAT-LM-au3"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sRD-mM-FMC" secondAttribute="trailingMargin" id="z5Y-Ng-0RQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="facilitiesLabel" destination="sRD-mM-FMC" id="enC-OP-tgH"/>
+                                            <outlet property="facilitiesValue" destination="SRE-7k-eTB" id="EEj-OU-eaI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingRoomInfo_Cell" rowHeight="56" id="1Ix-Ui-LiA" customClass="RoomInfoCell" customModule="MettingRooms" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="168" width="375" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Ix-Ui-LiA" id="qiY-2s-eWI">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dC8-dI-C5c">
+                                                    <rect key="frame" x="17" y="17" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="AQ4-g2-FDX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjw-aY-lfe">
+                                                    <rect key="frame" x="318" y="17" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="gTr-2V-ZaS"/>
+                                                        <constraint firstAttribute="height" constant="21" id="meB-FM-VWH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dC8-dI-C5c" secondAttribute="trailingMargin" id="6ta-tV-t4n"/>
+                                                <constraint firstItem="Mjw-aY-lfe" firstAttribute="centerY" secondItem="qiY-2s-eWI" secondAttribute="centerY" id="8tw-pq-4Mm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Mjw-aY-lfe" secondAttribute="trailing" constant="7" id="Eae-Bw-Pv6"/>
+                                                <constraint firstItem="dC8-dI-C5c" firstAttribute="leading" secondItem="qiY-2s-eWI" secondAttribute="leadingMargin" constant="9" id="Ly8-H3-Rpi"/>
+                                                <constraint firstItem="Mjw-aY-lfe" firstAttribute="firstBaseline" secondItem="dC8-dI-C5c" secondAttribute="firstBaseline" id="awx-IJ-N1D"/>
+                                                <constraint firstItem="Mjw-aY-lfe" firstAttribute="baseline" secondItem="dC8-dI-C5c" secondAttribute="baseline" id="cCb-QG-Axf"/>
+                                                <constraint firstItem="Mjw-aY-lfe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qiY-2s-eWI" secondAttribute="leadingMargin" id="lqr-H7-f0o"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="equipmentsLabel" destination="dC8-dI-C5c" id="Res-lO-G0f"/>
+                                            <outlet property="equipmentsValue" destination="Mjw-aY-lfe" id="yfj-TT-Yxu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingRoomInfo_Cell" rowHeight="56" id="EsM-R1-tsc" customClass="RoomInfoCell" customModule="MettingRooms" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="224" width="375" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EsM-R1-tsc" id="raa-ws-hZ5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tg3-Iq-gg7">
+                                                    <rect key="frame" x="17" y="17" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="nyM-G5-BMz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6c8-gq-qRd">
+                                                    <rect key="frame" x="318" y="17" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="9UA-o2-tf6"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="gbV-wS-2en"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6c8-gq-qRd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="raa-ws-hZ5" secondAttribute="leadingMargin" id="1F4-i5-Rts"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6c8-gq-qRd" secondAttribute="trailing" constant="7" id="6BV-oe-41A"/>
+                                                <constraint firstItem="6c8-gq-qRd" firstAttribute="centerY" secondItem="raa-ws-hZ5" secondAttribute="centerY" id="Big-P6-Dhf"/>
+                                                <constraint firstItem="6c8-gq-qRd" firstAttribute="baseline" secondItem="tg3-Iq-gg7" secondAttribute="baseline" id="D8A-oD-8mj"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tg3-Iq-gg7" secondAttribute="trailingMargin" id="H2T-dT-fZN"/>
+                                                <constraint firstItem="6c8-gq-qRd" firstAttribute="firstBaseline" secondItem="tg3-Iq-gg7" secondAttribute="firstBaseline" id="Re2-rg-zJV"/>
+                                                <constraint firstItem="tg3-Iq-gg7" firstAttribute="leading" secondItem="raa-ws-hZ5" secondAttribute="leadingMargin" constant="9" id="m0m-df-Sc8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="applicatedEQLabel" destination="tg3-Iq-gg7" id="5Ih-6v-28c"/>
+                                            <outlet property="applicatedEQValue" destination="6c8-gq-qRd" id="WeB-yv-7io"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingRoomInfo_Cell" rowHeight="56" id="RW0-ci-MsA" customClass="RoomInfoCell" customModule="MettingRooms" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="280" width="375" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RW0-ci-MsA" id="lzX-8G-kWH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8M-r6-jeC">
+                                                    <rect key="frame" x="17" y="17" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="oAx-Rz-kkW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezp-ou-olB">
+                                                    <rect key="frame" x="318" y="17" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="FAR-h8-t3K"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="SuV-5p-OGt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ezp-ou-olB" firstAttribute="firstBaseline" secondItem="e8M-r6-jeC" secondAttribute="firstBaseline" id="5cR-Pi-JRr"/>
+                                                <constraint firstItem="e8M-r6-jeC" firstAttribute="leading" secondItem="lzX-8G-kWH" secondAttribute="leadingMargin" constant="9" id="DSg-Fo-4WC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ezp-ou-olB" secondAttribute="trailing" constant="7" id="Jxv-Oy-QO4"/>
+                                                <constraint firstItem="Ezp-ou-olB" firstAttribute="baseline" secondItem="e8M-r6-jeC" secondAttribute="baseline" id="MAP-PM-Ofb"/>
+                                                <constraint firstItem="Ezp-ou-olB" firstAttribute="centerY" secondItem="lzX-8G-kWH" secondAttribute="centerY" id="hUv-JR-OaO"/>
+                                                <constraint firstItem="Ezp-ou-olB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lzX-8G-kWH" secondAttribute="leadingMargin" id="kvl-VE-nQX"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="e8M-r6-jeC" secondAttribute="trailingMargin" id="wPt-24-Yk5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="precautionsLabel" destination="e8M-r6-jeC" id="jHr-zt-1gE"/>
+                                            <outlet property="precautionsValue" destination="Ezp-ou-olB" id="3MP-OL-Spg"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -997,9 +1212,19 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="applicatedEQLabel" destination="tg3-Iq-gg7" id="aEG-LF-X1U"/>
+                        <outlet property="applicatedEQValue" destination="6c8-gq-qRd" id="a1o-QL-Z5q"/>
+                        <outlet property="capacityLabel" destination="C31-c0-Fkn" id="9qL-bd-0w0"/>
+                        <outlet property="capacityValue" destination="REE-Xe-1Jn" id="CHb-f8-SQb"/>
+                        <outlet property="equipmentsLabel" destination="dC8-dI-C5c" id="eLI-rA-qQ1"/>
+                        <outlet property="equipmentsValue" destination="Mjw-aY-lfe" id="21t-fZ-mgK"/>
+                        <outlet property="facilitiesLabel" destination="sRD-mM-FMC" id="cLG-kD-yNj"/>
+                        <outlet property="facilitiesValue" destination="SRE-7k-eTB" id="4jK-Sr-CoZ"/>
                         <outlet property="informationLabel" destination="Oag-rb-vQr" id="PRD-jm-4j2"/>
                         <outlet property="informationValue" destination="daV-nP-qRj" id="Trq-fX-gye"/>
                         <outlet property="meetingRoomInfo_Cell" destination="0mh-Uk-vqo" id="aVs-Kx-po3"/>
+                        <outlet property="precautionsLabel" destination="e8M-r6-jeC" id="Sgn-qR-Wgh"/>
+                        <outlet property="precautionsValue" destination="Ezp-ou-olB" id="kRf-hi-jtz"/>
                     </connections>
                 </tableViewController>
             </objects>

@@ -10,8 +10,32 @@ import UIKit
 
 class RoomInfoCell: UITableViewCell {
 
-    @IBOutlet weak var infoLabel: UILabel!
-    @IBOutlet weak var infoValue: UILabel!
+    @IBOutlet weak var informationLabel: UILabel!
+    @IBOutlet weak var informationValue: UILabel!
+    
+    @IBOutlet weak var capacityLabel: UILabel!
+    @IBOutlet weak var capacityValue: UILabel!
+    
+    @IBOutlet weak var facilitiesLabel: UILabel!
+    @IBOutlet weak var facilitiesValue: UILabel!
+    
+    @IBOutlet weak var equipmentsLabel: UILabel!
+    @IBOutlet weak var equipmentsValue: UILabel!
+    
+    @IBOutlet weak var applicatedEQLabel: UILabel!
+    @IBOutlet weak var applicatedEQValue: UILabel!
+    
+    @IBOutlet weak var precautionsLabel: UILabel!
+    @IBOutlet weak var precautionsValue: UILabel!
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
