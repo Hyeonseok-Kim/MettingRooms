@@ -123,13 +123,13 @@ class RoomInfoViewController: UITableViewController {
         //////////////////////////////////////////////////////////
         
         // code..
-        tableView.register(AnyClass?.none, forCellReuseIdentifier: "meetingRoomInfo_Cell")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "meetingRoomInfo_Cell", for: indexPath)
-        
-        
+//        tableView.register(AnyClass?.none, forCellReuseIdentifier: "meetingRoomInfo_Cell")
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "meetingRoomInfo_Cell", for: indexPath)
+        informationLabel.text = "위치"
+        informationValue.text = "위치정보"
         
         //////////////////////////////////////////////////////////
-        return cell
+        return meetingRoomInfo_Cell
     }
     
     
