@@ -636,7 +636,7 @@
         <!--Reservations-->
         <scene sceneID="Dj3-Zo-wbW">
             <objects>
-                <tableViewController title="Reservations" id="lAR-jb-RUE" customClass="ReservationListViewController" customModule="MettingRooms" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Reservations" hidesBottomBarWhenPushed="YES" id="lAR-jb-RUE" customClass="ReservationListViewController" customModule="MettingRooms" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Mk-iF-bfj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -926,7 +926,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K8b-02-RqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="cHl-Kb-ITa" customClass="RoomInfoViewController" customModule="MettingRooms" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oUR-CF-BsS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oUR-CF-BsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="0.59720141270000004" colorSpace="custom" customColorSpace="sRGB"/>
@@ -938,7 +938,7 @@
                         <sections>
                             <tableViewSection id="BCd-wt-mVx">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingRoomInfo_Cell" rowHeight="56" id="0mh-Uk-vqo">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingRoomInfo_Cell" rowHeight="56" id="0mh-Uk-vqo" customClass="RoomInfoCell" customModule="MettingRooms" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0mh-Uk-vqo" id="pu4-8c-lfr">
@@ -976,6 +976,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="infoLabel" destination="Oag-rb-vQr" id="ZsC-9F-E2T"/>
+                                            <outlet property="infoValue" destination="daV-nP-qRj" id="woO-tg-B73"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingRoomInfo_Cell" rowHeight="56" id="R9E-w9-stQ">
                                         <rect key="frame" x="0.0" y="56" width="375" height="56"/>

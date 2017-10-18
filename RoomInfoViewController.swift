@@ -53,7 +53,7 @@ class RoomInfoViewController: UITableViewController {
         case "몰디브/Moldiv":
             plistFormat = plistFormat + "moldiv"
         default:
-            plistFormat = "reservationPlist-jeju"
+            plistFormat = "reservationPlist-bermuda"
         }
         
         guard let plistURL = Bundle.main.url(forResource: plistFormat, withExtension: "plist") else {
@@ -101,7 +101,7 @@ class RoomInfoViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // code..
-        let cell = tableView.dequeueReusableCell(withIdentifier: "meetingRoomInfo_Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "meetingRoomInfo_Cell", for: indexPath) as! RoomInfoCell
         
         guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else{
             return meetingRoomInfo_Cell
@@ -115,8 +115,8 @@ class RoomInfoViewController: UITableViewController {
         testLabel.text = label
         testValue.text = value
         
-//        return meetingRoomInfo_Cell
-        return cell
+        return meetingRoomInfo_Cell
+//        return cell
     }
     
     

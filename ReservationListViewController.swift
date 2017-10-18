@@ -22,7 +22,6 @@ class ReservationListViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.title = meetingRoom?.name.substring(to: (meetingRoom?.name.index(of: "/"))!)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,8 +40,13 @@ class ReservationListViewController: UITableViewController {
     @IBAction func unwind(to unwindSegue: UIStoryboardSegue, ReservationList subsequentVC: UITableViewController) {
         print("unwind")
     }
+    
+    override func viewWillDisappear(_ animated: Bool) { //back button event Hidden
+        self.navigationController?.isToolbarHidden = true
+    }
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1

@@ -41,10 +41,7 @@ class EquipmentsListViewController: UITableViewController {
         }*/
         
         if let equipmentArray = NSArray(contentsOf: equipmentURL) {
-            print(equipmentArray)
-            
             equipments = equipments + (equipmentArray as Array<AnyObject>)
-            
         }
         
         
@@ -103,8 +100,8 @@ class EquipmentsListViewController: UITableViewController {
             return
         }
         
-        print("index : \(indexPath.row)")
-        print("index items : \(equipments[indexPath.row])")
+//        print("index : \(indexPath.row)")
+//        print("index items : \(equipments[indexPath.row])")
         
         selectedEQName = equipment["name"] as? String
         selectedEQValue = equipment["amount"] as? Int
