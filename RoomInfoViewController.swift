@@ -14,9 +14,6 @@ let precautionsFormat = "reservationPlist-precautions"
 class RoomInfoViewController: UITableViewController {
     
     @IBOutlet weak var meetingRoomInfo_Cell: UITableViewCell!
-
-    @IBOutlet weak var testLabel: UILabel!
-    @IBOutlet weak var testValue: UILabel!
     
     @IBOutlet weak var informationLabel: UILabel!
 
@@ -96,12 +93,12 @@ class RoomInfoViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // code..
-        let cell = tableView.dequeueReusableCell(withIdentifier: "meetingRoomInfo_Cell", for: indexPath) as! RoomInfoCell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "meetingRoomInfo_Cell", for: indexPath) as! RoomInfoCell
         
         guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else{
             return meetingRoomInfo_Cell
@@ -112,8 +109,6 @@ class RoomInfoViewController: UITableViewController {
         
         informationLabel.text = label
         informationValue.text = value
-        testLabel.text = label
-        testValue.text = value
         
         return meetingRoomInfo_Cell
 //        return cell
