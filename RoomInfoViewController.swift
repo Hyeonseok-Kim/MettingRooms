@@ -68,6 +68,7 @@ class RoomInfoViewController: UITableViewController {
         }
         
         guard let plistURL = Bundle.main.url(forResource: plistFormat, withExtension: "plist") else {
+            print("fileOf:\(plistFormatSource)")
             print("has no file")
             return
         }

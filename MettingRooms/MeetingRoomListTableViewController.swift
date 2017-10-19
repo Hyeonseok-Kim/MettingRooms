@@ -10,7 +10,7 @@ import UIKit
 
 class MeetingRoomListTableViewController: UITableViewController {
 
-    
+    var roomInformation = RoomInfoViewController()
     var service:Service!
     var selectedRoomName:String = ""
     //var meetingRooms:[String:[String:Int]] = ["Meeting": ["Banksy":4, "Rivera":8, "Kahlo":8, "Picasso":10], "Seminar":["Cezanne":20, "Matisse":30, "Renoir":40]]
@@ -91,20 +91,6 @@ class MeetingRoomListTableViewController: UITableViewController {
         print("selectedRoomName:\(selectedRoomName)")
     }
     
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        if segue.identifier == "OptionEquipmentsVC"{
-//
-//            let destinationName = segue.destination as! OptionEquipmentsViewController
-//            destinationName.firstParamName = selectedEQName!
-//
-//            let destinationAmount = segue.destination as! OptionEquipmentsViewController
-//            destinationAmount.firstParamValue = selectedEQValue!
-//        }
-//
-//    }
-    
     /*
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         //let orderedMeetingRooms = meetingRooms.sorted(by: {$0.1.first!.1 < $1.1.first!.1})
@@ -157,7 +143,6 @@ class MeetingRoomListTableViewController: UITableViewController {
     }
     */
 
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -173,6 +158,7 @@ class MeetingRoomListTableViewController: UITableViewController {
             guard let destinationName = segue.destination as? RoomInfoViewController else {
                 return
             }
+            print("선택된 실의 이름 :\(self.selectedRoomName)")
             destinationName.plistFormatSource = self.selectedRoomName as String
         }
     }
