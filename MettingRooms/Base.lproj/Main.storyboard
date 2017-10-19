@@ -175,7 +175,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="Aea-JU-uZq" kind="presentation" identifier="roomInfomationSegue" trigger="accessoryAction" id="dra-lI-Hms"/>
+                                    <segue destination="Aea-JU-uZq" kind="presentation" identifier="roomInformationSegue" trigger="accessoryAction" id="dra-lI-Hms"/>
                                     <segue destination="lAR-jb-RUE" kind="show" identifier="ReservationSegue" id="gMd-3J-lxV"/>
                                 </connections>
                             </tableViewCell>

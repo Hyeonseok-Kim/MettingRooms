@@ -44,7 +44,6 @@ class ReserveRoomViewController: UITableViewController {
         datePick = dateFormatter.date(from: stringToDate)!
         datePick.addTimeInterval(32400)
         print("현재시각 : \(datePick)")
-        print(stringToDate)
     }
     
     override func viewDidLoad() {

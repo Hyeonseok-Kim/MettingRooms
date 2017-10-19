@@ -80,13 +80,15 @@ class MeetingRoomListTableViewController: UITableViewController {
         return cell
     }
     
+    
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         guard let meetingRoom = service?.items?[indexPath.row] else{
             return
         }
         selectedRoomName = meetingRoom.name
-        
+        print("selectedRoomName:\(selectedRoomName)")
     }
     
     
@@ -168,29 +170,15 @@ class MeetingRoomListTableViewController: UITableViewController {
             destination.meetingRoom = meetingRoom
         }
         if segue.identifier == "roomInformationSegue" {
-            let destinationName = segue.destination as? RoomInfoViewController
-            destinationName?.plistFormatSource = selectedRoomName
+            guard let destinationName = segue.destination as? RoomInfoViewController else {
+                return
+            }
+            destinationName.plistFormatSource = self.selectedRoomName as String
         }
     }
     
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

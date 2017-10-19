@@ -9,10 +9,11 @@
 import UIKit
 //let roomInfoFileName = "ReserveInfomationPlist"
 var plistFormat = "reservationPlist-"
-let precautionsFormat = "reservationPlist-precautions"
+var precautionsFormat = "precautions"
 var Cell = RoomInfoCell()
 
 class RoomInfoViewController: UITableViewController {
+    var plistFormatSource = ""
     
     @IBOutlet weak var meetingRoomInfo_Cell: UITableViewCell!
     
@@ -36,7 +37,6 @@ class RoomInfoViewController: UITableViewController {
     
     var infomations:Array<AnyObject> = []
     var precautions:Array<AnyObject> = []
-    var plistFormatSource = ""
     
     
     override func viewDidLoad() {
@@ -64,13 +64,14 @@ class RoomInfoViewController: UITableViewController {
         case "몰디브/Moldiv":
             plistFormat = plistFormat + "moldiv"
         default:
-            plistFormat = "reservationPlist-bermuda"
+            break;
         }
         
         guard let plistURL = Bundle.main.url(forResource: plistFormat, withExtension: "plist") else {
             print("has no file")
             return
         }
+        precautionsFormat = plistFormat + precautionsFormat
         guard let precautionsURL = Bundle.main.url(forResource: precautionsFormat, withExtension: "plist") else {
             print("has no precautions")
             return
