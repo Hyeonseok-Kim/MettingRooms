@@ -112,9 +112,8 @@ class RoomInfoViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // code..
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "meetingRoomInfo_Cell", for: indexPath) as! RoomInfoCell
         
-        tableView.register(RoomInfoCell.self, forCellReuseIdentifier: "meetingRoomInfo_Cell")
+//        tableView.register(RoomInfoCell.self, forCellReuseIdentifier: "meetingRoomInfo_Cell")
         
         guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else{
             return meetingRoomInfo_Cell
