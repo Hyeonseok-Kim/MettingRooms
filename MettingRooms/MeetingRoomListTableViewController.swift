@@ -15,8 +15,6 @@ class MeetingRoomListTableViewController: UITableViewController {
     var selectedRoomName:String = ""
     //var meetingRooms:[String:[String:Int]] = ["Meeting": ["Banksy":4, "Rivera":8, "Kahlo":8, "Picasso":10], "Seminar":["Cezanne":20, "Matisse":30, "Renoir":40]]
     
-    
-    
     /*func meetingRoomsAtIndex(index:Int) -> (key:String, value:[String:Int]) {
         let orderedMeetingRooms = meetingRooms.sorted(by: {$0.1.first!.1 < $1.1.first!.1})
         return orderedMeetingRooms[index]
@@ -80,15 +78,12 @@ class MeetingRoomListTableViewController: UITableViewController {
         return cell
     }
     
-    
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         guard let meetingRoom = service?.items?[indexPath.row] else{
             return
         }
         selectedRoomName = meetingRoom.name
-        print("selectedRoomName:\(selectedRoomName)")
+        print("선택된 셀:\(selectedRoomName)")
     }
     
     /*
@@ -147,20 +142,26 @@ class MeetingRoomListTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        print(segue.identifier)
         if segue.identifier == "ReservationSegue" {
             guard let destination = segue.destination as? ReservationListViewController , let selectedIndex = self.tableView.indexPathForSelectedRow?.row, let meetingRoom = service?.items?[selectedIndex] else{
                 return
             }
             destination.meetingRoom = meetingRoom
-        }
-        if segue.identifier == "roomInformationSegue" {
-            guard let destinationName = segue.destination as? RoomInfoViewController else {
-                return
-            }
+        }else if segue.identifier == "roomInformationSegue" {
+//            guard let destinationName = segue.destination as? RoomInfoViewController else {
+//                return
+//            }
+            
+//            let add = RoomInfoViewController()
+//            add.plistFormatSource = "jeju"
             print("선택된 실의 이름 :\(self.selectedRoomName)")
-            destinationName.plistFormatSource = self.selectedRoomName as String
+            let destination = segue.destination as? RoomInfoViewController
+            destination?.plistFormatSource = "self.selectedRoomName"
+            
+//            destinationName.plistFormatSource = self.selectedRoomName as String
         }
+        
     }
     
 

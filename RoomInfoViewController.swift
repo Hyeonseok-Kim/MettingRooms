@@ -41,6 +41,8 @@ class RoomInfoViewController: UITableViewController {
     
     override func viewDidLoad() {
         
+        print("1")
+        
         super.viewDidLoad()
         
 //        guard let infomationURL = Bundle.main.url(forResource: roomInfoFileName, withExtension: "plist") else {
@@ -54,6 +56,8 @@ class RoomInfoViewController: UITableViewController {
 //            infomations = infomations + (infomationArray as Array<AnyObject>)
 //        }
 //
+        self.title = plistFormatSource
+        
         switch plistFormatSource {
         case "제주/Jeju":
             plistFormat = plistFormat + "jeju"
@@ -64,7 +68,6 @@ class RoomInfoViewController: UITableViewController {
         case "몰디브/Moldiv":
             plistFormat = plistFormat + "moldiv"
         default:
-            print("Source :\(plistFormatSource)")
             break;
         }
         

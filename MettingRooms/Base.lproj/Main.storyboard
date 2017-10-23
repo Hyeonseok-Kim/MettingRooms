@@ -924,7 +924,6 @@
         <!--정보-->
         <scene sceneID="IGP-eF-j1f">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K8b-02-RqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="cHl-Kb-ITa" customClass="RoomInfoViewController" customModule="MettingRooms" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oUR-CF-BsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1227,6 +1226,7 @@
                         <outlet property="precautionsValue" destination="Ezp-ou-olB" id="kRf-hi-jtz"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K8b-02-RqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3712.8000000000002" y="-1585.4572713643179"/>
         </scene>
@@ -1238,6 +1238,9 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9pI-VB-tvp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="cHl-Kb-ITa" kind="relationship" relationship="rootViewController" id="EfA-Ac-zpX"/>
                     </connections>
