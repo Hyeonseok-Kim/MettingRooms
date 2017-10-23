@@ -18,6 +18,7 @@
 		751612A81F4E619700677C44 /* ReserveRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751612A71F4E619700677C44 /* ReserveRoomViewController.swift */; };
 		7521CF271F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7521CF261F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift */; };
 		753400CF1F4D979900C22C78 /* RoomInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753400CE1F4D979900C22C78 /* RoomInfoViewController.swift */; };
+		7537239A1F9DD4B60057CAF5 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753723991F9DD4B60057CAF5 /* Common.swift */; };
 		755DEE511F43CFA0006BD444 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEE501F43CFA0006BD444 /* AppDelegate.swift */; };
 		755DEE531F43CFA0006BD444 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755DEE521F43CFA0006BD444 /* ViewController.swift */; };
 		755DEE561F43CFA0006BD444 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755DEE541F43CFA0006BD444 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		751612A71F4E619700677C44 /* ReserveRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveRoomViewController.swift; sourceTree = "<group>"; };
 		7521CF261F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionEquipmentsViewController.swift; sourceTree = "<group>"; };
 		753400CE1F4D979900C22C78 /* RoomInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomInfoViewController.swift; sourceTree = "<group>"; };
+		753723991F9DD4B60057CAF5 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		755DEE4D1F43CFA0006BD444 /* MettingRooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MettingRooms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		755DEE501F43CFA0006BD444 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		755DEE521F43CFA0006BD444 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				755DEE501F43CFA0006BD444 /* AppDelegate.swift */,
+				753723991F9DD4B60057CAF5 /* Common.swift */,
 				755DEE521F43CFA0006BD444 /* ViewController.swift */,
 				755DEE541F43CFA0006BD444 /* Main.storyboard */,
 				75A1D1511F53A4380033E06C /* EquipmentsDefault.plist */,
@@ -346,6 +349,7 @@
 				755DEE511F43CFA0006BD444 /* AppDelegate.swift in Sources */,
 				7521CF271F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift in Sources */,
 				751612A81F4E619700677C44 /* ReserveRoomViewController.swift in Sources */,
+				7537239A1F9DD4B60057CAF5 /* Common.swift in Sources */,
 				75724C2C1F4FAE7E00738F59 /* TintColorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

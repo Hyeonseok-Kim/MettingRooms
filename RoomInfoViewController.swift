@@ -9,11 +9,11 @@
 import UIKit
 //let roomInfoFileName = "ReserveInfomationPlist"
 var plistFormat = "reservationPlist-"
-var precautionsFormat = "precautions"
+var precautionsFormat = "reservationPlist-precautions"
 var Cell = RoomInfoCell()
 
 class RoomInfoViewController: UITableViewController {
-    var plistFormatSource = ""
+    var plistFormatSource = Common.sharedInstance.title
     
     @IBOutlet weak var meetingRoomInfo_Cell: UITableViewCell!
     
@@ -40,9 +40,6 @@ class RoomInfoViewController: UITableViewController {
     
     
     override func viewDidLoad() {
-        
-        print("1")
-        
         super.viewDidLoad()
         
 //        guard let infomationURL = Bundle.main.url(forResource: roomInfoFileName, withExtension: "plist") else {
@@ -56,27 +53,33 @@ class RoomInfoViewController: UITableViewController {
 //            infomations = infomations + (infomationArray as Array<AnyObject>)
 //        }
 //
-        self.title = plistFormatSource
+        var title = Common.sharedInstance.title.substring(to: (Common.sharedInstance.title.index(of: "/"))!)
+        title = title + "실 정보"
+        self.title = title
         
-        switch plistFormatSource {
+        switch Common.sharedInstance.title {
         case "제주/Jeju":
             plistFormat = plistFormat + "jeju"
+            print("plistFormat:\(plistFormat)") //dismiss후 재 선택 시 반복적으로 값을 담는지 체크하기 위함
         case "버뮤다/Bermuda":
             plistFormat = plistFormat + "bermuda"
+            print("plistFormat:\(plistFormat)")
         case "시실리/Sicily":
             plistFormat = plistFormat + "sicily"
+            print("plistFormat:\(plistFormat)")
         case "몰디브/Moldiv":
             plistFormat = plistFormat + "moldiv"
+            print("plistFormat:\(plistFormat)")
         default:
             break;
         }
         
         guard let plistURL = Bundle.main.url(forResource: plistFormat, withExtension: "plist") else {
-            print("fileOf:\(plistFormatSource)")
             print("has no file")
             return
         }
-        precautionsFormat = plistFormat + precautionsFormat
+        print("fileOf:\(Common.sharedInstance.title)")
+        
         guard let precautionsURL = Bundle.main.url(forResource: precautionsFormat, withExtension: "plist") else {
             print("has no precautions")
             return
