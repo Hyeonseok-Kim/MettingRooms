@@ -64,6 +64,7 @@ class RoomInfoViewController: UITableViewController {
         case "몰디브/Moldiv":
             plistFormat = plistFormat + "moldiv"
         default:
+            print("Source :\(plistFormatSource)")
             break;
         }
         
