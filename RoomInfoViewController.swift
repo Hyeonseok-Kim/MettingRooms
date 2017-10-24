@@ -41,7 +41,7 @@ class RoomInfoViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var plistFormat = "reservationPlist-" //dismiss 후 재 선택 전 값 초기화
 //        guard let infomationURL = Bundle.main.url(forResource: roomInfoFileName, withExtension: "plist") else {
 //            print("has no file")
 //            return
@@ -60,16 +60,16 @@ class RoomInfoViewController: UITableViewController {
         switch Common.sharedInstance.title {
         case "제주/Jeju":
             plistFormat = plistFormat + "jeju"
-            print("plistFormat:\(plistFormat)") //dismiss후 재 선택 시 반복적으로 값을 담는지 체크하기 위함
+            print("plistFormat :\(plistFormat)") //dismiss후 재 선택 시 반복적으로 값을 담는지 체크하기 위함
         case "버뮤다/Bermuda":
             plistFormat = plistFormat + "bermuda"
-            print("plistFormat:\(plistFormat)")
+            print("plistFormat :\(plistFormat)")
         case "시실리/Sicily":
             plistFormat = plistFormat + "sicily"
-            print("plistFormat:\(plistFormat)")
+            print("plistFormat :\(plistFormat)")
         case "몰디브/Moldiv":
             plistFormat = plistFormat + "moldiv"
-            print("plistFormat:\(plistFormat)")
+            print("plistFormat :\(plistFormat)")
         default:
             break;
         }
