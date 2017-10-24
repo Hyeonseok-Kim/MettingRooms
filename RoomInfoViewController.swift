@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//let roomInfoFileName = "ReserveInfomationPlist"
+
 var plistFormat = "reservationPlist-"
 var precautionsFormat = "reservationPlist-precautions"
 
@@ -21,37 +21,26 @@ class RoomInfoViewController: UITableViewController {
     
     @IBOutlet weak var capacityLabel: UILabel!
     @IBOutlet weak var capacityValue: UILabel!
-    
+
     @IBOutlet weak var facilitiesLabel: UILabel!
     @IBOutlet weak var facilitiesValue: UILabel!
-    
+
     @IBOutlet weak var equipmentsLabel: UILabel!
     @IBOutlet weak var equipmentsValue: UILabel!
-    
+
     @IBOutlet weak var applicatedEQLabel: UILabel!
     @IBOutlet weak var applicatedEQValue: UILabel!
-    
+
     @IBOutlet weak var precautionsLabel: UILabel!
     @IBOutlet weak var precautionsValue: UILabel!
     
     var infomations:Array<AnyObject> = []
     var precautions:Array<AnyObject> = []
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         var plistFormat = "reservationPlist-" //dismiss 후 재 선택 전 값 초기화
-//        guard let infomationURL = Bundle.main.url(forResource: roomInfoFileName, withExtension: "plist") else {
-//            print("has no file")
-//            return
-//        }
-//
-//        if let infomationArray = NSArray(contentsOf: infomationURL) {
-////            print(infomationArray)
-//
-//            infomations = infomations + (infomationArray as Array<AnyObject>)
-//        }
-//
+
         var title = Common.sharedInstance.title.substring(to: (Common.sharedInstance.title.index(of: "/"))!)
         title = title + "실 정보"
         self.title = title
@@ -120,9 +109,6 @@ class RoomInfoViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // code..
-        
-//        tableView.register(RoomInfoCell.self, forCellReuseIdentifier: "meetingRoomInfo_Cell")
-        
         guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else{
             return meetingRoomInfo_Cell
         }
@@ -130,43 +116,77 @@ class RoomInfoViewController: UITableViewController {
         let label = infomation["Label"] as? String ?? ""
         let value = infomation["Value"] as? String ?? ""
         
-//        informationLabel.text = label
-//        informationValue.text = value
-//        print(indexPath)
-
+        
+        
+        //REVERSE
+        guard let cell1 = infomations[5] as? [String:AnyObject] else{
+            return meetingRoomInfo_Cell
+        }
+        guard let cell2 = infomations[4] as? [String:AnyObject] else{
+            return meetingRoomInfo_Cell
+        }
+        guard let cell3 = infomations[3] as? [String:AnyObject] else{
+            return meetingRoomInfo_Cell
+        }
+        guard let cell4 = infomations[2] as? [String:AnyObject] else{
+            return meetingRoomInfo_Cell
+        }
+        guard let cell5 = infomations[1] as? [String:AnyObject] else{
+            return meetingRoomInfo_Cell
+        }
+        guard let cell6 = infomations[0] as? [String:AnyObject] else{
+            return meetingRoomInfo_Cell
+        }
+        
+        let label1 = cell1["Label"] as? String ?? ""
+        let value1 = cell1["Value"] as? String ?? ""
+        
+        let label2 = cell2["Label"] as? String ?? ""
+        let value2 = cell2["Value"] as? String ?? ""
+        
+        let label3 = cell3["Label"] as? String ?? ""
+        let value3 = cell3["Value"] as? String ?? ""
+        
+        let label4 = cell4["Label"] as? String ?? ""
+        let value4 = cell4["Value"] as? String ?? ""
+        
+        let label5 = cell5["Label"] as? String ?? ""
+        let value5 = cell5["Value"] as? String ?? ""
+        
+        let label6 = cell6["Label"] as? String ?? ""
+        let value6 = cell6["Value"] as? String ?? ""
+        
+        
         switch indexPath {
         case [0,0]:
-            informationLabel.text = label
-            informationValue.text = value
+            informationLabel.text = label1
+            informationValue.text = value1
+            print("셀: \(String(describing: informationLabel.text))\n\(indexPath)")
         case [0,1]:
-            capacityLabel.text = label
-            capacityValue.text = value
+            capacityLabel.text = label2
+            capacityValue.text = value2
+            print("셀: \(String(describing: capacityLabel.text))\n\(indexPath)")
         case [0,2]:
-            facilitiesLabel.text = label
-            facilitiesValue.text = value
+            facilitiesLabel.text = label3
+            facilitiesValue.text = value3
+            print("셀: \(String(describing: facilitiesLabel.text))\n\(indexPath)")
         case [0,3]:
-            equipmentsLabel.text = label
-            equipmentsValue.text = value
+            equipmentsLabel.text = label4
+            equipmentsValue.text = value4
+            print("셀: \(String(describing: equipmentsLabel.text))\n\(indexPath)")
         case [0,4]:
-            applicatedEQLabel.text = label
-            applicatedEQValue.text = value
+            applicatedEQLabel.text = label5
+            applicatedEQValue.text = value5
+            print("셀: \(String(describing: applicatedEQLabel.text))\n\(indexPath)")
         case [0,5]:
-            precautionsLabel.text = label
-            precautionsValue.text = value
+            precautionsLabel.text = label6
+            precautionsValue.text = value6
+            print("셀: \(String(describing: precautionsLabel.text))\n\(indexPath)")
         default:
             break;
         }
         
-        guard let cell = meetingRoomInfo_Cell as? RoomInfoCell else {
-            return meetingRoomInfo_Cell
-        }
-        
-        cell.informationLabel.text = label
-        cell.informationValue.text = value
-        //\Ub300\Ud68c\Uc758\Uc2e4 \Ub9de\Uc740\Ud3b8
-//        return meetingRoomInfo_Cell
-        return cell
-//        return cell
+        return meetingRoomInfo_Cell
     }
     
     
