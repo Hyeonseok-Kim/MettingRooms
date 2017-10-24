@@ -10,7 +10,6 @@ import UIKit
 //let roomInfoFileName = "ReserveInfomationPlist"
 var plistFormat = "reservationPlist-"
 var precautionsFormat = "reservationPlist-precautions"
-var Cell = RoomInfoCell()
 
 class RoomInfoViewController: UITableViewController {
     var plistFormatSource = Common.sharedInstance.title
@@ -157,7 +156,16 @@ class RoomInfoViewController: UITableViewController {
         default:
             break;
         }
-        return meetingRoomInfo_Cell
+        
+        guard let cell = meetingRoomInfo_Cell as? RoomInfoCell else {
+            return meetingRoomInfo_Cell
+        }
+        
+        cell.informationLabel.text = label
+        cell.informationValue.text = value
+        //\Ub300\Ud68c\Uc758\Uc2e4 \Ub9de\Uc740\Ud3b8
+//        return meetingRoomInfo_Cell
+        return cell
 //        return cell
     }
     
