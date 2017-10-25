@@ -18,7 +18,6 @@ class RoomInfoViewController: UITableViewController {
     
     @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var informationValue: UILabel!
-
     
     var infomations:Array<AnyObject> = []
     var precautions:Array<AnyObject> = []
@@ -90,12 +89,12 @@ class RoomInfoViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 1
         return infomations.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // code..
+        
         guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else{
             return meetingRoomInfo_Cell
         }
@@ -173,6 +172,9 @@ class RoomInfoViewController: UITableViewController {
 //        default:
 //            break;
 //        }
+        //REVERSE;
+        
+        print(meetingRoomInfo_Cell.reuseIdentifier)
         
         return meetingRoomInfo_Cell
     }
@@ -224,3 +226,17 @@ class RoomInfoViewController: UITableViewController {
     */
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,6 +13,7 @@ class Tab4TableViewController: UITableViewController {
     var labelArray:Array = ["위치","수용인원","기본시설","기본장비","신청가능장비","특징"]
     var valueArray:Array = ["1","2","3","4","5","6"]
     
+    @IBOutlet weak var tableCell: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +44,12 @@ class Tab4TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "testCell", for: indexPath)
-
-        cell.textLabel?.text = labelArray[indexPath.row]
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "testCell", for: indexPath)
         
-
-        return cell
+        print(labelArray[indexPath.row])
+//        cell.textLabel?.text = labelArray[indexPath.row]
+        tableCell.textLabel?.text = "1"
+        return tableCell
     }
  
 
