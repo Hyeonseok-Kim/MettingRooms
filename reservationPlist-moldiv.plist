@@ -6,7 +6,7 @@
 		<key>Label</key>
 		<string>특징</string>
 		<key>Value</key>
-		<string>대회의실</string>
+		<string>옆 회의실과 연결되어 있음</string>
 	</dict>
 	<dict>
 		<key>Label</key>
@@ -24,19 +24,19 @@
 		<key>Label</key>
 		<string>기본시설</string>
 		<key>Value</key>
-		<string>테이블1, 의자12, 모니터</string>
+		<string>테이블1, 의자6, 모니터</string>
 	</dict>
 	<dict>
 		<key>Label</key>
 		<string>수용인원</string>
 		<key>Value</key>
-		<string>12명</string>
+		<string>6명</string>
 	</dict>
 	<dict>
 		<key>Label</key>
 		<string>위치</string>
 		<key>Value</key>
-		<string>대회의실</string>
+		<string>출입문 바로 앞</string>
 	</dict>
 </array>
 </plist>

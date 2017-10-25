@@ -52,7 +52,7 @@ class DataCenter {
         let JejuRoom = MeetingRoom(name:"제주/Jeju", capacity: 6)
         let BermudaRoom = MeetingRoom(name:"버뮤다/Bermuda", capacity: 8)
         let SicilyRoom = MeetingRoom(name:"시실리/Sicily", capacity: 6)
-        let MoldivRoom = MeetingRoom(name:"몰디브/Moldiv", capacity: 12)
+        let MoldivRoom = MeetingRoom(name:"몰디브/Moldiv", capacity: 6)
         
         let meetingRoomService = Service(name: "회의실예약")
         let visitorService = Service(name: "방문자예약")

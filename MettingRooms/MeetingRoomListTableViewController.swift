@@ -154,9 +154,6 @@ class MeetingRoomListTableViewController: UITableViewController {
                 return
             }
             destination.meetingRoom = meetingRoom
-        }else if segue.identifier == "roomInformationSegue" {
-            print("선택된 실의 이름 :\(Common.sharedInstance.title)")
-//            destinationName.plistFormatSource = self.selectedRoomName as String
         }
         
     }

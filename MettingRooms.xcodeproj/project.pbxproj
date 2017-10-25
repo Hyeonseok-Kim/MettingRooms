@@ -13,7 +13,6 @@
 		7503BB0B1F95A841007EDA51 /* reservationPlist-sicily.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7503BB0A1F95A841007EDA51 /* reservationPlist-sicily.plist */; };
 		7503BB0D1F95C0C2007EDA51 /* reservationPlist-moldiv.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7503BB0C1F95C0C2007EDA51 /* reservationPlist-moldiv.plist */; };
 		7503BB0F1F95C197007EDA51 /* reservationPlist-precautions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7503BB0E1F95C197007EDA51 /* reservationPlist-precautions.plist */; };
-		7503BB111F9724A1007EDA51 /* RoomInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7503BB101F9724A1007EDA51 /* RoomInfoCell.swift */; };
 		751612A61F4E617D00677C44 /* ReservationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751612A51F4E617D00677C44 /* ReservationListViewController.swift */; };
 		751612A81F4E619700677C44 /* ReserveRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751612A71F4E619700677C44 /* ReserveRoomViewController.swift */; };
 		7521CF271F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7521CF261F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift */; };
@@ -33,6 +32,7 @@
 		75A1D1521F53A4380033E06C /* EquipmentsDefault.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A1D1511F53A4380033E06C /* EquipmentsDefault.plist */; };
 		75A1D1541F53B6690033E06C /* EquipmentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1D1531F53B6690033E06C /* EquipmentsListViewController.swift */; };
 		75A1D1581F5401700033E06C /* EquipmentsPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A1D1571F5401700033E06C /* EquipmentsPlist.plist */; };
+		75E108A71FA062F000189354 /* Tab4TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E108A61FA062F000189354 /* Tab4TableViewController.swift */; };
 		75E4CF4B1F45240D008F9980 /* BranchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E4CF4A1F45240D008F9980 /* BranchListViewController.swift */; };
 		75E4CF4D1F45241C008F9980 /* ServiceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E4CF4C1F45241C008F9980 /* ServiceListViewController.swift */; };
 /* End PBXBuildFile section */
@@ -61,7 +61,6 @@
 		7503BB0A1F95A841007EDA51 /* reservationPlist-sicily.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "reservationPlist-sicily.plist"; sourceTree = "<group>"; };
 		7503BB0C1F95C0C2007EDA51 /* reservationPlist-moldiv.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "reservationPlist-moldiv.plist"; sourceTree = "<group>"; };
 		7503BB0E1F95C197007EDA51 /* reservationPlist-precautions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "reservationPlist-precautions.plist"; sourceTree = "<group>"; };
-		7503BB101F9724A1007EDA51 /* RoomInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomInfoCell.swift; sourceTree = "<group>"; };
 		751612A51F4E617D00677C44 /* ReservationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationListViewController.swift; sourceTree = "<group>"; };
 		751612A71F4E619700677C44 /* ReserveRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveRoomViewController.swift; sourceTree = "<group>"; };
 		7521CF261F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionEquipmentsViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		75A1D1511F53A4380033E06C /* EquipmentsDefault.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EquipmentsDefault.plist; sourceTree = "<group>"; };
 		75A1D1531F53B6690033E06C /* EquipmentsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentsListViewController.swift; sourceTree = "<group>"; };
 		75A1D1571F5401700033E06C /* EquipmentsPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = EquipmentsPlist.plist; path = ../EquipmentsPlist.plist; sourceTree = "<group>"; };
+		75E108A61FA062F000189354 /* Tab4TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab4TableViewController.swift; sourceTree = "<group>"; };
 		75E4CF4A1F45240D008F9980 /* BranchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchListViewController.swift; sourceTree = "<group>"; };
 		75E4CF4C1F45241C008F9980 /* ServiceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,7 +119,7 @@
 		755DEE441F43CFA0006BD444 = {
 			isa = PBXGroup;
 			children = (
-				7503BB101F9724A1007EDA51 /* RoomInfoCell.swift */,
+				75E108A61FA062F000189354 /* Tab4TableViewController.swift */,
 				7503BB061F95A37B007EDA51 /* reservationPlist-jeju.plist */,
 				7503BB081F95A5CA007EDA51 /* reservationPlist-bermuda.plist */,
 				7503BB0A1F95A841007EDA51 /* reservationPlist-sicily.plist */,
@@ -338,7 +338,6 @@
 			files = (
 				753400CF1F4D979900C22C78 /* RoomInfoViewController.swift in Sources */,
 				755DEE531F43CFA0006BD444 /* ViewController.swift in Sources */,
-				7503BB111F9724A1007EDA51 /* RoomInfoCell.swift in Sources */,
 				755DEE7F1F43D000006BD444 /* MeetingRoomListTableViewController.swift in Sources */,
 				75A1D1541F53B6690033E06C /* EquipmentsListViewController.swift in Sources */,
 				751612A61F4E617D00677C44 /* ReservationListViewController.swift in Sources */,
@@ -346,6 +345,7 @@
 				7571D6371F58F8AB0033EC8F /* EquipmentApplicationListViewController.swift in Sources */,
 				75E4CF4B1F45240D008F9980 /* BranchListViewController.swift in Sources */,
 				75E4CF4D1F45241C008F9980 /* ServiceListViewController.swift in Sources */,
+				75E108A71FA062F000189354 /* Tab4TableViewController.swift in Sources */,
 				755DEE511F43CFA0006BD444 /* AppDelegate.swift in Sources */,
 				7521CF271F5D22E100C7EFB3 /* OptionEquipmentsViewController.swift in Sources */,
 				751612A81F4E619700677C44 /* ReserveRoomViewController.swift in Sources */,

@@ -18,21 +18,7 @@ class RoomInfoViewController: UITableViewController {
     
     @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var informationValue: UILabel!
-    
-    @IBOutlet weak var capacityLabel: UILabel!
-    @IBOutlet weak var capacityValue: UILabel!
 
-    @IBOutlet weak var facilitiesLabel: UILabel!
-    @IBOutlet weak var facilitiesValue: UILabel!
-
-    @IBOutlet weak var equipmentsLabel: UILabel!
-    @IBOutlet weak var equipmentsValue: UILabel!
-
-    @IBOutlet weak var applicatedEQLabel: UILabel!
-    @IBOutlet weak var applicatedEQValue: UILabel!
-
-    @IBOutlet weak var precautionsLabel: UILabel!
-    @IBOutlet weak var precautionsValue: UILabel!
     
     var infomations:Array<AnyObject> = []
     var precautions:Array<AnyObject> = []
@@ -104,88 +90,89 @@ class RoomInfoViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 1
         return infomations.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // code..
-//        guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else{
-//            return meetingRoomInfo_Cell
-//        }
+        guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else{
+            return meetingRoomInfo_Cell
+        }
         
-//        let label = infomation["Label"] as? String ?? ""
-//        let value = infomation["Value"] as? String ?? ""
+        let label = infomation["Label"] as? String ?? ""
+        let value = infomation["Value"] as? String ?? ""
         
-        
+        informationLabel.text = label
+        informationValue.text = value
         
         //REVERSE
-        guard let cell1 = infomations[5] as? [String:AnyObject] else{
-            return meetingRoomInfo_Cell
-        }
-        guard let cell2 = infomations[4] as? [String:AnyObject] else{
-            return meetingRoomInfo_Cell
-        }
-        guard let cell3 = infomations[3] as? [String:AnyObject] else{
-            return meetingRoomInfo_Cell
-        }
-        guard let cell4 = infomations[2] as? [String:AnyObject] else{
-            return meetingRoomInfo_Cell
-        }
-        guard let cell5 = infomations[1] as? [String:AnyObject] else{
-            return meetingRoomInfo_Cell
-        }
-        guard let cell6 = infomations[0] as? [String:AnyObject] else{
-            return meetingRoomInfo_Cell
-        }
-        
-        let label1 = cell1["Label"] as? String ?? ""
-        let value1 = cell1["Value"] as? String ?? ""
-        
-        let label2 = cell2["Label"] as? String ?? ""
-        let value2 = cell2["Value"] as? String ?? ""
-        
-        let label3 = cell3["Label"] as? String ?? ""
-        let value3 = cell3["Value"] as? String ?? ""
-        
-        let label4 = cell4["Label"] as? String ?? ""
-        let value4 = cell4["Value"] as? String ?? ""
-        
-        let label5 = cell5["Label"] as? String ?? ""
-        let value5 = cell5["Value"] as? String ?? ""
-        
-        let label6 = cell6["Label"] as? String ?? ""
-        let value6 = cell6["Value"] as? String ?? ""
-        
-        
-        switch indexPath {
-        case [0,0]:
-            informationLabel.text = label1
-            informationValue.text = value1
-            print("셀: \(String(describing: informationLabel.text))\n\(indexPath)")
-        case [0,1]:
-            capacityLabel.text = label2
-            capacityValue.text = value2
-            print("셀: \(String(describing: capacityLabel.text))\n\(indexPath)")
-        case [0,2]:
-            facilitiesLabel.text = label3
-            facilitiesValue.text = value3
-            print("셀: \(String(describing: facilitiesLabel.text))\n\(indexPath)")
-        case [0,3]:
-            equipmentsLabel.text = label4
-            equipmentsValue.text = value4
-            print("셀: \(String(describing: equipmentsLabel.text))\n\(indexPath)")
-        case [0,4]:
-            applicatedEQLabel.text = label5
-            applicatedEQValue.text = value5
-            print("셀: \(String(describing: applicatedEQLabel.text))\n\(indexPath)")
-        case [0,5]:
-            precautionsLabel.text = label6
-            precautionsValue.text = value6
-            print("셀: \(String(describing: precautionsLabel.text))\n\(indexPath)")
-        default:
-            break;
-        }
-        print(meetingRoomInfo_Cell.textLabel?.text)
+//        guard let cell1 = infomations[5] as? [String:AnyObject] else{
+//            return meetingRoomInfo_Cell
+//        }
+//        guard let cell2 = infomations[4] as? [String:AnyObject] else{
+//            return meetingRoomInfo_Cell
+//        }
+//        guard let cell3 = infomations[3] as? [String:AnyObject] else{
+//            return meetingRoomInfo_Cell
+//        }
+//        guard let cell4 = infomations[2] as? [String:AnyObject] else{
+//            return meetingRoomInfo_Cell
+//        }
+//        guard let cell5 = infomations[1] as? [String:AnyObject] else{
+//            return meetingRoomInfo_Cell
+//        }
+//        guard let cell6 = infomations[0] as? [String:AnyObject] else{
+//            return meetingRoomInfo_Cell
+//        }
+//
+//        let label1 = cell1["Label"] as? String ?? ""
+//        let value1 = cell1["Value"] as? String ?? ""
+//
+//        let label2 = cell2["Label"] as? String ?? ""
+//        let value2 = cell2["Value"] as? String ?? ""
+//
+//        let label3 = cell3["Label"] as? String ?? ""
+//        let value3 = cell3["Value"] as? String ?? ""
+//
+//        let label4 = cell4["Label"] as? String ?? ""
+//        let value4 = cell4["Value"] as? String ?? ""
+//
+//        let label5 = cell5["Label"] as? String ?? ""
+//        let value5 = cell5["Value"] as? String ?? ""
+//
+//        let label6 = cell6["Label"] as? String ?? ""
+//        let value6 = cell6["Value"] as? String ?? ""
+//
+//
+//        switch indexPath {
+//        case [0,0]:
+//            informationLabel.text = label1
+//            informationValue.text = value1
+//            print("셀: \(String(describing: informationLabel.text))\n\(indexPath)")
+//        case [0,1]:
+//            informationLabel.text = label2
+//            informationValue.text = value2
+//            print("셀: \(String(describing: informationLabel.text))\n\(indexPath)")
+//        case [0,2]:
+//            informationLabel.text = label3
+//            informationValue.text = value3
+//            print("셀: \(String(describing: informationLabel.text))\n\(indexPath)")
+//        case [0,3]:
+//            informationLabel.text = label4
+//            informationValue.text = value4
+//            print("셀: \(String(describing: informationLabel.text))\n\(indexPath)")
+//        case [0,4]:
+//            informationLabel.text = label5
+//            informationValue.text = value5
+//            print("셀: \(String(describing: informationLabel.text))\n\(indexPath)")
+//        case [0,5]:
+//            informationLabel.text = label6
+//            informationValue.text = value6
+//            print("셀: \(String(describing: informationLabel.text))\n\(indexPath)")
+//        default:
+//            break;
+//        }
         
         return meetingRoomInfo_Cell
     }
