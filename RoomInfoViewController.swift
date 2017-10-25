@@ -109,12 +109,12 @@ class RoomInfoViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // code..
-        guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else{
-            return meetingRoomInfo_Cell
-        }
+//        guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else{
+//            return meetingRoomInfo_Cell
+//        }
         
-        let label = infomation["Label"] as? String ?? ""
-        let value = infomation["Value"] as? String ?? ""
+//        let label = infomation["Label"] as? String ?? ""
+//        let value = infomation["Value"] as? String ?? ""
         
         
         
@@ -185,6 +185,7 @@ class RoomInfoViewController: UITableViewController {
         default:
             break;
         }
+        print(meetingRoomInfo_Cell.textLabel?.text)
         
         return meetingRoomInfo_Cell
     }
