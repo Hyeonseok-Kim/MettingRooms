@@ -3,40 +3,40 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>Label</key>
-		<string>특징</string>
 		<key>Value</key>
 		<string>AppleTV</string>
+		<key>Label</key>
+		<string>특징</string>
 	</dict>
 	<dict>
-		<key>Label</key>
-		<string>신청가능장비</string>
 		<key>Value</key>
 		<string>hdmi cable, 리모컨 건전지</string>
+		<key>Label</key>
+		<string>신청가능장비</string>
 	</dict>
 	<dict>
-		<key>Label</key>
-		<string>기본장비</string>
 		<key>Value</key>
 		<string>보드마카, AppleTV리모컨</string>
+		<key>Label</key>
+		<string>기본장비</string>
 	</dict>
 	<dict>
-		<key>Label</key>
-		<string>기본시설</string>
 		<key>Value</key>
 		<string>테이블1, 의자8, AppleTV, 40인치 모니터</string>
+		<key>Label</key>
+		<string>기본시설</string>
 	</dict>
 	<dict>
-		<key>Label</key>
-		<string>수용인원</string>
 		<key>Value</key>
 		<string>8명</string>
+		<key>Label</key>
+		<string>수용인원</string>
 	</dict>
 	<dict>
-		<key>Label</key>
-		<string>위치</string>
 		<key>Value</key>
 		<string>기존 휴계공간 옆</string>
+		<key>Label</key>
+		<string>위치</string>
 	</dict>
 </array>
 </plist>

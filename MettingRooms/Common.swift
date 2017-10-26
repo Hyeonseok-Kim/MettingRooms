@@ -13,5 +13,5 @@ class Common {
     static let sharedInstance = Common()
     
     var title = ""
-    
+
 }

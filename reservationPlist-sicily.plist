@@ -3,40 +3,40 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>Label</key>
-		<string>특징</string>
 		<key>Value</key>
 		<string>옆 회의실과 연결되어있음</string>
+		<key>Label</key>
+		<string>특징</string>
 	</dict>
 	<dict>
-		<key>Label</key>
-		<string>신청가능장비</string>
 		<key>Value</key>
 		<string>hdmi cable</string>
+		<key>Label</key>
+		<string>신청가능장비</string>
 	</dict>
 	<dict>
-		<key>Label</key>
-		<string>기본장비</string>
 		<key>Value</key>
 		<string>보드마카, 전화기</string>
+		<key>Label</key>
+		<string>기본장비</string>
 	</dict>
 	<dict>
-		<key>Label</key>
-		<string>기본시설</string>
 		<key>Value</key>
 		<string>테이블1, 의자6, 모니터</string>
+		<key>Label</key>
+		<string>기본시설</string>
 	</dict>
 	<dict>
-		<key>Label</key>
-		<string>수용인원</string>
 		<key>Value</key>
 		<string>6명</string>
+		<key>Label</key>
+		<string>수용인원</string>
 	</dict>
 	<dict>
-		<key>Label</key>
-		<string>위치</string>
 		<key>Value</key>
 		<string>대회의실 앞</string>
+		<key>Label</key>
+		<string>위치</string>
 	</dict>
 </array>
 </plist>

@@ -14,11 +14,6 @@ var precautionsFormat = "reservationPlist-precautions"
 class RoomInfoViewController: UITableViewController {
     var plistFormatSource = Common.sharedInstance.title
     
-    @IBOutlet weak var meetingRoomInfo_Cell: UITableViewCell!
-    
-    @IBOutlet weak var informationLabel: UILabel!
-    @IBOutlet weak var informationValue: UILabel!
-    
     var infomations:Array<AnyObject> = []
     var precautions:Array<AnyObject> = []
     
@@ -51,7 +46,7 @@ class RoomInfoViewController: UITableViewController {
             print("has no file")
             return
         }
-        print("fileOf:\(Common.sharedInstance.title)")
+        print("fileOf:\(Common.sharedInstance.title.description)")
         
         guard let precautionsURL = Bundle.main.url(forResource: precautionsFormat, withExtension: "plist") else {
             print("has no precautions")
@@ -94,18 +89,20 @@ class RoomInfoViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // code..
+//        tableView.register(meetingRoomInfo_Cell.self, forCellReuseIdentifier: "meetingRoomInfo_Cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "meetingRoomInfo_Cell", for: indexPath) as! meetingRoomInfo_Cell
         
         guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else{
-            return meetingRoomInfo_Cell
+            return cell
         }
-        
+
         let label = infomation["Label"] as? String ?? ""
         let value = infomation["Value"] as? String ?? ""
         
-        informationLabel.text = label
-        informationValue.text = value
-        
-        return meetingRoomInfo_Cell
+        cell.informationLabel.text = label
+        cell.informationValue.text = value
+
+        return cell
     }
     
     
