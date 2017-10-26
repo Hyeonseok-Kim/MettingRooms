@@ -930,7 +930,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="0.59720141270000004" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="0Xj-h4-whT">
-                            <rect key="frame" x="0.0" y="336" width="375" height="628"/>
+                            <rect key="frame" x="0.0" y="448" width="375" height="628"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
@@ -1167,6 +1167,84 @@
                                                 <constraint firstItem="dDh-MC-5B5" firstAttribute="leading" secondItem="vhY-SL-16I" secondAttribute="leadingMargin" constant="9" id="cFR-hD-aSL"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="YRs-Jd-Grl" secondAttribute="trailing" constant="7" id="kPm-KZ-jHx"/>
                                                 <constraint firstItem="YRs-Jd-Grl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vhY-SL-16I" secondAttribute="leadingMargin" id="wGq-8Y-zGT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingRoomInfo_Cell" rowHeight="56" id="i5d-vg-7Z6">
+                                        <rect key="frame" x="0.0" y="336" width="375" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i5d-vg-7Z6" id="eDT-3x-Ett">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7g-Wc-sdW">
+                                                    <rect key="frame" x="17" y="17" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="wzL-QA-Qgj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQV-Cs-AUy">
+                                                    <rect key="frame" x="318" y="17" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="8ce-oS-T8O"/>
+                                                        <constraint firstAttribute="height" constant="21" id="Vhf-EH-OhK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="D7g-Wc-sdW" firstAttribute="leading" secondItem="eDT-3x-Ett" secondAttribute="leadingMargin" constant="9" id="1Ya-RW-JS1"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PQV-Cs-AUy" secondAttribute="trailing" constant="7" id="3g4-Hr-v3K"/>
+                                                <constraint firstItem="PQV-Cs-AUy" firstAttribute="baseline" secondItem="D7g-Wc-sdW" secondAttribute="baseline" id="7he-ma-PIe"/>
+                                                <constraint firstItem="PQV-Cs-AUy" firstAttribute="firstBaseline" secondItem="D7g-Wc-sdW" secondAttribute="firstBaseline" id="BGy-zH-xHY"/>
+                                                <constraint firstItem="PQV-Cs-AUy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eDT-3x-Ett" secondAttribute="leadingMargin" id="cwW-j2-1e2"/>
+                                                <constraint firstItem="PQV-Cs-AUy" firstAttribute="centerY" secondItem="eDT-3x-Ett" secondAttribute="centerY" id="mcQ-Ag-9vC"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D7g-Wc-sdW" secondAttribute="trailingMargin" id="nO9-ng-se1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingRoomInfo_Cell" rowHeight="56" id="sAF-TK-EcI">
+                                        <rect key="frame" x="0.0" y="392" width="375" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sAF-TK-EcI" id="WCk-cg-zoV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNI-Mf-VGb">
+                                                    <rect key="frame" x="17" y="17" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="PXw-ew-6DV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9s-VB-Wof">
+                                                    <rect key="frame" x="318" y="17" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="9jH-Cw-7GM"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="SVM-zl-5Au"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="B9s-VB-Wof" secondAttribute="trailing" constant="7" id="154-ro-KBi"/>
+                                                <constraint firstItem="QNI-Mf-VGb" firstAttribute="leading" secondItem="WCk-cg-zoV" secondAttribute="leadingMargin" constant="9" id="OlE-rX-f2m"/>
+                                                <constraint firstItem="B9s-VB-Wof" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WCk-cg-zoV" secondAttribute="leadingMargin" id="Skd-2e-r8M"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QNI-Mf-VGb" secondAttribute="trailingMargin" id="feu-vx-nHT"/>
+                                                <constraint firstItem="B9s-VB-Wof" firstAttribute="firstBaseline" secondItem="QNI-Mf-VGb" secondAttribute="firstBaseline" id="ktT-Eb-3Zb"/>
+                                                <constraint firstItem="B9s-VB-Wof" firstAttribute="centerY" secondItem="WCk-cg-zoV" secondAttribute="centerY" id="ld8-ki-KSR"/>
+                                                <constraint firstItem="B9s-VB-Wof" firstAttribute="baseline" secondItem="QNI-Mf-VGb" secondAttribute="baseline" id="uKI-tY-3sd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.33309423919999998" green="0.33318200710000001" blue="0.37899866700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
