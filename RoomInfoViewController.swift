@@ -91,6 +91,7 @@ class RoomInfoViewController: UITableViewController {
         // code..
 //        tableView.register(meetingRoomInfo_Cell.self, forCellReuseIdentifier: "meetingRoomInfo_Cell")
         let cell = tableView.dequeueReusableCell(withIdentifier: "meetingRoomInfo_Cell", for: indexPath) as! meetingRoomInfo_Cell
+        self.tableView.rowHeight = 56.0
         
         guard let infomation = infomations[indexPath.row] as? [String:AnyObject] else{
             return cell
@@ -99,8 +100,8 @@ class RoomInfoViewController: UITableViewController {
         let label = infomation["Label"] as? String ?? ""
         let value = infomation["Value"] as? String ?? ""
         
-        cell.informationLabel.text = label
-        cell.informationValue.text = value
+        cell.informationLabel?.text = label
+        cell.informationValue?.text = value
 
         return cell
     }

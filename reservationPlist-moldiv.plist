@@ -4,27 +4,9 @@
 <array>
 	<dict>
 		<key>Value</key>
-		<string>옆 회의실과 연결되어 있음</string>
+		<string>출입문 바로 앞</string>
 		<key>Label</key>
-		<string>특징</string>
-	</dict>
-	<dict>
-		<key>Value</key>
-		<string>hdmi cable</string>
-		<key>Label</key>
-		<string>신청가능장비</string>
-	</dict>
-	<dict>
-		<key>Value</key>
-		<string>보드마카, 전화기</string>
-		<key>Label</key>
-		<string>기본장비</string>
-	</dict>
-	<dict>
-		<key>Value</key>
-		<string>테이블1, 의자6, 모니터</string>
-		<key>Label</key>
-		<string>기본시설</string>
+		<string>위치</string>
 	</dict>
 	<dict>
 		<key>Value</key>
@@ -34,9 +16,27 @@
 	</dict>
 	<dict>
 		<key>Value</key>
-		<string>출입문 바로 앞</string>
+		<string>테이블1, 의자6, 모니터</string>
 		<key>Label</key>
-		<string>위치</string>
+		<string>기본시설</string>
+	</dict>
+	<dict>
+		<key>Value</key>
+		<string>보드마카, 전화기</string>
+		<key>Label</key>
+		<string>기본장비</string>
+	</dict>
+	<dict>
+		<key>Value</key>
+		<string>hdmi cable</string>
+		<key>Label</key>
+		<string>신청가능장비</string>
+	</dict>
+	<dict>
+		<key>Value</key>
+		<string>옆 회의실과 연결되어 있음</string>
+		<key>Label</key>
+		<string>특징</string>
 	</dict>
 </array>
 </plist>
