@@ -64,12 +64,40 @@ class ReservationListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReservationCell", for: indexPath)
-
+        
         guard let reservation = meetingRoom?.reservations?[indexPath.row] else{
             return cell
         }
-        cell.textLabel?.text = reservation.dateToString
-        cell.detailTextLabel?.text = reservation.hostName
+    
+        //Old Reservations Checking
+        var nowDate = Date()
+        nowDate.addTimeInterval(32400)
+        //--
+//        if reservation.date <= nowDate {
+//            reservation.dateToString.sorted()
+//            cell.textLabel?.text = reservation.dateToString
+//            cell.detailTextLabel?.text = reservation.hostName
+//        }else {
+//            cell.textLabel?.text = reservation.dateToString
+//            cell.detailTextLabel?.text = reservation.hostName
+//        }
+        var tempCell:Array<AnyObject> = []
+//        let tempIndex = 0
+        if nowDate >= reservation.date {
+            tempCell.append(reservation.dateToString as AnyObject)
+            tempCell.append(reservation.hostName as AnyObject)
+        }
+
+        if tempCell.count == 0 {
+            cell.textLabel?.text = reservation.dateToString
+            cell.detailTextLabel?.text = reservation.hostName
+        }else {
+            cell.textLabel?.text = tempCell[0] as? String
+            cell.detailTextLabel?.text = tempCell[1] as? String
+            cell.accessoryType = .checkmark
+        }
+        
+        print("---------------\n\(tempCell)")
         
         return cell
     }
